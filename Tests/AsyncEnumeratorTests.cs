@@ -15,7 +15,7 @@ namespace Tests
         {
             var enumerator = new AsyncEnumerator<int>(async yield =>
             {
-                await Task.Run(async () =>
+                await TaskEx.Run(async () =>
                 {
                     await yield.ReturnAsync(1);
                 });
@@ -38,7 +38,7 @@ namespace Tests
 
             var enumerable = new AsyncEnumerable<int>(async yield =>
             {
-                await Task.Yield();
+                await TaskEx.Yield();
                 yield.CancellationToken.ThrowIfCancellationRequested();
             });
 
@@ -98,11 +98,15 @@ namespace Tests
             CreateEnumeratorAndMoveNext();
 
             // Instead of calling enumerator.Dispose(), do garbage collection.
-            GC.Collect(GC.MaxGeneration, GCCollectionMode.Forced, blocking: true);
+            GC.Collect(GC.MaxGeneration, GCCollectionMode.Forced
+#if !NET40
+                , blocking: true
+#endif
+                );
 
             // Give some time to other thread that does the disposal of the enumerator.
             // (see finalizer of the AsyncEnumerator for details)
-            await Task.Delay(16);
+            await TaskEx.Delay(16);
 
             // ASSERT
 
@@ -150,7 +154,11 @@ namespace Tests
             // ACT
 
             CreateEnumerator();
-            GC.Collect(GC.MaxGeneration, GCCollectionMode.Forced, blocking: true);
+            GC.Collect(GC.MaxGeneration, GCCollectionMode.Forced
+#if !NET40
+                , blocking: true
+#endif
+                );
             Thread.Sleep(16);
 
             // ASSERT
@@ -182,7 +190,7 @@ namespace Tests
             await enumerator.MoveNextAsync();
 
             var disposeTask = enumerator.DisposeAsync();
-            await Task.Yield();
+            await TaskEx.Yield();
             Assert.IsFalse(disposeTask.IsCompleted);
 
             tcs.SetResult(null);
@@ -249,7 +257,7 @@ namespace Tests
 
             var result = await enumerator.MoveNextAsync();
 
-            await Task.Yield();
+            await TaskEx.Yield();
 
             // ASSERT
 

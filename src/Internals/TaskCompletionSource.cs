@@ -143,7 +143,9 @@ namespace Dasync.Collections.Internals
         /// <typeparam name="T">Type of the result value</typeparam>
         /// <param name="taskCompletionSource">Target <see cref="TaskCompletionSource{TResult}"/> to be reset or recreated. It's safe to pass null.</param>
         /// <param name="stateObject">Optional state object that you pass into <see cref="TaskCompletionSource{TResult}"/> constructor.</param>
+#if !NET40        
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
+#endif
         public static void Reset<T>(ref TaskCompletionSource<T> taskCompletionSource, object stateObject = null)
         {
             if (_resetTaskFunc != null && taskCompletionSource != null)

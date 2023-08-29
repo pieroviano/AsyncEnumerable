@@ -87,7 +87,11 @@ namespace Dasync.Collections
 
             public Task OnStartOperationAsync(CancellationToken cancellationToken)
             {
+#if NET40
+                return new Action(()=>_semaphore.Wait(cancellationToken)).Run();
+#else
                 return _semaphore.WaitAsync(cancellationToken);
+#endif
             }
 
             public void OnOperationComplete(Exception exceptionIfFailed = null)
@@ -185,81 +189,83 @@ namespace Dasync.Collections
 
             var context = new ParallelForEachContext(maxDegreeOfParallelism, breakLoopOnException, gracefulBreak, cancellationToken);
 
-            Task.Run(
-                async () =>
+            async Task Func()
+            {
+                try
                 {
+                    var enumerator = collection.GetAsyncEnumerator(cancellationToken);
                     try
                     {
-                        var enumerator = collection.GetAsyncEnumerator(cancellationToken);
-                        try
-                        {
-                            var itemIndex = 0L;
+                        var itemIndex = 0L;
 
-                            while (await enumerator.MoveNextAsync().ConfigureAwait(false))
+                        while (await enumerator.MoveNextAsync().ConfigureAwait(false))
+                        {
+                            if (context.IsLoopBreakRequested) break;
+
+                            await context.OnStartOperationAsync(cancellationToken).ConfigureAwait(false);
+
+                            if (context.IsLoopBreakRequested)
                             {
-                                if (context.IsLoopBreakRequested)
-                                    break;
-
-                                await context.OnStartOperationAsync(cancellationToken).ConfigureAwait(false);
-
-                                if (context.IsLoopBreakRequested)
-                                {
-                                    context.OnOperationComplete();
-                                    break;
-                                }
-
-                                Task itemActionTask = null;
-                                try
-                                {
-                                    itemActionTask = asyncItemAction(enumerator.Current, itemIndex);
-                                }
-                                // there is no guarantee that task is executed asynchronously, so it can throw right away
-                                catch (Exception ex)
-                                {
-                                    ex.Data["ForEach.Index"] = itemIndex;
-                                    context.OnOperationComplete(ex);
-                                }
-
-                                if (itemActionTask != null)
-                                {
-                                    var capturedItemIndex = itemIndex;
-#pragma warning disable CS4014  // Justification: not awaited by design
-                                    itemActionTask.ContinueWith(
-                                        task =>
-                                        {
-                                            Exception ex = null;
-                                            if (task.IsFaulted)
-                                            {
-                                                ex = task.Exception;
-
-                                                if (ex is AggregateException aggEx && aggEx.InnerExceptions.Count == 1)
-                                                    ex = aggEx.InnerException;
-
-                                                ex.Data["ForEach.Index"] = capturedItemIndex;
-                                            }
-
-                                            context.OnOperationComplete(ex);
-                                        });
-#pragma warning restore CS4014
-                                }
-
-                                itemIndex++;
+                                context.OnOperationComplete();
+                                break;
                             }
+
+                            Task itemActionTask = null;
+                            try
+                            {
+                                itemActionTask = asyncItemAction(enumerator.Current, itemIndex);
+                            }
+                            // there is no guarantee that task is executed asynchronously, so it can throw right away
+                            catch (Exception ex)
+                            {
+                                ex.Data["ForEach.Index"] = itemIndex;
+                                context.OnOperationComplete(ex);
+                            }
+
+                            if (itemActionTask != null)
+                            {
+                                var capturedItemIndex = itemIndex;
+#pragma warning disable CS4014 // Justification: not awaited by design
+                                itemActionTask.ContinueWith(task =>
+                                {
+                                    Exception ex = null;
+                                    if (task.IsFaulted)
+                                    {
+                                        ex = task.Exception;
+
+                                        if (ex is AggregateException aggEx && aggEx.InnerExceptions.Count == 1) ex = aggEx.InnerException;
+
+                                        ex.Data["ForEach.Index"] = capturedItemIndex;
+                                    }
+
+                                    context.OnOperationComplete(ex);
+                                });
+#pragma warning restore CS4014
+                            }
+
+                            itemIndex++;
                         }
-                        finally
-                        {
-                            await enumerator.DisposeAsync().ConfigureAwait(false);
-                        }
-                    }
-                    catch (Exception ex)
-                    {
-                        context.AddException(ex);
                     }
                     finally
                     {
-                        context.OnOperationComplete();
+                        await enumerator.DisposeAsync().ConfigureAwait(false);
                     }
-                });
+                }
+                catch (Exception ex)
+                {
+                    context.AddException(ex);
+                }
+                finally
+                {
+                    context.OnOperationComplete();
+                }
+            }
+#if NET40
+            var taskEx = new System.Threading.Tasks.Task(async ()=>await Func());
+            taskEx.Start();
+#else
+            Task.Run(Func);
+#endif
 
             return context.CompletionTask;
         }
@@ -291,74 +297,77 @@ namespace Dasync.Collections
 
             var context = new ParallelForEachContext(maxDegreeOfParallelism, breakLoopOnException, gracefulBreak, cancellationToken);
 
-            Task.Run(
-                async () =>
+            async Task Func()
+            {
+                try
                 {
-                    try
-                    {
-                        var itemIndex = 0L;
+                    var itemIndex = 0L;
 
-                        while (await enumerator.MoveNextAsync().ConfigureAwait(false))
+                    while (await enumerator.MoveNextAsync().ConfigureAwait(false))
+                    {
+                        if (context.IsLoopBreakRequested) break;
+
+                        await context.OnStartOperationAsync(cancellationToken).ConfigureAwait(false);
+
+                        if (context.IsLoopBreakRequested)
                         {
-                            if (context.IsLoopBreakRequested)
-                                break;
-
-                            await context.OnStartOperationAsync(cancellationToken).ConfigureAwait(false);
-
-                            if (context.IsLoopBreakRequested)
-                            {
-                                context.OnOperationComplete();
-                                break;
-                            }
-
-                            Task itemActionTask = null;
-                            try
-                            {
-                                itemActionTask = asyncItemAction(enumerator.Current, itemIndex);
-                            }
-                            // there is no guarantee that task is executed asynchronously, so it can throw right away
-                            catch (Exception ex)
-                            {
-                                ex.Data["ForEach.Index"] = itemIndex;
-                                context.OnOperationComplete(ex);
-                            }
-
-                            if (itemActionTask != null)
-                            {
-                                var capturedItemIndex = itemIndex;
-#pragma warning disable CS4014  // Justification: not awaited by design
-                                itemActionTask.ContinueWith(
-                                    task =>
-                                    {
-                                        Exception ex = null;
-                                        if (task.IsFaulted)
-                                        {
-                                            ex = task.Exception;
-
-                                            if (ex is AggregateException aggEx && aggEx.InnerExceptions.Count == 1)
-                                                ex = aggEx.InnerException;
-
-                                            ex.Data["ForEach.Index"] = capturedItemIndex;
-                                        }
-
-                                        context.OnOperationComplete(ex);
-                                    });
-#pragma warning restore CS4014
-                            }
-
-                            itemIndex++;
+                            context.OnOperationComplete();
+                            break;
                         }
+
+                        Task itemActionTask = null;
+                        try
+                        {
+                            itemActionTask = asyncItemAction(enumerator.Current, itemIndex);
+                        }
+                        // there is no guarantee that task is executed asynchronously, so it can throw right away
+                        catch (Exception ex)
+                        {
+                            ex.Data["ForEach.Index"] = itemIndex;
+                            context.OnOperationComplete(ex);
+                        }
+
+                        if (itemActionTask != null)
+                        {
+                            var capturedItemIndex = itemIndex;
+#pragma warning disable CS4014 // Justification: not awaited by design
+                            itemActionTask.ContinueWith(task =>
+                            {
+                                Exception ex = null;
+                                if (task.IsFaulted)
+                                {
+                                    ex = task.Exception;
+
+                                    if (ex is AggregateException aggEx && aggEx.InnerExceptions.Count == 1) ex = aggEx.InnerException;
+
+                                    ex.Data["ForEach.Index"] = capturedItemIndex;
+                                }
+
+                                context.OnOperationComplete(ex);
+                            });
+#pragma warning restore CS4014
+                        }
+
+                        itemIndex++;
                     }
-                    catch (Exception ex)
-                    {
-                        context.AddException(ex);
-                    }
-                    finally
-                    {
-                        await enumerator.DisposeAsync().ConfigureAwait(false);
-                        context.OnOperationComplete();
-                    }
-                });
+                }
+                catch (Exception ex)
+                {
+                    context.AddException(ex);
+                }
+                finally
+                {
+                    await enumerator.DisposeAsync().ConfigureAwait(false);
+                    context.OnOperationComplete();
+                }
+            }
+
+#if NET40
+            var taskEx = new System.Threading.Tasks.Task(async () => await Func());
+            taskEx.Start();
+#else
+            Task.Run(Func);
+#endif
 
             return context.CompletionTask;
         }

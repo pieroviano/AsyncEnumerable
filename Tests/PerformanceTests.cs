@@ -12,7 +12,6 @@ namespace Tests
     public class PerformanceTests
     {
         [Test]
-        [Ignore("Manual testing, no assertions")] 
         public async Task MeasureEnumerationTime()
         {
             var iterations = 1000000;
@@ -69,7 +68,7 @@ namespace Tests
             sw = Stopwatch.StartNew();
             sum = 0;
 
-            var t = Task.FromResult(1);
+            var t = TaskEx.FromResult(1);
             for (int i = 0; i < iterations; i++)
                 sum += await t;
 

@@ -5,7 +5,11 @@ namespace Dasync.Collections
 {
     public interface IAsyncDisposable
     {
+#if NET40
+        Task DisposeAsync();
+#else
         ValueTask DisposeAsync();
+#endif
     }
 }
 #endif

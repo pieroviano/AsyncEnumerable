@@ -29,18 +29,39 @@ namespace Dasync.Collections.Internals
             {
                 try
                 {
+#if NET40
+                    var moveNextAsync = new ValueTask<bool>(()=>_enumerator.MoveNext());
+                    moveNextAsync.Start();
+                    return moveNextAsync;
+#else
                     return new ValueTask<bool>(_enumerator.MoveNext());
+#endif
                 }
                 catch (Exception ex)
                 {
                     var tcs = new TaskCompletionSource<bool>();
                     tcs.SetException(ex);
+#if NET40
+                    var moveNextAsync = new ValueTask<bool>(()=>tcs.Task.Result);
+                    moveNextAsync.Start();
+                    return moveNextAsync;
+#else
                     return new ValueTask<bool>(tcs.Task);
+#endif
                 }
             }
             else
             {
+#if NET40
+                return new ValueTask<bool>(()=>
+                {
+                    var taskEx = new Task<bool>(() => _enumerator.MoveNext(), MasterCancellationToken);
+                    taskEx.Start();
+                    return taskEx.Result;
+                });
+#else
                 return new ValueTask<bool>(Task.Run(() => _enumerator.MoveNext(), MasterCancellationToken));
+#endif
             }
         }
 
@@ -49,10 +70,18 @@ namespace Dasync.Collections.Internals
             _enumerator.Dispose();
         }
 
+#if NET40
+        public Task DisposeAsync()
+        {
+            Dispose();
+            return TaskEx.Completed;
+        }
+#else
         public ValueTask DisposeAsync()
         {
             Dispose();
             return new ValueTask();
         }
+#endif
     }
 }

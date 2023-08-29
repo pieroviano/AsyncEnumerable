@@ -95,7 +95,11 @@ namespace Dasync.Collections
         public virtual ValueTask<bool> MoveNextAsync()
         {
             if (_enumerationFunction == null)
+#if NET40
+                return new ValueTask<bool>(()=>false);
+#else
                 return new ValueTask<bool>(false);
+#endif
 
             if (_yield == null)
                 _yield = new AsyncEnumerator<TItem>.Yield(this, MasterCancellationToken);
@@ -127,7 +131,11 @@ namespace Dasync.Collections
         /// <summary>
         /// Performs application-defined tasks associated with freeing, releasing, or resetting unmanaged resources
         /// </summary>
+#if NET40
+        public async Task DisposeAsync()
+#else
         public async ValueTask DisposeAsync()
+#endif
         {
             var enumTask = _enumerationTask;
 
@@ -160,7 +168,12 @@ namespace Dasync.Collections
             else if (_yield != null && !_yield.IsComplete)
             {
                 var yield = _yield;
+#if NET40
+                var task = new Task(() => yield.SetCanceled());
+                task.Start();
+#else
                 Task.Run(() => yield.SetCanceled()); // don't block the GC thread
+#endif
             }
 
             _enumerationTask = null;
@@ -285,8 +298,11 @@ namespace Dasync.Collections
                     TaskCompletionSource.Reset(ref _moveNextCompleteTcs);
                     _resumeEnumerationTcs?.TrySetResult(true);
                 }
-
+#if NET40
+                return new ValueTask<bool>(()=>_moveNextCompleteTcs.Task.Result);
+#else
                 return new ValueTask<bool>(_moveNextCompleteTcs.Task);
+#endif
             }
         }
 
