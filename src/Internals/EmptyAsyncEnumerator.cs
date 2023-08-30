@@ -17,7 +17,7 @@ namespace Dasync.Collections.Internals
 
         object IAsyncEnumerator.Current => Current;
 
-#if NET40
+#if NET40 || NET35
         public ValueTask<bool> MoveNextAsync() => new ValueTask<bool>(()=>false);
 
         public Task DisposeAsync() => TaskEx.Completed;

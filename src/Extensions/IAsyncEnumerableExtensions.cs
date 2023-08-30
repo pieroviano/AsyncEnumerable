@@ -166,9 +166,9 @@ namespace Dasync.Collections
             return lastMatch;
         }
 
-#endregion
+        #endregion
 
-#region First / FirstOrDefault
+        #region First / FirstOrDefault
 
         internal static class PredicateCache<T>
         {
@@ -290,9 +290,9 @@ namespace Dasync.Collections
             return default;
         }
 
-#endregion
+        #endregion
 
-#region Select
+        #region Select
 
         /// <summary>
         /// Projects each element of a sequence into a new form.
@@ -386,9 +386,9 @@ namespace Dasync.Collections
             public static readonly Func<AsyncEnumerator<TResult>.Yield, SelectWithIndexContext<TSource, TResult>, Task> Enumerate = _enumerate;
         }
 
-#endregion
+        #endregion
 
-#region SelectMany
+        #region SelectMany
 
         /// <summary>
         /// Projects each element of a sequence to an IAsyncEnumerable&lt;T&gt; and flattens the resulting sequences into one sequence.
@@ -572,9 +572,9 @@ namespace Dasync.Collections
             public static readonly Func<AsyncEnumerator<TResult>.Yield, SelectManySyncContext<TSource, TItem, TResult>, Task> Enumerate = _enumerate;
         }
 
-#endregion
+        #endregion
 
-#region Take / TakeWhile
+        #region Take / TakeWhile
 
         /// <summary>
         /// Returns a specified number of contiguous elements from the start of a sequence.
@@ -671,9 +671,9 @@ namespace Dasync.Collections
             public static readonly Func<AsyncEnumerator<TSource>.Yield, TakeWhileContext<TSource>, Task> Enumerate = _enumerate;
         }
 
-#endregion
+        #endregion
 
-#region ToList
+        #region ToList
 
         /// <summary>
         /// Creates a list of elements asynchronously from the enumerable source
@@ -700,9 +700,9 @@ namespace Dasync.Collections
             return resultList;
         }
 
-#endregion
+        #endregion
 
-#region ToArray
+        #region ToArray
 
         /// <summary>
         /// Creates an array of elements asynchronously from the enumerable source
@@ -730,9 +730,9 @@ namespace Dasync.Collections
             return resultList.ToArray();
         }
 
-#endregion
+        #endregion
 
-#region ToDictionary
+        #region ToDictionary
 
         /// <summary>
         /// Creates a <see cref="Dictionary{TKey, TValue}"/> from an <see cref="IAsyncEnumerable{T}"/> according to a specified key selector function, a comparer, and an element selector function.
@@ -904,9 +904,9 @@ namespace Dasync.Collections
             return dictionary;
         }
 
-#endregion
+        #endregion
 
-#region ToLookup
+        #region ToLookup
 
         private class Grouping<TKey, TElement> : IGrouping<TKey, TElement>
         {
@@ -966,8 +966,11 @@ namespace Dasync.Collections
             public int Count { get; private set; }
 
             public bool Contains(TKey key) => _dictionary.ContainsKey(key);
-
+#if NET35
+            public IEnumerator<IGrouping<TKey, TElement>> GetEnumerator() => _dictionary.Values.Cast<IGrouping<TKey, TElement>>().GetEnumerator();
+#else
             public IEnumerator<IGrouping<TKey, TElement>> GetEnumerator() => _dictionary.Values.GetEnumerator();
+#endif
 
             IEnumerator IEnumerable.GetEnumerator() => GetEnumerator();
         }
@@ -1140,7 +1143,7 @@ namespace Dasync.Collections
 
 #endregion
 
-#region Skip / SkipWhile
+        #region Skip / SkipWhile
 
         /// <summary>
         /// An <see cref="IAsyncEnumerable{T}"/> to return elements from.
@@ -1237,9 +1240,9 @@ namespace Dasync.Collections
             public static readonly Func<AsyncEnumerator<TSource>.Yield, SkipWhileContext<TSource>, Task> Enumerate = _enumerate;
         }
 
-#endregion
+        #endregion
 
-#region Where
+        #region Where
 
         /// <summary>
         /// Filters a sequence of values based on a predicate.
@@ -1333,9 +1336,9 @@ namespace Dasync.Collections
             public static readonly Func<AsyncEnumerator<TSource>.Yield, WhereWithIndexContext<TSource>, Task> Enumerate = _enumerate;
         }
 
-#endregion
+        #endregion
 
-#region Cast
+        #region Cast
 
         /// <summary>
         /// Casts the elements of an <see cref="IAsyncEnumerable"/> to the specified type.
@@ -1374,9 +1377,9 @@ namespace Dasync.Collections
             public static readonly Func<AsyncEnumerator<TResult>.Yield, CastContext<TResult>, Task> Enumerate = _enumerate;
         }
 
-#endregion
+        #endregion
 
-#region OfType
+        #region OfType
 
         /// <summary>
         /// Filters the elements of an <see cref="IAsyncEnumerable"/> based on a specified type.
@@ -1415,9 +1418,9 @@ namespace Dasync.Collections
             public static readonly Func<AsyncEnumerator<TResult>.Yield, OfTypeContext<TResult>, Task> Enumerate = _enumerate;
         }
 
-#endregion
+        #endregion
 
-#region DefaultIfEmpty
+        #region DefaultIfEmpty
 
         /// <summary>
         /// Returns the elements of the specified sequence or the specified value in a singleton collection if the sequence is empty.
@@ -1473,9 +1476,9 @@ namespace Dasync.Collections
             public static readonly Func<AsyncEnumerator<TSource>.Yield, DefaultIfEmptyContext<TSource>, Task> Enumerate = _enumerate;
         }
 
-#endregion
+        #endregion
 
-#region Batch
+        #region Batch
 
         /// <summary>
         /// Splits the input collection into series of batches.
@@ -1671,10 +1674,23 @@ namespace Dasync.Collections
             private static readonly Func<int?, ConcurrentQueue<TSource>> _createConcurrentQueue = CreateConcurrentQueue;
             private static readonly Action<ConcurrentQueue<TSource>, TSource> _addToConcurrentQueue = AddToConcurrentQueue;
 
+#if NET35
+            private static ConcurrentOrderedList<TSource> CreateConcurrentBag(int? capacity) => new ConcurrentOrderedList<TSource>();
+            private static void AddToConcurrentBag(ConcurrentOrderedList<TSource> concurrentBag, TSource item)
+            {
+                while (!concurrentBag.TryAdd(item))
+                {
+                    Thread.Sleep(1);
+                }
+            }
+            private static readonly Func<int?, ConcurrentOrderedList<TSource>> _createConcurrentBag = CreateConcurrentBag;
+            private static readonly Action<ConcurrentOrderedList<TSource>, TSource> _addToConcurrentBag = AddToConcurrentBag;
+#else
             private static ConcurrentBag<TSource> CreateConcurrentBag(int? capacity) => new ConcurrentBag<TSource>();
             private static void AddToConcurrentBag(ConcurrentBag<TSource> concurrentBag, TSource item) => concurrentBag.Add(item);
             private static readonly Func<int?, ConcurrentBag<TSource>> _createConcurrentBag = CreateConcurrentBag;
             private static readonly Action<ConcurrentBag<TSource>, TSource> _addToConcurrentBag = AddToConcurrentBag;
+#endif
 
             public static Func<int?, TCollection> GetCreateCollectionFunction<TCollection>()
             {
@@ -1705,8 +1721,13 @@ namespace Dasync.Collections
                 if (typeof(TCollection) == typeof(ConcurrentQueue<TSource>))
                     return (Func<int?, TCollection>)(object)_createConcurrentQueue;
 
+#if !NET35
                 if (typeof(TCollection) == typeof(ConcurrentBag<TSource>))
                     return (Func<int?, TCollection>)(object)_createConcurrentBag;
+#else
+                if (typeof(TCollection) == typeof(ConcurrentOrderedList<TSource>))
+                    return (Func<int?, TCollection>)(object)_createConcurrentBag;
+#endif
 
                 throw new NotSupportedException($"The collection of type '{typeof(TCollection).FullName}' is not supported.");
             }
@@ -1740,8 +1761,13 @@ namespace Dasync.Collections
                 if (typeof(TCollection) == typeof(ConcurrentQueue<TSource>))
                     return (Action<TCollection, TSource>)(object)_addToConcurrentQueue;
 
+#if !NET35
                 if (typeof(TCollection) == typeof(ConcurrentBag<TSource>))
                     return (Action<TCollection, TSource>)(object)_addToConcurrentBag;
+#else
+                if (typeof(TCollection) == typeof(ConcurrentOrderedList<TSource>))
+                    return (Action<TCollection, TSource>)(object)_addToConcurrentBag;
+#endif
 
                 throw new NotSupportedException($"The collection of type '{typeof(TCollection).FullName}' is not supported.");
             }
@@ -1809,7 +1835,7 @@ namespace Dasync.Collections
 
 #endregion
 
-#region UnionAll
+        #region UnionAll
 
         /// <summary>
         /// Produces the set union of two sequences, which includes duplicate elements.
@@ -1871,9 +1897,9 @@ namespace Dasync.Collections
             public static readonly Func<AsyncEnumerator<T>.Yield, UnionContext<T>, Task> Enumerate = _enumerate;
         }
 
-#endregion
+        #endregion
 
-#region Append / Prepend
+        #region Append / Prepend
 
         /// <summary>
         /// Creates a new sequence based on input one plus an extra element at the end.
@@ -1939,9 +1965,9 @@ namespace Dasync.Collections
             public static readonly Func<AsyncEnumerator<TSource>.Yield, ExtraElementContext<TSource>, Task> Enumerate = _enumerate;
         }
 
-#endregion
+        #endregion
 
-#region Concat
+        #region Concat
 
         /// <summary>
         /// Concatenates two sequences.
@@ -1995,9 +2021,9 @@ namespace Dasync.Collections
             public static readonly Func<AsyncEnumerator<TSource>.Yield, ConcatContext<TSource>, Task> Enumerate = _enumerate;
         }
 
-#endregion
+        #endregion
 
-#region Distinct
+        #region Distinct
 
         /// <summary>
         /// Returns distinct elements from a sequence by using the default equality comparer to compare values.
@@ -2057,9 +2083,9 @@ namespace Dasync.Collections
             public static readonly Func<AsyncEnumerator<TSource>.Yield, DistinctContext<TSource>, Task> Enumerate = _enumerate;
         }
 
-#endregion
+        #endregion
 
-#region Aggregate
+        #region Aggregate
 
         /// <summary>
         /// Applies an accumulator function over a sequence.
@@ -2174,9 +2200,9 @@ namespace Dasync.Collections
             return resultSelector(val);
         }
 
-#endregion
-        
-#region All / Any
+        #endregion
+
+        #region All / Any
 
         /// <summary>
         /// Determines whether all elements of a sequence satisfy a condition.
@@ -2221,7 +2247,7 @@ namespace Dasync.Collections
 
             return true;
         }
-        
+
         /// <summary>
         /// Determines whether any element of a sequence exists or satisfies a condition.
         /// </summary>
@@ -2265,10 +2291,10 @@ namespace Dasync.Collections
 
             return false;
         }
-        
-#endregion
 
-#region Shared Helpers
+        #endregion
+
+        #region Shared Helpers
 
         internal static class ZeroTransformHelper
         {
@@ -2282,6 +2308,6 @@ namespace Dasync.Collections
                 ZeroTransformHelper._returnItem<TSource, TItem, TResult>;
         }
 
-#endregion
+        #endregion
     }
 }

@@ -48,13 +48,21 @@ namespace Dasync.Collections.Internals
 
                     var targetArg = Expression.Parameter(typeof(Task), "task");
                     var stateObjectArg = Expression.Parameter(typeof(object), "stateObject");
-
+#if NET35
+                    var body = ExpressionEx.Block(
+                        ExpressionEx.Assign(Expression.MakeMemberAccess(targetArg, m_stateFlags), Expression.Constant(defaultStateFlags, typeof(int))),
+                        ExpressionEx.Assign(Expression.MakeMemberAccess(targetArg, m_continuationObject), Expression.Constant(null, typeof(object))),
+                        ExpressionEx.Assign(Expression.MakeMemberAccess(targetArg, m_taskId), Expression.Constant(0, typeof(int))),
+                        ExpressionEx.Assign(Expression.MakeMemberAccess(targetArg, m_stateObject), stateObjectArg),
+                        Expression.Constant(0, typeof(int)) // this can be anything of any type - lambda expression allows to compile Func<> only, but not an Action<>
+#else
                     var body = Expression.Block(
                         Expression.Assign(Expression.MakeMemberAccess(targetArg, m_stateFlags), Expression.Constant(defaultStateFlags, typeof(int))),
                         Expression.Assign(Expression.MakeMemberAccess(targetArg, m_continuationObject), Expression.Constant(null, typeof(object))),
                         Expression.Assign(Expression.MakeMemberAccess(targetArg, m_taskId), Expression.Constant(0, typeof(int))),
                         Expression.Assign(Expression.MakeMemberAccess(targetArg, m_stateObject), stateObjectArg),
                         Expression.Constant(0, typeof(int)) // this can be anything of any type - lambda expression allows to compile Func<> only, but not an Action<>
+#endif
                     );
 
                     var lambda = Expression.Lambda(body, targetArg, stateObjectArg);
@@ -143,7 +151,7 @@ namespace Dasync.Collections.Internals
         /// <typeparam name="T">Type of the result value</typeparam>
         /// <param name="taskCompletionSource">Target <see cref="TaskCompletionSource{TResult}"/> to be reset or recreated. It's safe to pass null.</param>
         /// <param name="stateObject">Optional state object that you pass into <see cref="TaskCompletionSource{TResult}"/> constructor.</param>
-#if !NET40        
+#if !NET40 && !NET35
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
 #endif
         public static void Reset<T>(ref TaskCompletionSource<T> taskCompletionSource, object stateObject = null)

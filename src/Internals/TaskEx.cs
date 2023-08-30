@@ -10,7 +10,7 @@ namespace Dasync.Collections.Internals
         public static readonly Task Completed =
 #if NETFX4_5 || NETFX4_5_2
             True;
-#elif NET40
+#elif NET40 || NET35
 
             System.Threading.Tasks.TaskEx.CompletedTask;
 #else
@@ -34,7 +34,7 @@ namespace Dasync.Collections.Internals
             tcs.SetException(ex);
             return tcs.Task;
 #else
-#if NET40
+#if NET40|| NET35
             var fromException = new Task<T>(()=>throw ex);
             fromException.Start();
             return fromException;

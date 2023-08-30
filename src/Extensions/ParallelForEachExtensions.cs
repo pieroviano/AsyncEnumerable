@@ -14,10 +14,17 @@ namespace Dasync.Collections
     {
         private class ParallelForEachContext
         {
+#if NET35
+            private static object lockTaken = new object();
+            private Semaphore _semaphore;
+#else
             private SemaphoreSlim _semaphore;
+#endif
             private TaskCompletionSource<object> _completionTcs;
             private List<Exception> _exceptionList;
+#if !NET35
             private SpinLock _exceptionListLock;
+#endif
             private readonly int _maxDegreeOfParallelism;
             private readonly bool _breakLoopOnException;
             private readonly bool _gracefulBreak;
@@ -33,9 +40,15 @@ namespace Dasync.Collections
                 if (maxDegreeOfParallelism <= 0)
                     maxDegreeOfParallelism = 1;
 
+#if NET35
+                _semaphore = new Semaphore(initialCount: maxDegreeOfParallelism, maximumCount: maxDegreeOfParallelism + 1);
+#else
                 _semaphore = new SemaphoreSlim(initialCount: maxDegreeOfParallelism, maxCount: maxDegreeOfParallelism + 1);
+#endif
                 _completionTcs = new TaskCompletionSource<object>();
+#if !NET35
                 _exceptionListLock = new SpinLock(enableThreadOwnerTracking: false);
+#endif
                 _maxDegreeOfParallelism = maxDegreeOfParallelism;
                 _breakLoopOnException = breakLoopOnException;
                 _gracefulBreak = gracefulBreak;
@@ -54,9 +67,13 @@ namespace Dasync.Collections
                 if (_cancellationToken.IsCancellationRequested && ex is OperationCanceledException)
                     return;
 
+#if NET35
+                Monitor.Enter(lockTaken);
+#else
                 bool lockTaken = false;
                 while (!lockTaken)
                     _exceptionListLock.Enter(ref lockTaken);
+#endif
                 try
                 {
                     if (_exceptionList == null)
@@ -65,15 +82,23 @@ namespace Dasync.Collections
                 }
                 finally
                 {
+#if NET35
+                    Monitor.Exit(lockTaken);
+#else
                     _exceptionListLock.Exit(useMemoryBarrier: false);
+#endif
                 }
             }
 
             public List<Exception> ReadExceptions()
             {
+#if NET35
+                Monitor.Enter(lockTaken);
+#else
                 bool lockTaken = false;
                 while (!lockTaken)
                     _exceptionListLock.Enter(ref lockTaken);
+#endif
                 try
                 {
                     return _exceptionList;
@@ -81,14 +106,20 @@ namespace Dasync.Collections
                 finally
                 {
                     _exceptionList = null;
+#if NET35
+                    Monitor.Exit(lockTaken);
+#else
                     _exceptionListLock.Exit(useMemoryBarrier: false);
+#endif
                 }
             }
 
             public Task OnStartOperationAsync(CancellationToken cancellationToken)
             {
 #if NET40
-                return new Action(()=>_semaphore.Wait(cancellationToken)).Run();
+                return new Action(() => _semaphore.Wait(cancellationToken)).Run();
+#elif NET35
+                return new Action(() => _semaphore.WaitOne()).Run();
 #else
                 return _semaphore.WaitAsync(cancellationToken);
 #endif
@@ -114,9 +145,13 @@ namespace Dasync.Collections
                     // and we don't care about the result any more
                     return;
                 }
-
+#if NET35
+                if ((IsLoopBreakRequested && !_gracefulBreak))
+                    CompleteLoopNow();
+#else
                 if ((_semaphore.CurrentCount == _maxDegreeOfParallelism + 1) || (IsLoopBreakRequested && !_gracefulBreak))
                     CompleteLoopNow();
+#endif
             }
 
             public void CompleteLoopNow()
@@ -137,11 +172,16 @@ namespace Dasync.Collections
 
                 if (_cancellationToken.IsCancellationRequested)
                 {
+#if NET35
+                    _completionTcs.TrySetException(
+                        new OperationCanceledException());
+#else
                     _completionTcs.TrySetException(
                         new OperationCanceledException(
                             new OperationCanceledException().Message,
                             aggregatedException,
                             _cancellationToken));
+#endif
                 }
                 else if (exceptions?.Count > 0)
                 {

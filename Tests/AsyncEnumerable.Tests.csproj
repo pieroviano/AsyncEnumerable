@@ -1,6 +1,6 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 	<PropertyGroup>
-		<TargetFrameworks>net45;net461;net5.0</TargetFrameworks>
+		<TargetFrameworks>net45;net461;net6.0</TargetFrameworks>
 		<AssemblyName>Tests</AssemblyName>
 		<RootNamespace>Tests</RootNamespace>
 		<OutputTypeEx>exe</OutputTypeEx>
@@ -12,7 +12,6 @@
 	<ItemGroup>
 	  <PackageReference Include="Net35.TypeInfo" Version="1.1.0" />
 	  <PackageReference Include="Net4x.NunitTests" Version="1.1.0.1" />
-
 	  <PackageReference Include="Net4x.AsyncBridge" Version="$(Net4xAsyncBridgeVersion).$(VersionBuildSuffix)" />
 	  <PackageReference Include="Net4x.BaseTypes" Version="$(Net4xBaseTypesVersion).$(VersionBuildSuffix)" />
 	</ItemGroup>
