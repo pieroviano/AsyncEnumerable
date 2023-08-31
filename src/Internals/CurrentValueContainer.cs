@@ -1,29 +1,28 @@
-﻿namespace Dasync.Collections.Internals
+﻿namespace System.Collections.Internals;
+
+/// <summary>
+/// Internal base type for <see cref="AsyncEnumerator{T}"/> and <see cref="AsyncEnumeratorWithState{TItem, TState}"/>
+/// </summary>
+public abstract class CurrentValueContainer<T> : AsyncEnumerator
 {
-    /// <summary>
-    /// Internal base type for <see cref="AsyncEnumerator{T}"/> and <see cref="AsyncEnumeratorWithState{TItem, TState}"/>
-    /// </summary>
-    public abstract class CurrentValueContainer<T> : AsyncEnumerator
+    private T _currentValue;
+
+    internal T CurrentValue
     {
-        private T _currentValue;
-
-        internal T CurrentValue
+        get
         {
-            get
-            {
-                return _currentValue;
-            }
-            set
-            {
-                _currentValue = value;
-                HasCurrentValue = true;
-            }
+            return _currentValue;
         }
-
-        internal bool HasCurrentValue
+        set
         {
-            get;
-            private set;
+            _currentValue = value;
+            HasCurrentValue = true;
         }
+    }
+
+    internal bool HasCurrentValue
+    {
+        get;
+        private set;
     }
 }

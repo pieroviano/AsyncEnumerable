@@ -1,16 +1,15 @@
 using System.Threading;
 
-namespace Dasync.Collections.Internals
-{
-    internal static class CancellationTokenEx
-    {
-        public static readonly CancellationToken Canceled;
+namespace System.Collections.Internals;
 
-        static CancellationTokenEx()
-        {
-            var cts = new CancellationTokenSource();
-            cts.Cancel();
-            Canceled = cts.Token;
-        }
+internal static class CancellationTokenEx
+{
+    public static readonly CancellationToken Canceled;
+
+    static CancellationTokenEx()
+    {
+        var cts = new CancellationTokenSource();
+        cts.Cancel();
+        Canceled = cts.Token;
     }
 }

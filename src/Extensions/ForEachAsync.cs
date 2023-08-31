@@ -1,17 +1,16 @@
-﻿namespace Dasync.Collections
+﻿namespace System.Collections;
+
+/// <summary>
+/// Class to provide access to static <see cref="Break"/> method.
+/// </summary>
+public static class ForEachAsync
 {
     /// <summary>
-    /// Class to provide access to static <see cref="Break"/> method.
+    /// Stops ForEachAsync iteration (similar to 'break' statement)
     /// </summary>
-    public static class ForEachAsync
+    /// <exception cref="ForEachAsyncBreakException">Always throws this exception to stop the ForEachAsync iteration</exception>
+    public static void Break()
     {
-        /// <summary>
-        /// Stops ForEachAsync iteration (similar to 'break' statement)
-        /// </summary>
-        /// <exception cref="ForEachAsyncBreakException">Always throws this exception to stop the ForEachAsync iteration</exception>
-        public static void Break()
-        {
-            throw new ForEachAsyncBreakException();
-        }
+        throw new ForEachAsyncBreakException();
     }
 }

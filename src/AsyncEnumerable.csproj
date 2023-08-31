@@ -7,7 +7,7 @@
 		<TargetFrameworks>net35;net40;net461;netstandard2.0;netstandard2.1;net45</TargetFrameworks>
 		<SignAssembly>True</SignAssembly>
 		<AssemblyOriginatorKeyFile>$(SolutionDir)\AsyncEnumerable.snk</AssemblyOriginatorKeyFile>
-		<RootNamespace>Dasync.Collections</RootNamespace>
+		<RootNamespace>System.Collections</RootNamespace>
 		<GenerateAssemblyInfo>false</GenerateAssemblyInfo>
 		<LangVersion>latest</LangVersion>
 		<DefineConstants Condition="'$(TargetFramework)'=='net45'">$(DefineConstants);NETFX4_5</DefineConstants>

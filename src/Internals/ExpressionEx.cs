@@ -1,9 +1,8 @@
-﻿using System;
-using System.Linq;
+﻿using System.Linq;
 using System.Linq.Expressions;
 using System.Reflection;
 
-namespace Dasync.Collections.Internals;
+namespace System.Collections.Internals;
 
 internal static class ExpressionEx
 {

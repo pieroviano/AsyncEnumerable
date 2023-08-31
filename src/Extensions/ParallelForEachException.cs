@@ -1,19 +1,17 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 
-namespace Dasync.Collections
+namespace System.Collections;
+
+/// <summary>
+/// Used in ParallelForEachAsync&lt;T&gt; extension method
+/// </summary>
+public class ParallelForEachException : AggregateException
 {
     /// <summary>
-    /// Used in ParallelForEachAsync&lt;T&gt; extension method
+    /// Constructor
     /// </summary>
-    public class ParallelForEachException : AggregateException
+    public ParallelForEachException(IEnumerable<Exception> innerExceptions)
+        : base(innerExceptions)
     {
-        /// <summary>
-        /// Constructor
-        /// </summary>
-        public ParallelForEachException(IEnumerable<Exception> innerExceptions)
-            : base(innerExceptions)
-        {
-        }
     }
 }

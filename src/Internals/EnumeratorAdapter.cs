@@ -1,10 +1,6 @@
-﻿using System;
-using System.Collections;
-using System.Collections.Generic;
-using Dasync.Collections;
+﻿using System.Collections.Generic;
 
-namespace Dasync.Collections.Internals
-{
+namespace System.Collections.Internals;
 #if !NETSTANDARD2_1 && !NETSTANDARD2_0 && !NET461
     internal sealed class EnumeratorAdapter : IEnumerator
     {
@@ -25,24 +21,23 @@ namespace Dasync.Collections.Internals
     }
 #endif
 
-    internal sealed class EnumeratorAdapter<T> : IEnumerator, IEnumerator<T>
+internal sealed class EnumeratorAdapter<T> : IEnumerator, IEnumerator<T>
+{
+    private readonly IAsyncEnumerator<T> _asyncEnumerator;
+
+    public EnumeratorAdapter(IAsyncEnumerator<T> asyncEnumerator)
     {
-        private readonly IAsyncEnumerator<T> _asyncEnumerator;
-
-        public EnumeratorAdapter(IAsyncEnumerator<T> asyncEnumerator)
-        {
-            _asyncEnumerator = asyncEnumerator;
-        }
-
-        public T Current => _asyncEnumerator.Current;
-
-        object IEnumerator.Current => Current;
-
-        public bool MoveNext() => _asyncEnumerator.MoveNextAsync().GetAwaiter().GetResult();
-
-        public void Reset() => throw new NotSupportedException("The IEnumerator.Reset() method is obsolete. Create a new enumerator instead.");
-
-        public void Dispose() =>
-            _asyncEnumerator.DisposeAsync().GetAwaiter().GetResult();
+        _asyncEnumerator = asyncEnumerator;
     }
+
+    public T Current => _asyncEnumerator.Current;
+
+    object IEnumerator.Current => Current;
+
+    public bool MoveNext() => _asyncEnumerator.MoveNextAsync().GetAwaiter().GetResult();
+
+    public void Reset() => throw new NotSupportedException("The IEnumerator.Reset() method is obsolete. Create a new enumerator instead.");
+
+    public void Dispose() =>
+        _asyncEnumerator.DisposeAsync().GetAwaiter().GetResult();
 }

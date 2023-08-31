@@ -1,31 +1,28 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.Threading.Tasks;
-using Dasync.Collections;
 
-namespace Dasync.Collections.Internals
+namespace System.Collections.Internals;
+
+internal sealed class EmptyAsyncEnumerator<T> : IAsyncEnumerator, IAsyncEnumerator<T>
 {
-    internal sealed class EmptyAsyncEnumerator<T> : IAsyncEnumerator, IAsyncEnumerator<T>
+    public T Current
     {
-        public T Current
+        get
         {
-            get
-            {
-                throw new InvalidOperationException("The enumerator has reached the end of the collection");
-            }
+            throw new InvalidOperationException("The enumerator has reached the end of the collection");
         }
+    }
 
-        object IAsyncEnumerator.Current => Current;
+    object IAsyncEnumerator.Current => Current;
 
 #if NET40 || NET35
-        public ValueTask<bool> MoveNextAsync() => new ValueTask<bool>(()=>false);
+    public ValueTask<bool> MoveNextAsync() => new ValueTask<bool>(()=>false);
 
-        public Task DisposeAsync() => TaskEx.Completed;
+    public Task DisposeAsync() => AsyncTaskEx.Completed;
 #else
         public ValueTask<bool> MoveNextAsync() => new ValueTask<bool>(false);
 
         public ValueTask DisposeAsync() => new ValueTask();
 #endif
-        public void Dispose() { }
-    }
+    public void Dispose() { }
 }

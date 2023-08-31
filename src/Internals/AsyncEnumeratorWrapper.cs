@@ -1,57 +1,55 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.Threading;
 using System.Threading.Tasks;
-using Dasync.Collections;
 
-namespace Dasync.Collections.Internals
+namespace System.Collections.Internals;
+
+internal sealed class AsyncEnumeratorWrapper<T> : IAsyncEnumerator, IAsyncEnumerator<T>
 {
-    internal sealed class AsyncEnumeratorWrapper<T> : IAsyncEnumerator, IAsyncEnumerator<T>
+    private readonly IEnumerator<T> _enumerator;
+    private readonly bool _runSynchronously;
+
+    public AsyncEnumeratorWrapper(IEnumerator<T> enumerator, bool runSynchronously)
     {
-        private readonly IEnumerator<T> _enumerator;
-        private readonly bool _runSynchronously;
+        _enumerator = enumerator;
+        _runSynchronously = runSynchronously;
+    }
 
-        public AsyncEnumeratorWrapper(IEnumerator<T> enumerator, bool runSynchronously)
+    internal CancellationToken MasterCancellationToken;
+
+    public T Current => _enumerator.Current;
+
+    object IAsyncEnumerator.Current => Current;
+
+    public ValueTask<bool> MoveNextAsync()
+    {
+        if (_runSynchronously)
         {
-            _enumerator = enumerator;
-            _runSynchronously = runSynchronously;
-        }
-
-        internal CancellationToken MasterCancellationToken;
-
-        public T Current => _enumerator.Current;
-
-        object IAsyncEnumerator.Current => Current;
-
-        public ValueTask<bool> MoveNextAsync()
-        {
-            if (_runSynchronously)
+            try
             {
-                try
-                {
 #if NET40 || NET35
                     var moveNextAsync = new ValueTask<bool>(()=>_enumerator.MoveNext());
                     moveNextAsync.Start();
                     return moveNextAsync;
 #else
-                    return new ValueTask<bool>(_enumerator.MoveNext());
+                return new ValueTask<bool>(_enumerator.MoveNext());
 #endif
-                }
-                catch (Exception ex)
-                {
-                    var tcs = new TaskCompletionSource<bool>();
-                    tcs.SetException(ex);
+            }
+            catch (Exception ex)
+            {
+                var tcs = new TaskCompletionSource<bool>();
+                tcs.SetException(ex);
 #if NET40 || NET35
                     var moveNextAsync = new ValueTask<bool>(()=>tcs.Task.Result);
                     moveNextAsync.Start();
                     return moveNextAsync;
 #else
-                    return new ValueTask<bool>(tcs.Task);
+                return new ValueTask<bool>(tcs.Task);
 #endif
-                }
             }
-            else
-            {
+        }
+        else
+        {
 #if NET40 || NET35
                 return new ValueTask<bool>(()=>
                 {
@@ -60,28 +58,27 @@ namespace Dasync.Collections.Internals
                     return taskEx.Result;
                 });
 #else
-                return new ValueTask<bool>(Task.Run(() => _enumerator.MoveNext(), MasterCancellationToken));
+            return new ValueTask<bool>(Task.Run(() => _enumerator.MoveNext(), MasterCancellationToken));
 #endif
-            }
         }
+    }
 
-        public void Dispose()
-        {
-            _enumerator.Dispose();
-        }
+    public void Dispose()
+    {
+        _enumerator.Dispose();
+    }
 
 #if NET40 || NET35
         public Task DisposeAsync()
         {
             Dispose();
-            return TaskEx.Completed;
+            return AsyncTaskEx.Completed;
         }
 #else
-        public ValueTask DisposeAsync()
-        {
-            Dispose();
-            return new ValueTask();
-        }
-#endif
+    public ValueTask DisposeAsync()
+    {
+        Dispose();
+        return new ValueTask();
     }
+#endif
 }
