@@ -6,7 +6,7 @@ namespace Tests;
 
 public partial class EnumeratorLinqStyleExtensionsTests
 {
-    public static async Task DoSelect()
+    private static async Task DoSelect()
     {
         var collection = new int[] { 1, 2, 3 }.GetAsyncEnumerator();
         var actualResult = await collection.Select(x => x.ToString()).ToArrayAsync();
@@ -14,7 +14,7 @@ public partial class EnumeratorLinqStyleExtensionsTests
         Assert.AreEqual(expectedResult, actualResult);
     }
 
-    public static async Task DoSelectWithIndex()
+    private static async Task DoSelectWithIndex()
     {
         var collection = new int[] { 1, 1, 1 }.GetAsyncEnumerator();
         var actualResult = await collection.Select((x, i) => x + i).ToArrayAsync();
@@ -22,49 +22,49 @@ public partial class EnumeratorLinqStyleExtensionsTests
         Assert.AreEqual(expectedResult, actualResult);
     }
 
-    public static async Task DoFirst()
+    private static async Task DoFirst()
     {
         var collection = new int[] { 1, 2, 3 }.GetAsyncEnumerator();
         var actualResult = await collection.FirstAsync();
         Assert.AreEqual(1, actualResult);
     }
 
-    public static async Task DoFirst_Predicate()
+    private static async Task DoFirst_Predicate()
     {
         var collection = new int[] { 1, 2, 3 }.GetAsyncEnumerator();
         var actualResult = await collection.FirstAsync(x => x > 1);
         Assert.AreEqual(2, actualResult);
     }
 
-    public static async Task DoFirstOrDefault()
+    private static async Task DoFirstOrDefault()
     {
         var collection = new int[] { 1, 2, 3 }.GetAsyncEnumerator();
         var actualResult = await collection.FirstAsync();
         Assert.AreEqual(1, actualResult);
     }
 
-    public static async Task DoFirstOrDefault_Empty()
+    private static async Task DoFirstOrDefault_Empty()
     {
         var collection = AsyncEnumerable<int>.Empty;
         var actualResult = await collection.FirstOrDefaultAsync();
         Assert.AreEqual(0, actualResult);
     }
 
-    public static async Task DoFirstOrDefault_Predicate()
+    private static async Task DoFirstOrDefault_Predicate()
     {
         var collection = new int[] { 1, 2, 3 }.GetAsyncEnumerator();
         var actualResult = await collection.FirstOrDefaultAsync(x => x > 1);
         Assert.AreEqual(2, actualResult);
     }
 
-    public static async Task DoFirstOrDefault_Predicate_Empty()
+    private static async Task DoFirstOrDefault_Predicate_Empty()
     {
         var collection = new int[] { 1, 2, 3 }.GetAsyncEnumerator();
         var actualResult = await collection.FirstOrDefaultAsync(x => x > 3);
         Assert.AreEqual(0, actualResult);
     }
 
-    public static async Task DoTake()
+    private static async Task DoTake()
     {
         var collection = new int[] { 1, 2, 3 }.GetAsyncEnumerator();
         var actualResult = await collection.Take(2).ToArrayAsync();
@@ -72,7 +72,7 @@ public partial class EnumeratorLinqStyleExtensionsTests
         Assert.AreEqual(expectedResult, actualResult);
     }
 
-    public static async Task DoTake_Zero()
+    private static async Task DoTake_Zero()
     {
         var collection = new int[] { 1, 2, 3 }.GetAsyncEnumerator();
         var actualResult = await collection.Take(0).ToArrayAsync();
@@ -80,7 +80,7 @@ public partial class EnumeratorLinqStyleExtensionsTests
         Assert.AreEqual(expectedResult, actualResult);
     }
 
-    public static async Task DoTake_More()
+    private static async Task DoTake_More()
     {
         var collection = new int[] { 1, 2, 3 }.GetAsyncEnumerator();
         var actualResult = await collection.Take(int.MaxValue).ToArrayAsync();
@@ -88,7 +88,7 @@ public partial class EnumeratorLinqStyleExtensionsTests
         Assert.AreEqual(expectedResult, actualResult);
     }
 
-    public static async Task DoTakeWhile()
+    private static async Task DoTakeWhile()
     {
         var collection = new int[] { 1, 2, 3 }.GetAsyncEnumerator();
         var actualResult = await collection.TakeWhile(x => x < 3).ToArrayAsync();
@@ -96,7 +96,7 @@ public partial class EnumeratorLinqStyleExtensionsTests
         Assert.AreEqual(expectedResult, actualResult);
     }
 
-    public static async Task DoTakeWhile_None()
+    private static async Task DoTakeWhile_None()
     {
         var collection = new int[] { 1, 2, 3 }.GetAsyncEnumerator();
         var actualResult = await collection.TakeWhile(x => x < 1).ToArrayAsync();
@@ -104,7 +104,7 @@ public partial class EnumeratorLinqStyleExtensionsTests
         Assert.AreEqual(expectedResult, actualResult);
     }
 
-    public static async Task DoTakeWhile_All()
+    private static async Task DoTakeWhile_All()
     {
         var collection = new int[] { 1, 2, 3 }.GetAsyncEnumerator();
         var actualResult = await collection.TakeWhile(x => x > 0).ToArrayAsync();
@@ -112,7 +112,7 @@ public partial class EnumeratorLinqStyleExtensionsTests
         Assert.AreEqual(expectedResult, actualResult);
     }
 
-    public static async Task DoSkip()
+    private static async Task DoSkip()
     {
         var collection = new int[] { 1, 2, 3 }.GetAsyncEnumerator();
         var actualResult = await collection.Skip(2).ToArrayAsync();
@@ -120,7 +120,7 @@ public partial class EnumeratorLinqStyleExtensionsTests
         Assert.AreEqual(expectedResult, actualResult);
     }
 
-    public static async Task DoSkip_Zero()
+    private static async Task DoSkip_Zero()
     {
         var collection = new int[] { 1, 2, 3 }.GetAsyncEnumerator();
         var actualResult = await collection.Skip(0).ToArrayAsync();
@@ -128,7 +128,7 @@ public partial class EnumeratorLinqStyleExtensionsTests
         Assert.AreEqual(expectedResult, actualResult);
     }
 
-    public static async Task DoSkip_More()
+    private static async Task DoSkip_More()
     {
         var collection = new int[] { 1, 2, 3 }.GetAsyncEnumerator();
         var actualResult = await collection.Skip(1000).ToArrayAsync();
@@ -136,7 +136,7 @@ public partial class EnumeratorLinqStyleExtensionsTests
         Assert.AreEqual(expectedResult, actualResult);
     }
 
-    public static async Task DoSkipWhile()
+    private static async Task DoSkipWhile()
     {
         var collection = new int[] { 1, 2, 3 }.GetAsyncEnumerator();
         var actualResult = await collection.SkipWhile(x => x < 3).ToArrayAsync();
@@ -144,7 +144,7 @@ public partial class EnumeratorLinqStyleExtensionsTests
         Assert.AreEqual(expectedResult, actualResult);
     }
 
-    public static async Task DoSkipWhile_None()
+    private static async Task DoSkipWhile_None()
     {
         var collection = new int[] { 1, 2, 3 }.GetAsyncEnumerator();
         var actualResult = await collection.SkipWhile(x => x > 3).ToArrayAsync();
@@ -152,7 +152,7 @@ public partial class EnumeratorLinqStyleExtensionsTests
         Assert.AreEqual(expectedResult, actualResult);
     }
 
-    public static async Task DoSkipWhile_All()
+    private static async Task DoSkipWhile_All()
     {
         var collection = new int[] { 1, 2, 3 }.GetAsyncEnumerator();
         var actualResult = await collection.SkipWhile(x => x > 0).ToArrayAsync();
@@ -160,7 +160,7 @@ public partial class EnumeratorLinqStyleExtensionsTests
         Assert.AreEqual(expectedResult, actualResult);
     }
 
-    public static async Task DoWhere()
+    private static async Task DoWhere()
     {
         var collection = new int[] { 1, 2, 3 }.GetAsyncEnumerator();
         var actualResult = await collection.Where(x => x != 2).ToArrayAsync();
@@ -168,7 +168,7 @@ public partial class EnumeratorLinqStyleExtensionsTests
         Assert.AreEqual(expectedResult, actualResult);
     }
 
-    public static async Task DoWhere_None()
+    private static async Task DoWhere_None()
     {
         var collection = new int[] { 1, 2, 3 }.GetAsyncEnumerator();
         var actualResult = await collection.Where(x => x > 3).ToArrayAsync();
@@ -176,7 +176,7 @@ public partial class EnumeratorLinqStyleExtensionsTests
         Assert.AreEqual(expectedResult, actualResult);
     }
 
-    public static async Task DoWhere_All()
+    private static async Task DoWhere_All()
     {
         var collection = new int[] { 1, 2, 3 }.GetAsyncEnumerator();
         var actualResult = await collection.Where(x => x > 0).ToArrayAsync();
@@ -184,7 +184,7 @@ public partial class EnumeratorLinqStyleExtensionsTests
         Assert.AreEqual(expectedResult, actualResult);
     }
 
-    public static async Task DoWhereWithIndex()
+    private static async Task DoWhereWithIndex()
     {
         var collection = new int[] { 1, 2, 1 }.GetAsyncEnumerator();
         var actualResult = await collection.Where((x, i) => (x + i) != 3).ToArrayAsync();

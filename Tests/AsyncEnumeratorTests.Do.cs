@@ -7,7 +7,7 @@ namespace Tests;
 
 public partial class AsyncEnumeratorTests
 {
-    public static async Task DoRaceConditionOnEndOfEnumeration()
+    private static async Task DoRaceConditionOnEndOfEnumeration()
     {
         var enumerator = new AsyncEnumerator<int>(async yield =>
         {
@@ -23,7 +23,7 @@ public partial class AsyncEnumeratorTests
         Assert.IsFalse(moveResult3);
     }
 
-    public static async Task DoDisposeAfterPartialEnumeration()
+    private static async Task DoDisposeAfterPartialEnumeration()
     {
         // ARRANGE
 
@@ -48,7 +48,7 @@ public partial class AsyncEnumeratorTests
         Assert.IsTrue(testDisposable.HasDisposed);
     }
 
-    public static async Task DoDisposeByGCAfterPartialEnumeration()
+    private static async Task DoDisposeByGCAfterPartialEnumeration()
     {
         // ARRANGE
 
@@ -89,7 +89,7 @@ public partial class AsyncEnumeratorTests
         Assert.IsTrue(testDisposable.HasDisposed);
     }
 
-    public static async Task DoDisposeWaitsForFinalization()
+    private static async Task DoDisposeWaitsForFinalization()
     {
         var tcs = new TaskCompletionSource<object>();
         var isFinalized = false;
@@ -120,7 +120,7 @@ public partial class AsyncEnumeratorTests
         Assert.IsTrue(isFinalized);
     }
 
-    public static async Task DoEnumerationMustEndAfterDispose()
+    private static async Task DoEnumerationMustEndAfterDispose()
     {
         // ARRANGE
 
@@ -144,7 +144,7 @@ public partial class AsyncEnumeratorTests
         Assert.AreEqual(1, currentElement, "Current must not change after Dispose");
     }
 
-    public static async Task DoYieldBreak()
+    private static async Task DoYieldBreak()
     {
         // ARRANGE
 

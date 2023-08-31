@@ -8,7 +8,7 @@ namespace Tests;
 
 public partial class PerformanceTests
 {
-    public static async Task DoMeasureEnumerationTime()
+    private static async Task DoMeasureEnumerationTime()
     {
         var iterations = 1000000;
         var enumerator = new AsyncEnumerator<int>(async yield =>

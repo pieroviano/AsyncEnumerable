@@ -8,7 +8,7 @@ namespace Tests;
 
 public partial class ForEachAsyncTests
 {
-    public static async Task DoSimpleAsyncForEachWithSyncBreak()
+    private static async Task DoSimpleAsyncForEachWithSyncBreak()
     {
         IAsyncEnumerable<int> enumerable = new AsyncEnumerable<int>(
             async yield =>
@@ -29,7 +29,7 @@ public partial class ForEachAsyncTests
         Assert.AreEqual(3, counter);
     }
 
-    public static async Task DoSimpleAsyncForEachWithAsyncBreak()
+    private static async Task DoSimpleAsyncForEachWithAsyncBreak()
     {
         IAsyncEnumerable<int> enumerable = new AsyncEnumerable<int>(
             async yield =>
@@ -50,7 +50,7 @@ public partial class ForEachAsyncTests
         Assert.AreEqual(2, counter);
     }
 
-    public static async Task DoSimpleAsyncForEach()
+    private static async Task DoSimpleAsyncForEach()
     {
         IAsyncEnumerable<int> enumerable = new AsyncEnumerable<int>(
             async yield =>
@@ -70,7 +70,7 @@ public partial class ForEachAsyncTests
         Assert.AreEqual(5, counter);
     }
 
-    public static async Task DoRethrowProducerException()
+    private static async Task DoRethrowProducerException()
     {
         IAsyncEnumerable<int> enumerable = new AsyncEnumerable<int>(
             async yield => { throw new ArgumentException("test"); });
@@ -88,7 +88,7 @@ public partial class ForEachAsyncTests
         Assert.Fail("Expected an exception to be thrown");
     }
 
-    public static async Task DoRethrowConsumerException()
+    private static async Task DoRethrowConsumerException()
     {
         IAsyncEnumerable<int> enumerable = new AsyncEnumerable<int>(
             async yield => { await yield.ReturnAsync(123); });
