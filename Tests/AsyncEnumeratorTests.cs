@@ -28,8 +28,15 @@ namespace Tests
                 await TaskEx.Yield();
                 yield.CancellationToken.ThrowIfCancellationRequested();
             });
-
+#if NET35 || NET40
+            var task = new Action(() =>
+            {
+                enumerable.ToListAsync(cts.Token);
+            }).RunWithCompletionSource();
+            Assert.Throws<TaskCanceledException>(()=>task.Wait());
+#else
             Assert.ThrowsAsync<TaskCanceledException>(() => enumerable.ToListAsync(cts.Token));
+#endif
         }
 
 
@@ -75,7 +82,7 @@ namespace Tests
 
             CreateEnumerator();
             GC.Collect(GC.MaxGeneration, GCCollectionMode.Forced
-#if !NET40
+#if !NET40 && !NET35
                 , blocking: true
 #endif
             );

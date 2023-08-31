@@ -1,6 +1,6 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 	<PropertyGroup>
-		<TargetFrameworks>net45;net461;net6.0</TargetFrameworks>
+		<TargetFrameworks>net35;net40;net45;net461;net6.0</TargetFrameworks>
 		<AssemblyName>Tests</AssemblyName>
 		<RootNamespace>Tests</RootNamespace>
 		<OutputTypeEx>exe</OutputTypeEx>
@@ -9,6 +9,20 @@
 	</PropertyGroup>
 	<ItemGroup Condition="'$(TargetFramework)'=='net45'">
 		<PackageReference Include="System.Threading.Tasks.Extensions" Version="4.5.2" />
+	</ItemGroup>
+	<ItemGroup Condition="'$(TargetFramework)'=='net35' or '$(TargetFramework)'=='net40'">
+		<Compile Remove="AsyncEnumeratorTests.Task.cs" />
+		<Compile Remove="EnumerableLinqStyleExtensionsTests.Task.cs" />
+		<Compile Remove="EnumeratorLinqStyleExtensionsTests.Task.cs" />
+		<Compile Remove="ForEachAsyncTests.Task.cs" />
+		<Compile Remove="PerformanceTests.Task.cs" />
+	</ItemGroup>
+	<ItemGroup Condition="'$(TargetFramework)'!='net35' and '$(TargetFramework)'!='net40'">
+		<Compile Remove="AsyncEnumeratorTests.Void.cs" />
+		<Compile Remove="EnumerableLinqStyleExtensionsTests.Void.cs" />
+		<Compile Remove="EnumeratorLinqStyleExtensionsTests.Void.cs" />
+		<Compile Remove="ForEachAsyncTests.Void.cs" />
+		<Compile Remove="PerformanceTests.Void.cs" />
 	</ItemGroup>
 	<ItemGroup>
 	  <PackageReference Include="Net35.TypeInfo" Version="1.1.0" />

@@ -75,7 +75,7 @@ public partial class AsyncEnumeratorTests
 
         // Instead of calling enumerator.Dispose(), do garbage collection.
         GC.Collect(GC.MaxGeneration, GCCollectionMode.Forced
-#if !NET40
+#if !NET40 && !NET35
             , blocking: true
 #endif
         );
