@@ -1,6 +1,5 @@
 using System;
 using System.Collections;
-using System.Collections.Generic;
 using System.Diagnostics;
 using System.Threading;
 using System.Threading.Tasks;
@@ -68,11 +67,5 @@ public partial class PerformanceTests
 
         time = sw.Elapsed;
         Console.WriteLine($"Time taken: {time},   Sum: {sum}");
-    }
-
-    public static IEnumerable<int> EnumerateNumbers()
-    {
-        for (int i = 0; i < 1000000; i++)
-            yield return 1;
     }
 }

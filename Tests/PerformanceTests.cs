@@ -1,14 +1,12 @@
-﻿using System.Threading.Tasks;
-using NUnit.Framework;
+﻿using System.Collections.Generic;
 
 namespace Tests;
 
-[TestFixture]
 public partial class PerformanceTests
 {
-    [Test]
-    public async Task MeasureEnumerationTime()
+    public static IEnumerable<int> EnumerateNumbers()
     {
-        await DoMeasureEnumerationTime();
+        for (int i = 0; i < 1000000; i++)
+            yield return 1;
     }
 }
