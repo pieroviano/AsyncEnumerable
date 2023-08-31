@@ -18,7 +18,7 @@ internal sealed class EmptyAsyncEnumerator<T> : IAsyncEnumerator, IAsyncEnumerat
 #if NET40 || NET35
     public ValueTask<bool> MoveNextAsync() => new ValueTask<bool>(()=>false);
 
-    public Task DisposeAsync() => AsyncTaskEx.Completed;
+    public Task DisposeAsync() => AsyncTask.Completed;
 #else
         public ValueTask<bool> MoveNextAsync() => new ValueTask<bool>(false);
 

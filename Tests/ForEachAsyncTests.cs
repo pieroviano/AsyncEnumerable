@@ -9,7 +9,7 @@ using NUnit.Framework;
 namespace Tests;
 
 [TestFixture]
-public class ForEachAsyncTests
+public partial class ForEachAsyncTests
 {
     [Test]
     public void SimpleSyncForEach()
@@ -34,6 +34,11 @@ public class ForEachAsyncTests
     [Test]
     public async Task SimpleAsyncForEachWithSyncBreak()
     {
+        await DoSimpleAsyncForEachWithSyncBreak();
+    }
+
+    private static async Task DoSimpleAsyncForEachWithSyncBreak()
+    {
         IAsyncEnumerable<int> enumerable = new AsyncEnumerable<int>(
             async yield =>
             {
@@ -55,6 +60,11 @@ public class ForEachAsyncTests
 
     [Test]
     public async Task SimpleAsyncForEachWithAsyncBreak()
+    {
+        await DoSimpleAsyncForEachWithAsyncBreak();
+    }
+
+    private static async Task DoSimpleAsyncForEachWithAsyncBreak()
     {
         IAsyncEnumerable<int> enumerable = new AsyncEnumerable<int>(
             async yield =>
@@ -78,6 +88,11 @@ public class ForEachAsyncTests
     [Test]
     public async Task SimpleAsyncForEach()
     {
+        await DoSimpleAsyncForEach();
+    }
+
+    private static async Task DoSimpleAsyncForEach()
+    {
         IAsyncEnumerable<int> enumerable = new AsyncEnumerable<int>(
             async yield =>
             {
@@ -99,19 +114,18 @@ public class ForEachAsyncTests
     [Test]
     public async Task RethrowProducerException()
     {
+        await DoRethrowProducerException();
+    }
+
+    private static async Task DoRethrowProducerException()
+    {
         IAsyncEnumerable<int> enumerable = new AsyncEnumerable<int>(
-            async yield =>
-            {
-                throw new ArgumentException("test");
-            });
+            async yield => { throw new ArgumentException("test"); });
 
         try
         {
             await enumerable.ForEachAsync(
-                number =>
-                {
-                    Assert.Fail("must never be called due to the exception");
-                });
+                number => { Assert.Fail("must never be called due to the exception"); });
         }
         catch (ArgumentException)
         {
@@ -124,19 +138,18 @@ public class ForEachAsyncTests
     [Test]
     public async Task RethrowConsumerException()
     {
+        await DoRethrowConsumerException();
+    }
+
+    private static async Task DoRethrowConsumerException()
+    {
         IAsyncEnumerable<int> enumerable = new AsyncEnumerable<int>(
-            async yield =>
-            {
-                await yield.ReturnAsync(123);
-            });
+            async yield => { await yield.ReturnAsync(123); });
 
         try
         {
             await enumerable.ForEachAsync(
-                number =>
-                {
-                    throw new ArgumentException("test");
-                });
+                number => { throw new ArgumentException("test"); });
         }
         catch (ArgumentException)
         {

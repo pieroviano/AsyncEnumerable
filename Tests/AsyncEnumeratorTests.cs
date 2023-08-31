@@ -7,17 +7,19 @@ using NUnit.Framework;
 namespace Tests;
 
 [TestFixture]
-public class AsyncEnumeratorTests
+public partial class AsyncEnumeratorTests
 {
     [Test]
     public async Task RaceConditionOnEndOfEnumeration()
     {
+        await DoRaceConditionOnEndOfEnumeration();
+    }
+
+    private static async Task DoRaceConditionOnEndOfEnumeration()
+    {
         var enumerator = new AsyncEnumerator<int>(async yield =>
         {
-            await TaskEx.Run(async () =>
-            {
-                await yield.ReturnAsync(1);
-            });
+            await TaskEx.Run(async () => { await yield.ReturnAsync(1); });
         });
 
         var moveResult1 = await enumerator.MoveNextAsync();
@@ -47,6 +49,11 @@ public class AsyncEnumeratorTests
     [Test]
     public async Task DisposeAfterPartialEnumeration()
     {
+        await DoDisposeAfterPartialEnumeration();
+    }
+
+    private static async Task DoDisposeAfterPartialEnumeration()
+    {
         // ARRANGE
 
         var testDisposable = new TestDisposable();
@@ -72,6 +79,11 @@ public class AsyncEnumeratorTests
 
     [Test]
     public async Task DisposeByGCAfterPartialEnumeration()
+    {
+        await DoDisposeByGCAfterPartialEnumeration();
+    }
+
+    private static async Task DoDisposeByGCAfterPartialEnumeration()
     {
         // ARRANGE
 
@@ -168,6 +180,11 @@ public class AsyncEnumeratorTests
     [Test]
     public async Task DisposeWaitsForFinalization()
     {
+        await DoDisposeWaitsForFinalization();
+    }
+
+    private static async Task DoDisposeWaitsForFinalization()
+    {
         var tcs = new TaskCompletionSource<object>();
         var isFinalized = false;
 
@@ -209,6 +226,11 @@ public class AsyncEnumeratorTests
     [Test]
     public async Task EnumerationMustEndAfterDispose()
     {
+        await DoEnumerationMustEndAfterDispose();
+    }
+
+    private static async Task DoEnumerationMustEndAfterDispose()
+    {
         // ARRANGE
 
         var enumerator = new AsyncEnumerator<int>(async yield =>
@@ -233,6 +255,11 @@ public class AsyncEnumeratorTests
 
     [Test]
     public async Task YieldBreak()
+    {
+        await DoYieldBreak();
+    }
+
+    private static async Task DoYieldBreak()
     {
         // ARRANGE
 
@@ -261,6 +288,7 @@ public class AsyncEnumeratorTests
         // ASSERT
 
         Assert.IsFalse(result, "MoveNextAsync must return False due to Yield.Break");
-        Assert.IsTrue(asyncEnumerationCanceledExceptionRaised, "Yield.Break must throw AsyncEnumerationCanceledException so the enumerator body can perform finalization");
+        Assert.IsTrue(asyncEnumerationCanceledExceptionRaised,
+            "Yield.Break must throw AsyncEnumerationCanceledException so the enumerator body can perform finalization");
     }
 }

@@ -72,7 +72,7 @@ internal sealed class AsyncEnumeratorWrapper<T> : IAsyncEnumerator, IAsyncEnumer
         public Task DisposeAsync()
         {
             Dispose();
-            return AsyncTaskEx.Completed;
+            return AsyncTask.Completed;
         }
 #else
     public ValueTask DisposeAsync()
