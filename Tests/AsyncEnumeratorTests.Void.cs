@@ -1,4 +1,5 @@
-﻿using System.Threading.Tasks;
+﻿using System;
+using System.Threading.Tasks;
 using NUnit.Framework;
 
 namespace Tests;
@@ -15,7 +16,7 @@ public partial class AsyncEnumeratorTests
     [Test]
     public void DisposeAfterPartialEnumeration()
     {
-        DoDisposeAfterPartialEnumeration().Wait();
+        new Func<Task>(DoDisposeAfterPartialEnumeration).Run().Wait();
     }
 
     [Test]
