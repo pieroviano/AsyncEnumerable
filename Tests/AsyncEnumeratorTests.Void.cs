@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Threading.Tasks;
+using CoreLibrary;
 using NUnit.Framework;
 
 namespace Tests;
@@ -10,36 +11,36 @@ public partial class AsyncEnumeratorTests
     [Test]
     public void RaceConditionOnEndOfEnumeration()
     {
-        DoRaceConditionOnEndOfEnumeration().Wait();
+        DoRaceConditionOnEndOfEnumeration().WaitForTask();
     }
 
     [Test]
     public void DisposeAfterPartialEnumeration()
     {
-        new Func<Task>(DoDisposeAfterPartialEnumeration).Run().Wait();
+        new Func<Task>(DoDisposeAfterPartialEnumeration).Run().WaitForTask();
     }
 
     [Test]
     public void DisposeByGCAfterPartialEnumeration()
     {
-        DoDisposeByGCAfterPartialEnumeration().Wait();
+        DoDisposeByGCAfterPartialEnumeration().WaitForTask();
     }
 
     [Test]
     public void DisposeWaitsForFinalization()
     {
-        DoDisposeWaitsForFinalization().Wait();
+        DoDisposeWaitsForFinalization().WaitForTask();
     }
 
     [Test]
     public void EnumerationMustEndAfterDispose()
     {
-        DoEnumerationMustEndAfterDispose().Wait();
+        DoEnumerationMustEndAfterDispose().WaitForTask();
     }
 
     [Test]
     public void YieldBreak()
     {
-        DoYieldBreak().Wait();
+        DoYieldBreak().WaitForTask();
     }
 }

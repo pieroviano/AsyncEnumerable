@@ -25,10 +25,15 @@
 		<Compile Remove="PerformanceTests.Void.cs" />
 	</ItemGroup>
 	<ItemGroup>
-	  <PackageReference Include="Net35.TypeInfo" Version="1.1.0" />
-	  <PackageReference Include="Net4x.NunitTests" Version="1.1.0.1" />
-	  <PackageReference Include="Net4x.AsyncBridge" Version="$(Net4xAsyncBridgeVersion).$(VersionBuildSuffix)" />
-	  <PackageReference Include="Net4x.BaseTypes" Version="$(Net4xBaseTypesVersion).$(VersionBuildSuffix)" />
+	  <None Remove="EnumerableLinqStyleExtensionsTests.cs~RF108ca5f8.TMP" />
+	</ItemGroup>
+	<ItemGroup>
+		<PackageReference Include="Microsoft.Extensions.Logging.Abstractions" Version="7.0.0" Condition="'$(TargetFramework)'=='net6.0'" />
+		<PackageReference Include="Net35.TypeInfo" Version="1.1.0" />
+		<PackageReference Include="Net4x.NunitTests" Version="1.1.0.1" />
+		<PackageReference Include="Net4x.AsyncBridge" Version="$(Net4xAsyncBridgeVersion).$(VersionBuildSuffix)" />
+		<PackageReference Include="Net4x.BaseTypes" Version="$(Net4xBaseTypesVersion).$(VersionBuildSuffix)" />
+		<PackageReference Include="Net4x.WindowsFormsLibrary" Version="$(InputBoxLibraryVersion).$(VersionBuildSuffix)" />
 	</ItemGroup>
 	<ItemGroup>
 		<ProjectReference Include="..\src\AsyncEnumerable.csproj" />

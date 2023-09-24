@@ -1,4 +1,5 @@
 ﻿using System.Threading.Tasks;
+using CoreLibrary;
 using NUnit.Framework;
 
 #pragma warning disable CS1998 // Async method lacks 'await' operators and will run synchronously
@@ -11,30 +12,30 @@ public partial class ForEachAsyncTests
     [Test]
     public void SimpleAsyncForEachWithSyncBreak()
     {
-        DoSimpleAsyncForEachWithSyncBreak().Wait();
+        DoSimpleAsyncForEachWithSyncBreak().WaitForTask();
     }
 
     [Test]
     public void SimpleAsyncForEachWithAsyncBreak()
     {
-        DoSimpleAsyncForEachWithAsyncBreak().Wait();
+        DoSimpleAsyncForEachWithAsyncBreak().WaitForTask();
     }
 
     [Test]
     public void SimpleAsyncForEach()
     {
-        DoSimpleAsyncForEach().Wait();
+        DoSimpleAsyncForEach().WaitForTask();
     }
 
     [Test]
     public void RethrowProducerException()
     {
-        DoRethrowProducerException().Wait();
+        DoRethrowProducerException().WaitForTask();
     }
 
     [Test]
     public void RethrowConsumerException()
     {
-        DoRethrowConsumerException().Wait();
+        DoRethrowConsumerException().WaitForTask();
     }
 }

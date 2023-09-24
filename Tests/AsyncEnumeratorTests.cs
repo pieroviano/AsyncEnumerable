@@ -3,6 +3,7 @@ using System;
 using System.Collections;
 using System.Threading;
 using System.Threading.Tasks;
+using CoreLibrary;
 
 namespace Tests
 {
@@ -32,8 +33,8 @@ namespace Tests
             var task = new Action(() =>
             {
                 enumerable.ToListAsync(cts.Token);
-            }).RunWithCompletionSource();
-            Assert.Throws<TaskCanceledException>(()=>task.Wait());
+            }).RunDelegateWithCompletionSource();
+            Assert.Throws<TaskCanceledException>(()=>task.WaitForTask());
 #else
             Assert.ThrowsAsync<TaskCanceledException>(() => enumerable.ToListAsync(cts.Token));
 #endif

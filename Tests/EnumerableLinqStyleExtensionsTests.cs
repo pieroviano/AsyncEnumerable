@@ -3,6 +3,7 @@ using System;
 using System.Collections;
 using System.Linq;
 using System.Threading.Tasks;
+using CoreLibrary;
 
 namespace Tests;
 
@@ -13,7 +14,7 @@ public partial class EnumerableLinqStyleExtensionsTests
     {
         var collection = AsyncEnumerable<int>.Empty;
 #if NET35 || NET40
-        Assert.Throws<InvalidOperationException>(() => collection.FirstAsync().Wait());
+        Assert.Throws<InvalidOperationException>(() => collection.FirstAsync().WaitForTask());
 #else
         Assert.ThrowsAsync<InvalidOperationException>(() => collection.FirstAsync());
 #endif
@@ -24,7 +25,7 @@ public partial class EnumerableLinqStyleExtensionsTests
     {
         var collection = new int[] { 1, 2, 3 }.ToAsyncEnumerable();
 #if NET35 || NET40
-        Assert.Throws<InvalidOperationException>(() => collection.FirstAsync(x => x > 3).Wait());
+        Assert.Throws<InvalidOperationException>(() => collection.FirstAsync(x => x > 3).WaitForTask());
 #else
         Assert.ThrowsAsync<InvalidOperationException>(() => collection.FirstAsync(x => x > 3));
 #endif
@@ -35,7 +36,7 @@ public partial class EnumerableLinqStyleExtensionsTests
     {
         var collection = new int[0].ToAsyncEnumerable();
 #if NET35 || NET40
-        Assert.Throws<InvalidOperationException>(() => collection.AggregateAsync((a, b) => a + b).Wait());
+        Assert.Throws<InvalidOperationException>(() => collection.AggregateAsync((a, b) => a + b).WaitForTask());
 #else
         Assert.ThrowsAsync<InvalidOperationException>(() => collection.AggregateAsync((a, b) => a + b));
 #endif

@@ -1,4 +1,5 @@
 ﻿using System.Threading.Tasks;
+using CoreLibrary;
 using NUnit.Framework;
 
 namespace Tests;
@@ -9,6 +10,6 @@ public partial class PerformanceTests
     [Test]
     public void MeasureEnumerationTime()
     {
-        DoMeasureEnumerationTime().Wait();
+        DoMeasureEnumerationTime().WaitForTask();
     }
 }

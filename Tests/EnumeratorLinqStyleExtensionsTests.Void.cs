@@ -1,4 +1,5 @@
 ﻿using System.Threading.Tasks;
+using CoreLibrary;
 using NUnit.Framework;
 
 namespace Tests;
@@ -9,144 +10,144 @@ public partial class EnumeratorLinqStyleExtensionsTests
     [Test]
     public void Select()
     {
-        DoSelect().Wait();
+        DoSelect().WaitForTask();
     }
 
     [Test]
     public void SelectWithIndex()
     {
-        DoSelectWithIndex().Wait();
+        DoSelectWithIndex().WaitForTask();
     }
 
     [Test]
     public void First()
     {
-        DoFirst().Wait();
+        DoFirst().WaitForTask();
     }
 
     [Test]
     public void First_Predicate()
     {
-        DoFirst_Predicate().Wait();
+        DoFirst_Predicate().WaitForTask();
     }
 
      [Test]
     public void FirstOrDefault()
     {
-        DoFirstOrDefault().Wait();
+        DoFirstOrDefault().WaitForTask();
     }
 
     [Test]
     public void FirstOrDefault_Empty()
     {
-        DoFirstOrDefault_Empty().Wait();
+        DoFirstOrDefault_Empty().WaitForTask();
     }
 
     [Test]
     public void FirstOrDefault_Predicate()
     {
-        DoFirstOrDefault_Predicate().Wait();
+        DoFirstOrDefault_Predicate().WaitForTask();
     }
 
     [Test]
     public void FirstOrDefault_Predicate_Empty()
     {
-        DoFirstOrDefault_Predicate_Empty().Wait();
+        DoFirstOrDefault_Predicate_Empty().WaitForTask();
     }
 
     [Test]
     public void Take()
     {
-        DoTake().Wait();
+        DoTake().WaitForTask();
     }
 
     [Test]
     public void Take_Zero()
     {
-        DoTake_Zero().Wait();
+        DoTake_Zero().WaitForTask();
     }
 
     [Test]
     public void Take_More()
     {
-        DoTake_More().Wait();
+        DoTake_More().WaitForTask();
     }
 
     [Test]
     public void TakeWhile()
     {
-        DoTakeWhile().Wait();
+        DoTakeWhile().WaitForTask();
     }
 
     [Test]
     public void TakeWhile_None()
     {
-        DoTakeWhile_None().Wait();
+        DoTakeWhile_None().WaitForTask();
     }
 
     [Test]
     public void TakeWhile_All()
     {
-        DoTakeWhile_All().Wait();
+        DoTakeWhile_All().WaitForTask();
     }
 
     [Test]
     public void Skip()
     {
-        DoSkip().Wait();
+        DoSkip().WaitForTask();
     }
 
     [Test]
     public void Skip_Zero()
     {
-        DoSkip_Zero().Wait();
+        DoSkip_Zero().WaitForTask();
     }
 
     [Test]
     public void Skip_More()
     {
-        DoSkip_More().Wait();
+        DoSkip_More().WaitForTask();
     }
 
     [Test]
     public void SkipWhile()
     {
-        DoSkipWhile().Wait();
+        DoSkipWhile().WaitForTask();
     }
 
     [Test]
     public void SkipWhile_None()
     {
-        DoSkipWhile_None().Wait();
+        DoSkipWhile_None().WaitForTask();
     }
 
     [Test]
     public void SkipWhile_All()
     {
-        DoSkipWhile_All().Wait();
+        DoSkipWhile_All().WaitForTask();
     }
 
     [Test]
     public void Where()
     {
-        DoWhere().Wait();
+        DoWhere().WaitForTask();
     }
 
     [Test]
     public void Where_None()
     {
-        DoWhere_None().Wait();
+        DoWhere_None().WaitForTask();
     }
 
     [Test]
     public void Where_All()
     {
-        DoWhere_All().Wait();
+        DoWhere_All().WaitForTask();
     }
 
     [Test]
     public void WhereWithIndex()
     {
-        DoWhereWithIndex().Wait();
+        DoWhereWithIndex().WaitForTask();
     }
 }
