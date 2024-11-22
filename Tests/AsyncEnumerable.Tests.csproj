@@ -1,41 +1,45 @@
-﻿<Project Sdk="Microsoft.NET.Sdk">
-	<PropertyGroup>
-		<TargetFrameworks>net35;net40;net45;net461;net6.0</TargetFrameworks>
-		<AssemblyName>Tests</AssemblyName>
-		<RootNamespace>Tests</RootNamespace>
-		<OutputTypeEx>exe</OutputTypeEx>
-		<AutoGenerateBindingRedirects>True</AutoGenerateBindingRedirects>
-		<LangVersion>latest</LangVersion>
-	</PropertyGroup>
-	<ItemGroup Condition="'$(TargetFramework)'=='net45'">
-		<PackageReference Include="System.Threading.Tasks.Extensions" Version="4.5.2" />
-	</ItemGroup>
-	<ItemGroup Condition="'$(TargetFramework)'=='net35' or '$(TargetFramework)'=='net40'">
-		<Compile Remove="AsyncEnumeratorTests.Task.cs" />
-		<Compile Remove="EnumerableLinqStyleExtensionsTests.Task.cs" />
-		<Compile Remove="EnumeratorLinqStyleExtensionsTests.Task.cs" />
-		<Compile Remove="ForEachAsyncTests.Task.cs" />
-		<Compile Remove="PerformanceTests.Task.cs" />
-	</ItemGroup>
-	<ItemGroup Condition="'$(TargetFramework)'!='net35' and '$(TargetFramework)'!='net40'">
-		<Compile Remove="AsyncEnumeratorTests.Void.cs" />
-		<Compile Remove="EnumerableLinqStyleExtensionsTests.Void.cs" />
-		<Compile Remove="EnumeratorLinqStyleExtensionsTests.Void.cs" />
-		<Compile Remove="ForEachAsyncTests.Void.cs" />
-		<Compile Remove="PerformanceTests.Void.cs" />
-	</ItemGroup>
-	<ItemGroup>
-	  <None Remove="EnumerableLinqStyleExtensionsTests.cs~RF108ca5f8.TMP" />
-	</ItemGroup>
-	<ItemGroup>
-		<PackageReference Include="Microsoft.Extensions.Logging.Abstractions" Version="7.0.0" Condition="'$(TargetFramework)'=='net6.0'" />
-		<PackageReference Include="Net35.TypeInfo" Version="1.1.0" />
-		<PackageReference Include="Net4x.NunitTests" Version="1.1.0.1" />
-		<PackageReference Include="Net4x.AsyncBridge" Version="$(Net4xAsyncBridgeVersion).$(VersionBuildSuffix)" />
-		<PackageReference Include="Net4x.BaseTypes" Version="$(Net4xBaseTypesVersion).$(VersionBuildSuffix)" />
-		<PackageReference Include="Net4x.WindowsFormsLibrary" Version="$(InputBoxLibraryVersion).$(VersionBuildSuffix)" />
-	</ItemGroup>
-	<ItemGroup>
-		<ProjectReference Include="..\src\AsyncEnumerable.csproj" />
-	</ItemGroup>
+<?xml version="1.0" encoding="utf-16"?>
+<Project Sdk="Microsoft.NET.Sdk">
+    <Import Project="$(NuGetPackageRoot)nugetutility/$(NuGetUtilityVersion)/build/NuGet.Utility.props" Condition="Exists('$(NuGetPackageRoot)nugetutility/$(NuGetUtilityVersion)/build/NuGet.Utility.props')" />
+    <PropertyGroup>
+        <PackageOutputPath>$(SolutionDir)Packages/</PackageOutputPath>
+        <GeneratePackageOnBuild>False</GeneratePackageOnBuild>
+        <Version>$(VersionPrefix).$(VersionSuffix)</Version>
+        <TargetFrameworks>net35;net40;net45;net461;net6.0</TargetFrameworks>
+        <AssemblyName>Tests</AssemblyName>
+        <RootNamespace>Tests</RootNamespace>
+        <OutputTypeEx>exe</OutputTypeEx>
+        <AutoGenerateBindingRedirects>True</AutoGenerateBindingRedirects>
+        <LangVersion>latest</LangVersion>
+    </PropertyGroup>
+    <ItemGroup>
+        <PackageReference Include="System.Threading.Tasks.Extensions" Version="4.5.2" Condition="'$(TargetFramework)'=='net45'" />
+    </ItemGroup>
+    <ItemGroup Condition="'$(TargetFramework)'=='net35' or '$(TargetFramework)'=='net40'">
+        <Compile Remove="AsyncEnumeratorTests.Task.cs" />
+        <Compile Remove="EnumerableLinqStyleExtensionsTests.Task.cs" />
+        <Compile Remove="EnumeratorLinqStyleExtensionsTests.Task.cs" />
+        <Compile Remove="ForEachAsyncTests.Task.cs" />
+        <Compile Remove="PerformanceTests.Task.cs" />
+    </ItemGroup>
+    <ItemGroup Condition="'$(TargetFramework)'!='net35' and '$(TargetFramework)'!='net40'">
+        <Compile Remove="AsyncEnumeratorTests.Void.cs" />
+        <Compile Remove="EnumerableLinqStyleExtensionsTests.Void.cs" />
+        <Compile Remove="EnumeratorLinqStyleExtensionsTests.Void.cs" />
+        <Compile Remove="ForEachAsyncTests.Void.cs" />
+        <Compile Remove="PerformanceTests.Void.cs" />
+    </ItemGroup>
+    <ItemGroup>
+        <PackageReference Include="Microsoft.Extensions.Logging.Abstractions" Version="7.0.0" Condition="'$(TargetFramework)'=='net6.0'" />
+        <PackageReference Include="Net35.TypeInfo" Version="$(Net35TypeInfoVersion).$(VersionBuildSuffix)" />
+        <PackageReference Include="Net4x.NunitTests" Version="$(Net4xMsTestsVersion).$(VersionBuildSuffix)" />
+        <PackageReference Include="Net4x.AsyncBridge" Version="$(Net4xAsyncBridgeVersion).$(VersionBuildSuffix)" />
+        <PackageReference Include="Net4x.BaseTypes" Version="$(Net4xBaseTypesVersion).$(VersionBuildSuffix)" />
+        <PackageReference Include="Net4x.WindowsFormsLibrary" Version="$(InputBoxLibraryVersion).$(VersionBuildSuffix)" />
+        <PackageReference Include="NuGetUtility" Version="$(NuGetUtilityVersion)" PrivateAssets="All" />
+    </ItemGroup>
+    <ItemGroup>
+        <ProjectReference Include="..\src\AsyncEnumerable.csproj" />
+    </ItemGroup>
+    <Import Project="$(NuGetPackageRoot)nugetutility/$(NuGetUtilityVersion)/build/NuGet.Utility.targets" Condition="Exists('$(NuGetPackageRoot)nugetutility/$(NuGetUtilityVersion)/build/NuGet.Utility.targets')" />
 </Project>

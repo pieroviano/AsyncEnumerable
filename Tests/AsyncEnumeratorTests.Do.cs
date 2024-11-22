@@ -82,7 +82,7 @@ public partial class AsyncEnumeratorTests
 
         // Give some time to other thread that does the disposal of the enumerator.
         // (see finalizer of the AsyncEnumerator for details)
-        await TaskEx.Delay(16);
+        await TaskEx.DelayAsync(16);
 
         // ASSERT
 

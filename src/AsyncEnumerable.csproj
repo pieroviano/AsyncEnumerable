@@ -1,43 +1,33 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-16"?>
 <Project Sdk="Microsoft.NET.Sdk">
-  <Import Project="$(NuGetPackageRoot)nugetutility/$(NuGetUtilityVersion)/build/NuGet.Utility.props" Condition="Exists('$(NuGetPackageRoot)nugetutility/$(NuGetUtilityVersion)/build/NuGet.Utility.props')" />
-  <PropertyGroup>
-    <PackageOutputPath>$(SolutionDir)Packages/</PackageOutputPath>
-    <GeneratePackageOnBuild>True</GeneratePackageOnBuild>
-    <Version>$(VersionPrefix).$(VersionSuffix)</Version>
-    <TargetFrameworks>net35;net40;net461;netstandard2.0;netstandard2.1;net45</TargetFrameworks>
-    <SignAssembly>True</SignAssembly>
-    <AssemblyOriginatorKeyFile>$(SolutionDir)\AsyncEnumerable.snk</AssemblyOriginatorKeyFile>
-    <RootNamespace>System.Collections</RootNamespace>
-    <GenerateAssemblyInfo>false</GenerateAssemblyInfo>
-    <LangVersion>latest</LangVersion>
-    <DefineConstants Condition="'$(TargetFramework)'=='net45'">$(DefineConstants);NETFX4_5</DefineConstants>
-    <PackageId>Net4x.$(AssemblyName)</PackageId>
-  </PropertyGroup>
-  <ItemGroup Condition="'$(TargetFramework)'=='net35' or '$(TargetFramework)'=='net40'">
-    <PackageReference Include="Net4x.AsyncBridge" Version="$(Net4xAsyncBridgeVersion).$(VersionBuildSuffix)" />
-    <PackageReference Include="Net4x.BaseTypes" Version="$(Net4xBaseTypesVersion).$(VersionBuildSuffix)" />
-    <PackageReference Include="NuGetUtility" Version="$(NuGetUtilityVersion)" PrivateAssets="All" />
-    <PackageReference Include="Net35.Threading.Tasks" Version="$(Net35ThreadingTasksVersion).$(VersionBuildSuffix)" />
-  </ItemGroup>
-  <ItemGroup Condition="'$(TargetFramework)'=='net45'">
-    <PackageReference Include="NuGetUtility" Version="$(NuGetUtilityVersion)" PrivateAssets="All" />
-    <PackageReference Include="System.Runtime.CompilerServices.Unsafe" Version="4.5.2" />
-    <PackageReference Include="System.Threading.Tasks.Extensions" Version="4.5.2" />
-  </ItemGroup>
-  <ItemGroup>
-    <PackageReference Include="NuGetUtility" Version="$(NuGetUtilityVersion)" PrivateAssets="All" />
-  </ItemGroup>
-  <ItemGroup Condition="'$(TargetFramework)' != 'netstandard2.1' and '$(TargetFramework)' != 'net40' and '$(TargetFramework)' != 'net35'">
-    <PackageReference Include="System.Threading.Tasks.Extensions" Version="4.5.2" />
-  </ItemGroup>
-  <ItemGroup Condition="'$(TargetFramework)' == 'net461'">
-    <PackageReference Include="Microsoft.Bcl.AsyncInterfaces" Version="1.0.0" />
-    <PackageReference Include="System.Threading.Tasks.Extensions" Version="4.5.2" />
-  </ItemGroup>
-  <ItemGroup Condition="'$(TargetFramework)' == 'netstandard2.0'">
-    <PackageReference Include="Microsoft.Bcl.AsyncInterfaces" Version="1.0.0" />
-    <PackageReference Include="System.Threading.Tasks.Extensions" Version="4.5.2" />
-  </ItemGroup>
-  <Import Project="$(NuGetPackageRoot)nugetutility/$(NuGetUtilityVersion)/build/NuGet.Utility.targets" Condition="Exists('$(NuGetPackageRoot)nugetutility/$(NuGetUtilityVersion)/build/NuGet.Utility.targets')" />
+    <Import Project="$(NuGetPackageRoot)nugetutility/$(NuGetUtilityVersion)/build/NuGet.Utility.props" Condition="Exists('$(NuGetPackageRoot)nugetutility/$(NuGetUtilityVersion)/build/NuGet.Utility.props')" />
+    <PropertyGroup>
+        <PackageOutputPath>$(SolutionDir)Packages/</PackageOutputPath>
+        <GeneratePackageOnBuild>True</GeneratePackageOnBuild>
+        <Version>$(VersionPrefix).$(VersionSuffix)</Version>
+        <TargetFrameworks>net35;net40;net461;netstandard2.0;netstandard2.1;net45</TargetFrameworks>
+        <SignAssembly>True</SignAssembly>
+        <AssemblyOriginatorKeyFile>$(SolutionDir)\AsyncEnumerable.snk</AssemblyOriginatorKeyFile>
+        <RootNamespace>System.Collections</RootNamespace>
+        <GenerateAssemblyInfo>false</GenerateAssemblyInfo>
+        <LangVersion>latest</LangVersion>
+        <DefineConstants Condition="'$(TargetFramework)'=='net45'">$(DefineConstants);NETFX4_5</DefineConstants>
+        <PackageId>Net4x.$(AssemblyName)</PackageId>
+    </PropertyGroup>
+    <ItemGroup>
+        <PackageReference Include="Net4x.AsyncBridge" Version="$(Net4xAsyncBridgeVersion).$(VersionBuildSuffix)" Condition="'$(TargetFramework)'=='net35' or '$(TargetFramework)'=='net40'" />
+        <PackageReference Include="Net4x.BaseTypes" Version="$(Net4xBaseTypesVersion).$(VersionBuildSuffix)" Condition="'$(TargetFramework)'=='net35' or '$(TargetFramework)'=='net40'" />
+        <PackageReference Include="NuGetUtility" Version="$(NuGetUtilityVersion)" PrivateAssets="All" Condition="'$(TargetFramework)'=='net35' or '$(TargetFramework)'=='net40'" />
+        <PackageReference Include="Net35.Threading.Tasks" Version="$(Net35ThreadingTasksVersion).$(VersionBuildSuffix)" Condition="'$(TargetFramework)'=='net35' or '$(TargetFramework)'=='net40'" />
+        <PackageReference Include="NuGetUtility" Version="$(NuGetUtilityVersion)" PrivateAssets="All" Condition="'$(TargetFramework)'=='net45'" />
+        <PackageReference Include="System.Runtime.CompilerServices.Unsafe" Version="4.5.2" Condition="'$(TargetFramework)'=='net45'" />
+        <PackageReference Include="System.Threading.Tasks.Extensions" Version="4.5.2" Condition="'$(TargetFramework)'=='net45'" />
+        <PackageReference Include="NuGetUtility" Version="$(NuGetUtilityVersion)" PrivateAssets="All" />
+        <PackageReference Include="System.Threading.Tasks.Extensions" Version="4.5.2" Condition="'$(TargetFramework)' != 'netstandard2.1' and '$(TargetFramework)' != 'net40' and '$(TargetFramework)' != 'net35'" />
+        <PackageReference Include="Microsoft.Bcl.AsyncInterfaces" Version="1.0.0" Condition="'$(TargetFramework)' == 'net461'" />
+        <PackageReference Include="System.Threading.Tasks.Extensions" Version="4.5.2" Condition="'$(TargetFramework)' == 'net461'" />
+        <PackageReference Include="Microsoft.Bcl.AsyncInterfaces" Version="1.0.0" Condition="'$(TargetFramework)' == 'netstandard2.0'" />
+        <PackageReference Include="System.Threading.Tasks.Extensions" Version="4.5.2" Condition="'$(TargetFramework)' == 'netstandard2.0'" />
+    </ItemGroup>
+    <Import Project="$(NuGetPackageRoot)nugetutility/$(NuGetUtilityVersion)/build/NuGet.Utility.targets" Condition="Exists('$(NuGetPackageRoot)nugetutility/$(NuGetUtilityVersion)/build/NuGet.Utility.targets')" />
 </Project>
