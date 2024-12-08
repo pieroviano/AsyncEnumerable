@@ -10133,6 +10133,11 @@
         "Name": "Net4x.ClassWrappers",
         "Project": "CompileTestsGeneratedCode\\ClassWrappers.csproj",
         "PackageReferences": null
+      },
+      {
+        "Name": "ClassWrappers",
+        "Project": "CompileTestsGeneratedCode\\ClassWrappers.csproj",
+        "PackageReferences": null
       }
     ]
   },
@@ -24179,6 +24184,61 @@
         "Name": "VbExplorer.CustomAction",
         "Project": "VbExplorer\\VbExplorerCustomAction\\VbExplorerCustomAction.vbproj",
         "PackageReferences": null
+      },
+      {
+        "Name": "PaccoFastbook",
+        "Project": "PaccoFastbook\\PaccoFastbook.vbproj",
+        "PackageReferences": null
+      },
+      {
+        "Name": "CambiaModificaEditoreTitolo",
+        "Project": "ModificaModificaEditoreTitolo\\CambiaModificaEditoreTitolo.vbproj",
+        "PackageReferences": null
+      },
+      {
+        "Name": "Circolari",
+        "Project": "Circolari\\Circolari.vbproj",
+        "PackageReferences": null
+      },
+      {
+        "Name": "PdfToExcel",
+        "Project": "PdfToExcel\\PdfToExcel.vbproj",
+        "PackageReferences": null
+      },
+      {
+        "Name": "VbExplorer.Utility",
+        "Project": "VbExplorer\\VbExplorer.Utility\\VbExplorer.Utility.vbproj",
+        "PackageReferences": null
+      },
+      {
+        "Name": "Starb.Utility",
+        "Project": "VbExplorer\\Starb.Utility\\Starb.Utility.vbproj",
+        "PackageReferences": null
+      },
+      {
+        "Name": "ImportaAIE",
+        "Project": "ImportaAIE\\ImportaAIE.vbproj",
+        "PackageReferences": null
+      },
+      {
+        "Name": "DownloadAndInstallCertificates",
+        "Project": "DownloadAndInstallCertificates\\DownloadAndInstallCertificates\\DownloadAndInstallCertificates.vbproj",
+        "PackageReferences": null
+      },
+      {
+        "Name": "AmazonLibrary",
+        "Project": "VbExplorer\\AmazonLibrary\\AmazonLibrary.vbproj",
+        "PackageReferences": null
+      },
+      {
+        "Name": "FastbookLibrary",
+        "Project": "VbExplorer\\FastbookLibrary\\FastbookLibrary.vbproj",
+        "PackageReferences": null
+      },
+      {
+        "Name": "VbExplorer",
+        "Project": "VbExplorer\\VbExplorer\\VbExplorer.vbproj",
+        "PackageReferences": null
       }
     ]
   },
@@ -24686,6 +24746,11 @@
       {
         "Name": "Net4x.CompileLibrary",
         "Project": "CompileLibrary\\CompileLibrary.csproj",
+        "PackageReferences": null
+      },
+      {
+        "Name": "CompileLibrary.Tests",
+        "Project": "Tests\\CompileLibrary.Tests\\CompileLibrary.Tests.csproj",
         "PackageReferences": null
       }
     ]
@@ -25307,6 +25372,61 @@
       {
         "Name": "VbExplorer.CustomAction",
         "Project": "VbExplorer\\VbExplorerCustomAction\\VbExplorerCustomAction.vbproj",
+        "PackageReferences": null
+      },
+      {
+        "Name": "AmazonLibrary",
+        "Project": "VbExplorer\\AmazonLibrary\\AmazonLibrary.vbproj",
+        "PackageReferences": null
+      },
+      {
+        "Name": "PaccoFastbook",
+        "Project": "PaccoFastbook\\PaccoFastbook.vbproj",
+        "PackageReferences": null
+      },
+      {
+        "Name": "CambiaModificaEditoreTitolo",
+        "Project": "ModificaModificaEditoreTitolo\\CambiaModificaEditoreTitolo.vbproj",
+        "PackageReferences": null
+      },
+      {
+        "Name": "Circolari",
+        "Project": "Circolari\\Circolari.vbproj",
+        "PackageReferences": null
+      },
+      {
+        "Name": "PdfToExcel",
+        "Project": "PdfToExcel\\PdfToExcel.vbproj",
+        "PackageReferences": null
+      },
+      {
+        "Name": "ImportaAIE",
+        "Project": "ImportaAIE\\ImportaAIE.vbproj",
+        "PackageReferences": null
+      },
+      {
+        "Name": "DownloadAndInstallCertificates",
+        "Project": "DownloadAndInstallCertificates\\DownloadAndInstallCertificates\\DownloadAndInstallCertificates.vbproj",
+        "PackageReferences": null
+      },
+      {
+        "Name": "FastbookLibrary",
+        "Project": "VbExplorer\\FastbookLibrary\\FastbookLibrary.vbproj",
+        "PackageReferences": null
+      },
+      {
+        "Name": "VbExplorer.Utility",
+        "Project": "VbExplorer\\VbExplorer.Utility\\VbExplorer.Utility.vbproj",
+        "PackageReferences": null
+      },
+      {
+        "Name": "Starb.Utility",
+        "Project": "VbExplorer\\Starb.Utility\\Starb.Utility.vbproj",
+        "PackageReferences": null
+      },
+      {
+        "Name": "VbExplorer",
+        "Project": "VbExplorer\\VbExplorer\\VbExplorer.vbproj",
         "PackageReferences": null
       }
     ]
@@ -27425,6 +27545,11 @@
         "Name": "Net4x.CompileLibrary",
         "Project": "CompileLibrary\\CompileLibrary.csproj",
         "PackageReferences": null
+      },
+      {
+        "Name": "CompileLibrary.Tests",
+        "Project": "Tests\\CompileLibrary.Tests\\CompileLibrary.Tests.csproj",
+        "PackageReferences": null
       }
     ]
   },
@@ -27476,6 +27601,882 @@
       {
         "Name": "Net4x.Serilog.Sinks.Console",
         "Project": "src\\Serilog.Sinks.Console\\Serilog.Sinks.Console.csproj",
+        "PackageReferences": null
+      }
+    ]
+  },
+  {
+    "Solution": {
+      "Path": "D:\\CommonLibrary\\CodiceFiscale\\CodiceFiscale.nuget.sln",
+      "Version": "CodiceFiscalenugetVersion"
+    },
+    "NuGetPackages": [
+      {
+        "Name": "Net4x.CodiceFiscaleLibrary",
+        "Project": "CodiceFiscaleLibrary\\CodiceFiscaleLibrary.csproj",
+        "PackageReferences": null
+      }
+    ]
+  },
+  {
+    "Solution": {
+      "Path": "D:\\CommonLibrary\\NuGetUtility\\asyncbridge\\Net4x.AsyncBridge.sln",
+      "Version": "Net4xAsyncBridgeVersion"
+    },
+    "NuGetPackages": [
+      {
+        "Name": "Net4x.AsyncBridge",
+        "Project": "src\\AsyncBridge\\Net4x.AsyncBridge.csproj",
+        "PackageReferences": null
+      },
+      {
+        "Name": "Net4x.SmartThreadPool",
+        "Project": "src\\SmartThreadPool\\Net4x.SmartThreadPool.csproj",
+        "PackageReferences": null
+      },
+      {
+        "Name": "Net4x.Dispatcher",
+        "Project": "Net4x.Windows.Threads\\Net4x.Dispatcher.csproj",
+        "PackageReferences": null
+      }
+    ]
+  },
+  {
+    "Solution": {
+      "Path": "D:\\CommonLibrary\\NuGetUtility\\net4x.basetypes\\Net4x.BaseTypes.sln",
+      "Version": "Net4xBaseTypesVersion"
+    },
+    "NuGetPackages": [
+      {
+        "Name": "Net4x.BaseTypes",
+        "Project": "src\\Net4x.BaseTypes\\Net4x.BaseTypes.csproj",
+        "PackageReferences": null
+      }
+    ]
+  },
+  {
+    "Solution": {
+      "Path": "D:\\CommonLibrary\\NuGetUtility\\wrappergenerator\\WrapperGenerator.sln",
+      "Version": "WrapperGeneratorVersion"
+    },
+    "NuGetPackages": [
+      {
+        "Name": "Net4x.WrapperGeneratorLibrary",
+        "Project": "Source\\WrapperGeneratorLibrary\\WrapperGeneratorLibrary.csproj",
+        "PackageReferences": null
+      },
+      {
+        "Name": "Net4x.StandardTypesWrappers",
+        "Project": "Source\\StandardTypesWrappers\\StandardTypesWrappers.csproj",
+        "PackageReferences": null
+      },
+      {
+        "Name": "Net4x.IonicWrapper",
+        "Project": "Source\\IonicWrapper\\IonicWrapper.csproj",
+        "PackageReferences": null
+      },
+      {
+        "Name": "Net4x.SystemWebWrapper",
+        "Project": "Source\\SystemWebWrapper\\SystemWebWrapper.csproj",
+        "PackageReferences": null
+      },
+      {
+        "Name": "Net4x.AppDomainWrapper",
+        "Project": "Source\\AppDomainWrapper\\AppDomainWrapper.csproj",
+        "PackageReferences": null
+      },
+      {
+        "Name": "Net4x.SystemConfigurationWrappers",
+        "Project": "Source\\SystemConfigurationWrappers\\SystemConfigurationWrappers.csproj",
+        "PackageReferences": null
+      }
+    ]
+  },
+  {
+    "Solution": {
+      "Path": "D:\\CommonLibrary\\NuGetUtility\\BuildAllPackages.sln",
+      "Version": "BuildAllPackagesVersion"
+    },
+    "NuGetPackages": [
+      {
+        "Name": "BuildAllPackages",
+        "Project": "BuildAllPackages\\BuildAllPackages.csproj",
+        "PackageReferences": null
+      },
+      {
+        "Name": "Net4x.$(MSBuildProjectName)",
+        "Project": "SolutionsLibrary\\SolutionsLibrary.csproj",
+        "PackageReferences": null
+      },
+      {
+        "Name": "Net4x.SolutionUtility.NoNugetUtility",
+        "Project": "Source\\SolutionUtility\\SolutionUtility.NoNugetUtility.csproj",
+        "PackageReferences": null
+      },
+      {
+        "Name": "SolutionsLibrary",
+        "Project": "SolutionsLibrary\\SolutionsLibrary.csproj",
+        "PackageReferences": null
+      }
+    ]
+  },
+  {
+    "Solution": {
+      "Path": "D:\\CommonLibrary\\DataGridLibrary\\DataGridLibrary.nuget.sln",
+      "Version": "DataGridLibrarynugetVersion"
+    },
+    "NuGetPackages": [
+      {
+        "Name": "Net4x.DataGridLibrary",
+        "Project": "DataGridLibrary\\DataGridLibrary.csproj",
+        "PackageReferences": null
+      }
+    ]
+  },
+  {
+    "Solution": {
+      "Path": "D:\\CommonLibrary\\DatabaseSchemaLibrary\\DatabaseSchemaLibrary.nuget.sln",
+      "Version": "DatabaseSchemaLibrarynugetVersion"
+    },
+    "NuGetPackages": [
+      {
+        "Name": "Net4x.DatabaseSchema.Library",
+        "Project": "DatabaseSchemaLibrary\\DatabaseSchema.Library.csproj",
+        "PackageReferences": null
+      }
+    ]
+  },
+  {
+    "Solution": {
+      "Path": "D:\\CommonLibrary\\DatabaseEditorLibrary\\DatabaseEditorLibrary.nuget.sln",
+      "Version": "DatabaseEditorLibrarynugetVersion"
+    },
+    "NuGetPackages": [
+      {
+        "Name": "Net4x.DatabaseEditor.Library",
+        "Project": "DatabaseEditorLibrary\\DatabaseEditor.Library.csproj",
+        "PackageReferences": null
+      }
+    ]
+  },
+  {
+    "Solution": {
+      "Path": "D:\\CommonLibrary\\CompressExistingPDF\\CompressExistingPDF.nuget.sln",
+      "Version": "CompressExistingPDFnugetVersion"
+    },
+    "NuGetPackages": [
+      {
+        "Name": "Net4x.CompressExistingPdf",
+        "Project": "CompressExistingPDF\\CompressExistingPDF.csproj",
+        "PackageReferences": null
+      }
+    ]
+  },
+  {
+    "Solution": {
+      "Path": "D:\\CommonLibrary\\WindowsLibrary\\WindowsLibrary.nuget.sln",
+      "Version": "WindowsLibrarynugetVersion"
+    },
+    "NuGetPackages": [
+      {
+        "Name": "Net4x.Windows.Library",
+        "Project": "WindowsLibrary\\Windows.Library.csproj",
+        "PackageReferences": null
+      },
+      {
+        "Name": "Net4x.Windows.Utility",
+        "Project": "WindowsLibrary.Utility\\Windows.Utility.csproj",
+        "PackageReferences": null
+      },
+      {
+        "Name": "Net4x.Windows.Grid",
+        "Project": "WindowsLibrary.Grid\\Windows.Grid.csproj",
+        "PackageReferences": null
+      }
+    ]
+  },
+  {
+    "Solution": {
+      "Path": "D:\\CommonLibrary\\WiaScannerLibrary\\WiaScannerLibrary.nuget.sln",
+      "Version": "WiaScannerLibrarynugetVersion"
+    },
+    "NuGetPackages": [
+      {
+        "Name": "Net4x.WiaScanner.Library",
+        "Project": "WiaScanner\\WiaScanner.Library.csproj",
+        "PackageReferences": null
+      },
+      {
+        "Name": "Net4x.WiaScanner.Interfaces",
+        "Project": "WiaScanner.Interfaces\\WiaScanner.Interfaces.csproj",
+        "PackageReferences": null
+      }
+    ]
+  },
+  {
+    "Solution": {
+      "Path": "D:\\CommonLibrary\\VisualBasicLibrary\\VisualBasicLibrary.nuget.sln",
+      "Version": "VisualBasicLibrarynugetVersion"
+    },
+    "NuGetPackages": [
+      {
+        "Name": "Net4x.GraphicsFromFrx",
+        "Project": "GraphicsFromFrx\\GraphicsFromFrx.csproj",
+        "PackageReferences": null
+      },
+      {
+        "Name": "Net4x.VisualBasicLibrary",
+        "Project": "VisualBasicLibrary\\VisualBasicLibrary.csproj",
+        "PackageReferences": null
+      }
+    ]
+  },
+  {
+    "Solution": {
+      "Path": "D:\\CommonLibrary\\UtilityLibrary\\UtilityLibrary.nuget.sln",
+      "Version": "UtilityLibrarynugetVersion"
+    },
+    "NuGetPackages": [
+      {
+        "Name": "Net4x.UtilityLibrary",
+        "Project": "UtilityLibrary\\UtilityLibrary.csproj",
+        "PackageReferences": null
+      },
+      {
+        "Name": "Net4x.Win32Library",
+        "Project": "Win32Library\\Win32Library.csproj",
+        "PackageReferences": null
+      },
+      {
+        "Name": "Net4x.NetworkAccessLibrary",
+        "Project": "NetworkAccessLibrary\\NetworkAccessLibrary.csproj",
+        "PackageReferences": null
+      }
+    ]
+  },
+  {
+    "Solution": {
+      "Path": "D:\\CommonLibrary\\UpdateLibrary\\UpdateLibrary.nuget.sln",
+      "Version": "UpdateLibrarynugetVersion"
+    },
+    "NuGetPackages": [
+      {
+        "Name": "Net4x.Update.Library",
+        "Project": "UpdateLibrary\\Update.Library.csproj",
+        "PackageReferences": null
+      },
+      {
+        "Name": "Net4x.CompressArchive",
+        "Project": "CompressArchive\\CompressArchive.csproj",
+        "PackageReferences": null
+      },
+      {
+        "Name": "Net4x.Update.Commons",
+        "Project": "UpdateCommons\\Update.Commons.csproj",
+        "PackageReferences": null
+      },
+      {
+        "Name": "Net4x.Update.Manager",
+        "Project": "UpdateManagerLibrary\\Update.Manager.csproj",
+        "PackageReferences": null
+      }
+    ]
+  },
+  {
+    "Solution": {
+      "Path": "D:\\CommonLibrary\\ProjectsFormatLibrary\\ProjectsFormatLibrary.nuget.sln",
+      "Version": "ProjectsFormatLibrarynugetVersion"
+    },
+    "NuGetPackages": [
+      {
+        "Name": "Net4x.ProjectsFormatLibrary",
+        "Project": "ProjectsFormatLibrary\\ProjectsFormatLibrary.csproj",
+        "PackageReferences": null
+      }
+    ]
+  },
+  {
+    "Solution": {
+      "Path": "D:\\CommonLibrary\\PdfViewerLibrary\\PdfViewerLibrary.nuget.nuget.sln",
+      "Version": "PdfViewerLibrarynugetnugetVersion"
+    },
+    "NuGetPackages": [
+      {
+        "Name": "Net4x.PdfViewerLibrary",
+        "Project": "PdfViewerLibrary\\PdfViewerLibrary.csproj",
+        "PackageReferences": null
+      }
+    ]
+  },
+  {
+    "Solution": {
+      "Path": "D:\\CommonLibrary\\PdfOcr\\PdfOcr.nuget.sln",
+      "Version": "PdfOcrnugetVersion"
+    },
+    "NuGetPackages": [
+      {
+        "Name": "Net4x.PdfOcrLibrary",
+        "Project": "PdfOcrLibrary\\PdfOcrLibrary.csproj",
+        "PackageReferences": null
+      }
+    ]
+  },
+  {
+    "Solution": {
+      "Path": "D:\\CommonLibrary\\WebBrowserLibrary\\WebBrowserLibrary.nuget.sln",
+      "Version": "WebBrowserLibrarynugetVersion"
+    },
+    "NuGetPackages": [
+      {
+        "Name": "Net4x.WebBrowserLibrary.Base",
+        "Project": "WebBrowserLibrary\\WebBrowserLibrary.Base.csproj",
+        "PackageReferences": null
+      },
+      {
+        "Name": "Net4x.WebBrowserLibrary.InternetExplorer",
+        "Project": "WebBrowserLibrary.InternetExplorer\\WebBrowserLibrary.InternetExplorer.csproj",
+        "PackageReferences": null
+      },
+      {
+        "Name": "WebBrowserLibrary.Selenium.Chrome",
+        "Project": "WebBrowserLibrary.Selenium.Chrome\\WebBrowserLibrary.Selenium.Chrome.csproj",
+        "PackageReferences": null
+      },
+      {
+        "Name": "Net4x.WebBrowserLibrary.Selenium.InternetExplorer",
+        "Project": "WebBrowserLibrary.Selenium.InternetExplorer\\WebBrowserLibrary.Selenium.InternetExplorer.csproj",
+        "PackageReferences": null
+      },
+      {
+        "Name": "Net4x.WebBrowserLibrary.Selenium.Interfaces",
+        "Project": "WebBrowserLibrary.Selenium.Interfaces\\WebBrowserLibrary.Selenium.Interfaces.csproj",
+        "PackageReferences": null
+      },
+      {
+        "Name": "Net4x.WebBrowserLibrary.Selenium.Base",
+        "Project": "WebBrowserLibrary.Selenium.Base\\WebBrowserLibrary.Selenium.Base.csproj",
+        "PackageReferences": null
+      },
+      {
+        "Name": "WebBrowserLibrary.Selenium.Firefox",
+        "Project": "WebBrowserLibrary.Selenium.Firefox\\WebBrowserLibrary.Selenium.Firefox.csproj",
+        "PackageReferences": null
+      },
+      {
+        "Name": "Net4x.WebBrowserLibrary.Selenium.ChromeCleaner",
+        "Project": "WebBrowserLibrary.Selenium.ChromeCleaner\\WebBrowserLibrary.Selenium.ChromeCleaner.csproj",
+        "PackageReferences": null
+      },
+      {
+        "Name": "Net4x.WebBrowserLibrary.Selenium.FirefoxCleaner",
+        "Project": "WebBrowserLibrary.Selenium.FirefoxCleaner\\WebBrowserLibrary.Selenium.FirefoxCleaner.csproj",
+        "PackageReferences": null
+      },
+      {
+        "Name": "Net4x.WebBrowserLibrary.Selenium.InternetExplorerCleaner",
+        "Project": "WebBrowserLibrary.Selenium.InternetExplorerCleaner\\WebBrowserLibrary.Selenium.InternetExplorerCleaner.csproj",
+        "PackageReferences": null
+      },
+      {
+        "Name": "Net4x.WebBrowserLibrary.Selenium.Common",
+        "Project": "WebBrowserLibrary.Selenium\\WebBrowserLibrary.Selenium.Common.csproj",
+        "PackageReferences": null
+      },
+      {
+        "Name": "Net4x.WebBrowserLibrary.Interfaces",
+        "Project": "WebBrowserLibrary.Interfaces\\WebBrowserLibrary.Interfaces.csproj",
+        "PackageReferences": null
+      }
+    ]
+  },
+  {
+    "Solution": {
+      "Path": "D:\\CommonLibrary\\Titanium.Proxy.Library\\Titanium.Proxy.Library.nuget.sln",
+      "Version": "TitaniumProxyLibrarynugetVersion"
+    },
+    "NuGetPackages": [
+      {
+        "Name": "Net4x.Titanium.Proxy.Library",
+        "Project": "Sources\\Titanium.Proxy\\Titanium.Proxy.Library.csproj",
+        "PackageReferences": null
+      },
+      {
+        "Name": "Net4x.UsernameTokenLibrary",
+        "Project": "Sources\\UsernameTokenLibrary\\UsernameTokenLibrary.csproj",
+        "PackageReferences": null
+      }
+    ]
+  },
+  {
+    "Solution": {
+      "Path": "D:\\CommonLibrary\\SeleniumLibrary\\SeleniumLibrary.nuget.sln",
+      "Version": "SeleniumLibrarynugetVersion"
+    },
+    "NuGetPackages": [
+      {
+        "Name": "Net4x.BrowserLibrary",
+        "Project": "BrowserLibrary\\BrowserLibrary.csproj",
+        "PackageReferences": null
+      },
+      {
+        "Name": "Net4x.HtmlPersist",
+        "Project": "HtmlPersist\\HtmlPersist.csproj",
+        "PackageReferences": null
+      },
+      {
+        "Name": "Net4x.ZipCodesLibrary",
+        "Project": "ZipCodesLibrary\\ZipCodesLibrary.csproj",
+        "PackageReferences": null
+      }
+    ]
+  },
+  {
+    "Solution": {
+      "Path": "D:\\CommonLibrary\\QuestionsLibrary\\QuestionsLibrary.nuget.sln",
+      "Version": "QuestionsLibrarynugetVersion"
+    },
+    "NuGetPackages": [
+      {
+        "Name": "Net4x.QuestionsLibrary",
+        "Project": "QuestionsLibrary\\QuestionsLibrary.csproj",
+        "PackageReferences": null
+      }
+    ]
+  },
+  {
+    "Solution": {
+      "Path": "D:\\CommonLibrary\\PdfToPdfA\\PdfToPdfA.nuget.sln",
+      "Version": "PdfToPdfAnugetVersion"
+    },
+    "NuGetPackages": [
+      {
+        "Name": "Net4x.PdfToPdfA.Command",
+        "Project": "PdfToPdfA\\PdfToPdfA.Command.csproj",
+        "PackageReferences": null
+      },
+      {
+        "Name": "Net4x.PdfToPdfA.Library",
+        "Project": "PdfToPdfALibrary\\PdfToPdfA.Library.csproj",
+        "PackageReferences": null
+      },
+      {
+        "Name": "Net4x.PdfToPdfA.SyncFusion",
+        "Project": "PdfToPdfASyncFusion\\PdfToPdfA.SyncFusion.csproj",
+        "PackageReferences": null
+      },
+      {
+        "Name": "Net4x.PdfToPdfA.iTextSharp",
+        "Project": "PdfToPdfAiTextSharp\\PdfToPdfA.iTextSharp.csproj",
+        "PackageReferences": null
+      }
+    ]
+  },
+  {
+    "Solution": {
+      "Path": "D:\\CommonLibrary\\PdfRecognizerLibrary\\PdfRecognizerLibrary.nuget.sln",
+      "Version": "PdfRecognizerLibrarynugetVersion"
+    },
+    "NuGetPackages": [
+      {
+        "Name": "Net4x.PdfRecognizerLibrary",
+        "Project": "PdfRecognizerLibrary\\PdfRecognizerLibrary.csproj",
+        "PackageReferences": null
+      }
+    ]
+  },
+  {
+    "Solution": {
+      "Path": "D:\\CommonLibrary\\MergeTables\\MergeTables.nuget.sln",
+      "Version": "MergeTablesnugetVersion"
+    },
+    "NuGetPackages": [
+      {
+        "Name": "Net4x.MergeTables",
+        "Project": "MergeTables\\MergeTables.csproj",
+        "PackageReferences": null
+      }
+    ]
+  },
+  {
+    "Solution": {
+      "Path": "D:\\CommonLibrary\\InstallerLibrary\\InstallerLibrary.nuget.sln",
+      "Version": "InstallerLibrarynugetVersion"
+    },
+    "NuGetPackages": [
+      {
+        "Name": "InstallerLibrary",
+        "Project": "InstallerLibrary\\InstallerLibrary.csproj",
+        "PackageReferences": null
+      },
+      {
+        "Name": "InstallerTool",
+        "Project": "InstallerTool\\InstallerTool.csproj",
+        "PackageReferences": null
+      }
+    ]
+  },
+  {
+    "Solution": {
+      "Path": "D:\\CommonLibrary\\ExcelLibrary\\ExcelLibrary.nuget.sln",
+      "Version": "ExcelLibrarynugetVersion"
+    },
+    "NuGetPackages": [
+      {
+        "Name": "Net4x.ExcelLibrary.Classes",
+        "Project": "ExcelLibrary\\ExcelLibrary.Classes.csproj",
+        "PackageReferences": null
+      },
+      {
+        "Name": "Net4x.ExcelLibrary.Base",
+        "Project": "ExcelLibrary.Extensions\\ExcelLibrary.Base.csproj",
+        "PackageReferences": null
+      }
+    ]
+  },
+  {
+    "Solution": {
+      "Path": "D:\\CommonLibrary\\EmailLibrary\\EmailLibrary.nuget.sln",
+      "Version": "EmailLibrarynugetVersion"
+    },
+    "NuGetPackages": [
+      {
+        "Name": "Net4x.EmailLibrary",
+        "Project": "EmailLibrary\\EmailLibrary.csproj",
+        "PackageReferences": null
+      }
+    ]
+  },
+  {
+    "Solution": {
+      "Path": "D:\\CommonLibrary\\DataHandlerLibrary\\DataHandlerLibrary.nuget.nuget.sln",
+      "Version": "DataHandlerLibrarynugetnugetVersion"
+    },
+    "NuGetPackages": [
+      {
+        "Name": "Net4x.$(MSBuildProjectName)",
+        "Project": "DataHandlerLibrary\\DataHandlerLibrary.csproj",
+        "PackageReferences": null
+      }
+    ]
+  },
+  {
+    "Solution": {
+      "Path": "D:\\CommonLibrary\\DataHandlerLibrary\\DataHandlerLibrary.nuget.sln",
+      "Version": "DataHandlerLibrarynugetVersion"
+    },
+    "NuGetPackages": [
+      {
+        "Name": "Net4x.$(MSBuildProjectName)",
+        "Project": "DataHandlerLibrary\\DataHandlerLibrary.csproj",
+        "PackageReferences": null
+      }
+    ]
+  },
+  {
+    "Solution": {
+      "Path": "D:\\CommonLibrary\\UnitTestsLibrary\\UnitTestLibrary.nuget.sln",
+      "Version": "UnitTestLibrarynugetVersion"
+    },
+    "NuGetPackages": [
+      {
+        "Name": "Net4x.UnitTestLibrary",
+        "Project": "UnitTestLibrary\\UnitTestLibrary.csproj",
+        "PackageReferences": null
+      },
+      {
+        "Name": "Net4x.TrxerConsole",
+        "Project": "Trxer\\TrxerConsole.csproj",
+        "PackageReferences": null
+      }
+    ]
+  },
+  {
+    "Solution": {
+      "Path": "D:\\CommonLibrary\\TextControl\\TextControl.nuget.sln",
+      "Version": "TextControlnugetVersion"
+    },
+    "NuGetPackages": [
+      {
+        "Name": "Net4x.TextControl",
+        "Project": "TextControl\\TextControl.csproj",
+        "PackageReferences": null
+      }
+    ]
+  },
+  {
+    "Solution": {
+      "Path": "D:\\StarbookApp\\StarbookApp.sln",
+      "Version": "StarbookAppVersion"
+    },
+    "NuGetPackages": [
+      {
+        "Name": "CommonUtility",
+        "Project": "CommonUtility\\CommonUtility.vbproj",
+        "PackageReferences": null
+      },
+      {
+        "Name": "StarbookWebApi.Data",
+        "Project": "StarbookWebApi.Data\\StarbookWebApi.Data.csproj",
+        "PackageReferences": null
+      },
+      {
+        "Name": "EnsureVbExplorer",
+        "Project": "EnsureVbExplorer\\EnsureVbExplorer.vbproj",
+        "PackageReferences": null
+      }
+    ]
+  },
+  {
+    "Solution": {
+      "Path": "D:\\CommonLibrary\\NugetOptimizer\\NugetOptimizer.sln",
+      "Version": "NugetOptimizerVersion"
+    },
+    "NuGetPackages": [
+      {
+        "Name": "NugetOptimizer.Library",
+        "Project": "NugetOptimizer.Library\\NugetOptimizer.Library.csproj",
+        "PackageReferences": null
+      },
+      {
+        "Name": "NugetOptimizer.Library\\NugetOptimizer.Library.csproj",
+        "Project": "Net4x.NugetOptimizer.Library",
+        "PackageReferences": null
+      },
+      {
+        "Name": "NugetUtilityVsExtension\\NugetUtilityVsExtension.csproj",
+        "Project": "NugetUtilityVsExtension",
+        "PackageReferences": null
+      }
+    ]
+  },
+  {
+    "Solution": {
+      "Path": "D:\\starb\\DownloadAndInstallCertificates\\DownloadAndInstallCertificates_VB.sln",
+      "Version": "DownloadAndInstallCertificates_VBVersion"
+    },
+    "NuGetPackages": [
+      {
+        "Name": "DownloadAndInstallCertificates",
+        "Project": "DownloadAndInstallCertificates\\DownloadAndInstallCertificates.vbproj",
+        "PackageReferences": null
+      }
+    ]
+  },
+  {
+    "Solution": {
+      "Path": "D:\\CommonLibrary\\iTextSharpPdfa\\iTextSharpPdfa.sln",
+      "Version": "iTextSharpPdfaVersion"
+    },
+    "NuGetPackages": [
+      {
+        "Name": "Net4x.iTextSharp.Pdfa",
+        "Project": "iTextSharpPdfa\\iTextSharp.Pdfa.csproj",
+        "PackageReferences": null
+      }
+    ]
+  },
+  {
+    "Solution": {
+      "Path": "D:\\CommonLibrary\\DataAccessLibrary\\DataAccessLibrary.nuget.sln",
+      "Version": "DataAccessLibrarynugetVersion"
+    },
+    "NuGetPackages": [
+      {
+        "Name": "Net4x.DataAccessLibrary.Data.Database",
+        "Project": "DataAccessLibrary.Database\\DataAccessLibrary.Data.Database.csproj",
+        "PackageReferences": null
+      },
+      {
+        "Name": "Net4x.DataAccessLibrary.Classes",
+        "Project": "DataAccessLibrary.Base\\DataAccessLibrary.Classes.csproj",
+        "PackageReferences": null
+      },
+      {
+        "Name": "Net4x.DataAccessLibrary.Web",
+        "Project": "DataAccessLibrary.Web\\DataAccessLibrary.Web.csproj",
+        "PackageReferences": null
+      },
+      {
+        "Name": "Net4x.DataAccessLibrary.Utility.Base",
+        "Project": "DataAccessLibrary.Utilities\\DataAccessLibrary.Utility.Base.csproj",
+        "PackageReferences": null
+      },
+      {
+        "Name": "Net4x.DataAccessLibrary.Windows",
+        "Project": "DataAccessLibrary.Windows\\DataAccessLibrary.Windows.csproj",
+        "PackageReferences": null
+      },
+      {
+        "Name": "Net4x.DataAccessLibrary.Data.Classes",
+        "Project": "DataAccessLibrary.DataAccess\\DataAccessLibrary.Data.Classes.csproj",
+        "PackageReferences": null
+      },
+      {
+        "Name": "Net4x.DataAccessLibrary.Utility.Helpers",
+        "Project": "DataAccessLibrary.HelperClasses\\DataAccessLibrary.Utility.Helpers.csproj",
+        "PackageReferences": null
+      },
+      {
+        "Name": "Net4x.DataAccessLibrary.Models",
+        "Project": "DataAccessLibrary.Models\\DataAccessLibrary.Models.csproj",
+        "PackageReferences": null
+      },
+      {
+        "Name": "Net4x.DataAccessLibrary.Reflection",
+        "Project": "DataAccessLibrary.Reflection\\DataAccessLibrary.Reflection.csproj",
+        "PackageReferences": null
+      },
+      {
+        "Name": "Net4x.DataAccessLibrary.CodeGeneration",
+        "Project": "DataAccessLibrary.CodeGeneration\\DataAccessLibrary.CodeGeneration.csproj",
+        "PackageReferences": null
+      },
+      {
+        "Name": "Net4x.DataAccessLibrary.Data.Generation",
+        "Project": "DataAccessLibrary.DataGeneration\\DataAccessLibrary.Data.Generation.csproj",
+        "PackageReferences": null
+      },
+      {
+        "Name": "Net4x.DataAccessLibrary.Utility.Implementation",
+        "Project": "DataAccessLibrary.UtilityClasses\\DataAccessLibrary.Utility.Implementation.csproj",
+        "PackageReferences": null
+      },
+      {
+        "Name": "Net4x.DataAccessLibrary.Merge",
+        "Project": "DataAccessLibrary.MergeUtility\\DataAccessLibrary.Merge.csproj",
+        "PackageReferences": null
+      },
+      {
+        "Name": "Net4x.DataAccessLibrary.Data.Simple",
+        "Project": "DataAccessLibrary.SimpleDataAccess\\DataAccessLibrary.Data.Simple.csproj",
+        "PackageReferences": null
+      },
+      {
+        "Name": "Net4x.DataAccessLibrary.Builder.Statement",
+        "Project": "DataAccessLibrary.StatementBuilder\\DataAccessLibrary.Builder.Statement.csproj",
+        "PackageReferences": null
+      },
+      {
+        "Name": "Net4x.DataAccessLibrary.Firebird",
+        "Project": "DataAccessLibrary.Firebird\\DataAccessLibrary.Firebird.csproj",
+        "PackageReferences": null
+      },
+      {
+        "Name": "Net4x.DataAccessLibrary.MySql",
+        "Project": "DataAccessLibrary.MySql\\DataAccessLibrary.MySql.csproj",
+        "PackageReferences": null
+      },
+      {
+        "Name": "Net4x.DataAccessLibrary.Oracle",
+        "Project": "DataAccessLibrary.Oracle\\DataAccessLibrary.Oracle.csproj",
+        "PackageReferences": null
+      },
+      {
+        "Name": "Net4x.DataAccessLibrary.Data.Utility",
+        "Project": "DataAccessLibrary.DataUtility\\DataAccessLibrary.Data.Utility.csproj",
+        "PackageReferences": null
+      },
+      {
+        "Name": "Net4x.DataAccessLibrary.SchemaUtility",
+        "Project": "DataAccessLibrary.SchemaUtility\\DataAccessLibrary.SchemaUtility.csproj",
+        "PackageReferences": null
+      },
+      {
+        "Name": "Net4x.DataAccessLibrary.Data.Common",
+        "Project": "DataAccessLibrary.DataAccess.Common\\DataAccessLibrary.Data.Common.csproj",
+        "PackageReferences": null
+      },
+      {
+        "Name": "Net4x.DataAccessLibrary.SQLite",
+        "Project": "DataAccessLibrary.SQLite\\DataAccessLibrary.SQLite.csproj",
+        "PackageReferences": null
+      },
+      {
+        "Name": "Net4x.DataAccessLibrary.CustomLogging",
+        "Project": "DataAccessLibrary.CustomLogging\\DataAccessLibrary.CustomLogging.csproj",
+        "PackageReferences": null
+      },
+      {
+        "Name": "Net4x.DataAccessLibrary.Common.State",
+        "Project": "DataAccessLibrary.State\\DataAccessLibrary.Common.State.csproj",
+        "PackageReferences": null
+      },
+      {
+        "Name": "Net4x.DataAccessLibrary.Properties",
+        "Project": "DataAccessLibrary.Properties\\DataAccessLibrary.Properties.csproj",
+        "PackageReferences": null
+      },
+      {
+        "Name": "Net4x.DataAccessLibrary.MockSqlServer",
+        "Project": "DataAccessLibrary.MockSqlServer\\DataAccessLibrary.MockSqlServer.csproj",
+        "PackageReferences": null
+      },
+      {
+        "Name": "Net4x.DataAccessLibrary.Base",
+        "Project": "DataAccessLibrary.Base.Extensions\\DataAccessLibrary.Base.csproj",
+        "PackageReferences": null
+      },
+      {
+        "Name": "Net4x.DataAccessLibrary.Utility.Classes",
+        "Project": "DataAccessLibrary.UtilityClasses.Extensions\\DataAccessLibrary.Utility.Classes.csproj",
+        "PackageReferences": null
+      },
+      {
+        "Name": "Net4x.DataAccessLibrary.Helper.Classes",
+        "Project": "DataAccessLibrary.HelperClasses.Extensions\\DataAccessLibrary.Helper.Classes.csproj",
+        "PackageReferences": null
+      },
+      {
+        "Name": "Net4x.DataAccessLibrary.Installation",
+        "Project": "DataAccessLibrary.Installation\\DataAccessLibrary.Installation.csproj",
+        "PackageReferences": null
+      },
+      {
+        "Name": "Net4x.DataAccessLibrary.Dapper",
+        "Project": "DataAccessLibrary.Dapper\\DataAccessLibrary.Dapper.csproj",
+        "PackageReferences": null
+      },
+      {
+        "Name": "Net4x.DataAccessLibrary.Ado",
+        "Project": "DataAccessLibrary.Ado\\DataAccessLibrary.Ado.csproj",
+        "PackageReferences": null
+      },
+      {
+        "Name": "Net4x.DataAccessLibrary.Data.Tables",
+        "Project": "DataAccessLibrary.DataTable\\DataAccessLibrary.Data.Tables.csproj",
+        "PackageReferences": null
+      },
+      {
+        "Name": "Net4x.DataAccessLibrary.Data.Work",
+        "Project": "DataAccessLibrary.DataAccess.Extensions\\DataAccessLibrary.Data.Work.csproj",
+        "PackageReferences": null
+      },
+      {
+        "Name": "Net4x.DataAccessLibrary.WinLib",
+        "Project": "DataAccessLibrary.WindowsLibrary\\DataAccessLibrary.WinLib.csproj",
+        "PackageReferences": null
+      }
+    ]
+  },
+  {
+    "Solution": {
+      "Path": "D:\\CommonLibrary\\Xsd2Db\\Xsd2Db.nuget.sln",
+      "Version": "Xsd2DbnugetVersion"
+    },
+    "NuGetPackages": [
+      {
+        "Name": "Net4x.Xsd2Db.Data",
+        "Project": "Xsd2Db.Data\\Xsd2Db.Data.csproj",
+        "PackageReferences": null
+      },
+      {
+        "Name": "Net4x.Xsd2Db.CommandLineParser",
+        "Project": "Xsd2Db.CommandLineParser\\Xsd2Db.CommandLineParser.csproj",
+        "PackageReferences": null
+      },
+      {
+        "Name": "Net4x.Xsd2Db.Base",
+        "Project": "Xsd2Db\\Xsd2Db.Base.csproj",
         "PackageReferences": null
       }
     ]

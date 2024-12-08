@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Project Sdk="Microsoft.NET.Sdk">
-    <Import Condition="Exists('$(NuGetPackageRoot)nugetutility/$(NuGetUtilityVersion)/build/NuGet.Utility.props')" Project="$(NuGetPackageRoot)nugetutility/$(NuGetUtilityVersion)/build/NuGet.Utility.props" />
+    <Import Condition="Exists('$(NuGetPackageRoot)net4x.nugetutility/$(NuGetUtilityVersion)/build/NuGet.Utility.props')" Project="$(NuGetPackageRoot)net4x.nugetutility/$(NuGetUtilityVersion)/build/NuGet.Utility.props" />
     <PropertyGroup>
         <PackageOutputPath>$(SolutionDir)Packages/</PackageOutputPath>
         <GeneratePackageOnBuild>True</GeneratePackageOnBuild>
@@ -19,9 +19,9 @@
         <PackageReference Include="Net35.Threading.Tasks" Condition="'$(TargetFramework)'=='net35' or '$(TargetFramework)'=='net40'" Version="$(Net35ThreadingTasksVersion).$(VersionBuildSuffix)" />
         <PackageReference Include="Net4x.AsyncBridge" Condition="'$(TargetFramework)'=='net35' or '$(TargetFramework)'=='net40'" Version="$(Net4xAsyncBridgeVersion).$(VersionBuildSuffix)" />
         <PackageReference Include="Net4x.BaseTypes" Condition="'$(TargetFramework)'=='net35' or '$(TargetFramework)'=='net40'" Version="$(Net4xBaseTypesVersion).$(VersionBuildSuffix)" />
-        <PackageReference Include="NuGetUtility" Condition="'$(TargetFramework)'=='net35' or '$(TargetFramework)'=='net40' or '$(TargetFramework)'=='net45'" PrivateAssets="All" Version="$(NuGetUtilityVersion)" />
+        <PackageReference Include="Net4x.NuGetUtility" Condition="'$(TargetFramework)'=='net35' or '$(TargetFramework)'=='net40' or '$(TargetFramework)'=='net45'" PrivateAssets="All" Version="$(NuGetUtilityVersion)" />
         <PackageReference Include="System.Runtime.CompilerServices.Unsafe" Condition="'$(TargetFramework)'=='net45'" Version="4.5.2" />
         <PackageReference Include="System.Threading.Tasks.Extensions" Condition="'$(TargetFramework)'=='net45' or '$(TargetFramework)' != 'netstandard2.1' and '$(TargetFramework)' != 'net40' and '$(TargetFramework)' != 'net35' or '$(TargetFramework)' == 'net461' or '$(TargetFramework)' == 'netstandard2.0'" Version="4.5.2" />
     </ItemGroup>
-    <Import Condition="Exists('$(NuGetPackageRoot)nugetutility/$(NuGetUtilityVersion)/build/NuGet.Utility.targets')" Project="$(NuGetPackageRoot)nugetutility/$(NuGetUtilityVersion)/build/NuGet.Utility.targets" />
+    <Import Condition="Exists('$(NuGetPackageRoot)net4x.nugetutility/$(NuGetUtilityVersion)/build/NuGet.Utility.targets')" Project="$(NuGetPackageRoot)net4x.nugetutility/$(NuGetUtilityVersion)/build/NuGet.Utility.targets" />
 </Project>
