@@ -9282,6 +9282,11 @@
             "Version": "$(NuGetUtilityVersion)"
           }
         ]
+      },
+      {
+        "Name": "Net4x.iTextSharp.Common",
+        "Project": "Net4x.iTextSharp\\Net4x.iTextSharp.csproj",
+        "PackageReferences": null
       }
     ]
   },
@@ -28477,6 +28482,95 @@
       {
         "Name": "Net4x.Xsd2Db.Base",
         "Project": "Xsd2Db\\Xsd2Db.Base.csproj",
+        "PackageReferences": null
+      }
+    ]
+  },
+  {
+    "Solution": {
+      "Path": "D:\\CommonLibrary\\NuGetUtility\\compilelibrary\\CompileLibrary.nuget.sln",
+      "Version": "CompileLibrarynugetVersion"
+    },
+    "NuGetPackages": [
+      {
+        "Name": "Net4x.CompileLibrary",
+        "Project": "CompileLibrary\\CompileLibrary.csproj",
+        "PackageReferences": null
+      }
+    ]
+  },
+  {
+    "Solution": {
+      "Path": "D:\\CommonLibrary\\itextsharp\\src\\itextsharp.sln",
+      "Version": "itextsharpVersion"
+    },
+    "NuGetPackages": [
+      {
+        "Name": "itextsharp",
+        "Project": "core\\itextsharp.csproj",
+        "PackageReferences": null
+      },
+      {
+        "Name": "itext-hyph-xml",
+        "Project": "extras\\itext-hyph-xml\\itext-hyph-xml.csproj",
+        "PackageReferences": null
+      },
+      {
+        "Name": "itextsharp.xmlworker",
+        "Project": "extras\\itextsharp.xmlworker\\itextsharp.xmlworker.csproj",
+        "PackageReferences": null
+      },
+      {
+        "Name": "itextsharp.xtra",
+        "Project": "extras\\iTextSharp.xtra\\iTextSharp.xtra.csproj",
+        "PackageReferences": null
+      },
+      {
+        "Name": "iTextAsian",
+        "Project": "extras\\iTextAsian\\iTextAsian.csproj",
+        "PackageReferences": null
+      },
+      {
+        "Name": "itextsharp.pdfa",
+        "Project": "extras\\itextsharp.pdfa\\itextsharp.pdfa.csproj",
+        "PackageReferences": null
+      },
+      {
+        "Name": "itextsharp.tests",
+        "Project": "extras\\itextsharp.tests\\itextsharp.tests.csproj",
+        "PackageReferences": null
+      },
+      {
+        "Name": "itextsharp.pdfa.tests",
+        "Project": "extras\\itextsharp.pdfa.tests\\itextsharp.pdfa.tests.csproj",
+        "PackageReferences": null
+      },
+      {
+        "Name": "itextsharp.xmlworker.tests",
+        "Project": "extras\\itextsharp.xmlworker.tests\\itextsharp.xmlworker.tests.csproj",
+        "PackageReferences": null
+      },
+      {
+        "Name": "itextsharp.sandbox",
+        "Project": "extras\\itextsharp.sandbox\\itextsharp.sandbox.csproj",
+        "PackageReferences": null
+      },
+      {
+        "Name": "Net4x.iTextSharp.Pdfa",
+        "Project": "iTextSharp.Pdfa\\Net4x.iTextSharp.Pdfa.csproj",
+        "PackageReferences": null
+      }
+    ]
+  },
+  {
+    "Solution": {
+      "Path": "D:\\CommonLibrary\\itextsharp\\src\\extras\\itext-hyph-xml\\itext-hyph-xml.sln",
+      "Version": "itexthyphxmlVersion"
+    },
+    "NuGetPackages": [
+      {
+        "Name": "itext-hyph-xml",
+        "Project": "itext-hyph-xml.csproj",
         "PackageReferences": null
       }
     ]
