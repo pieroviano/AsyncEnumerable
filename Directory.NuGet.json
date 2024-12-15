@@ -4628,6 +4628,11 @@
             "Version": "$(NuGetUtilityVersion)"
           }
         ]
+      },
+      {
+        "Name": "EasyTabs\\EasyTabs.csproj",
+        "Project": "Net4x.Net4x.EasyTabs",
+        "PackageReferences": null
       }
     ]
   },
@@ -15339,6 +15344,11 @@
             "Version": "4.5.1"
           }
         ]
+      },
+      {
+        "Name": "..\\..\\titanium-web-proxy\\src\\Titanium.Web.Proxy\\Titanium.Web.Proxy.csproj",
+        "Project": "Net4x.Titanium.Web.Proxy",
+        "PackageReferences": null
       }
     ]
   },
@@ -22742,6 +22752,16 @@
             "Version": "$(NuGetUtilityVersion)"
           }
         ]
+      },
+      {
+        "Name": "..\\DocumentoUnico\\DocumentoUnicoLibrary.BaseTypes\\DocumentoUnicoLibrary.BaseTypes.csproj",
+        "Project": "Cartabianca.DocumentoUnico.BaseTypes",
+        "PackageReferences": null
+      },
+      {
+        "Name": "..\\DocumentoUnico\\TableMergeLibrary\\TableMergeLibrary.csproj",
+        "Project": "Cartabianca.TableMergeLibrary",
+        "PackageReferences": null
       }
     ]
   },
@@ -22780,6 +22800,11 @@
             "Version": "$(NuGetUtilityVersion)"
           }
         ]
+      },
+      {
+        "Name": "..\\..\\CommonLibrary\\NumberConverterLib\\NumberConverterLib\\NumberConverterLib.csproj",
+        "Project": "Net4x.NumberConverterLib",
+        "PackageReferences": null
       }
     ]
   },
@@ -24567,6 +24592,21 @@
         "Name": "Net4x.GtkSharpLibrary",
         "Project": "GtkSharpLibrary\\GtkSharpLibrary.csproj",
         "PackageReferences": null
+      },
+      {
+        "Name": "WindowsFormsLibrary.Test\\WindowsFormsLibrary.Test.csproj",
+        "Project": "WindowsFormsLibrary.Test",
+        "PackageReferences": null
+      },
+      {
+        "Name": "InputBox.GtkWinForms\\InputBoxLibrary.GtkWinForms.csproj",
+        "Project": "Net4x.InputBoxLibrary.GtkWinForms",
+        "PackageReferences": null
+      },
+      {
+        "Name": "GtkWindowsFormsLibrary\\GtkWindowsFormsLibrary.csproj",
+        "Project": "Net4x.GtkWindowsFormsLibrary",
+        "PackageReferences": null
       }
     ]
   },
@@ -24793,6 +24833,11 @@
         "Name": "MdiInActiveX\\MdiInActiveX.csproj",
         "Project": "Net4x.$(MSBuildProjectName)",
         "PackageReferences": null
+      },
+      {
+        "Name": "MdiInActiveX\\MdiInActiveX.csproj",
+        "Project": "Net4x.MdiInActiveX",
+        "PackageReferences": null
       }
     ]
   },
@@ -24805,6 +24850,11 @@
       {
         "Name": "Net4x.$(MSBuildProjectName)",
         "Project": "DataHandlerLibrary\\DataHandlerLibrary.csproj",
+        "PackageReferences": null
+      },
+      {
+        "Name": "DataHandlerLibrary\\DataHandlerLibrary.csproj",
+        "Project": "Net4x.DataHandlerLibrary",
         "PackageReferences": null
       }
     ]
@@ -24851,6 +24901,21 @@
       {
         "Name": "WshRuntime.Tests\\WshRuntime.Tests.csproj",
         "Project": "WshRuntime.Tests",
+        "PackageReferences": null
+      },
+      {
+        "Name": "Net4x.WshRuntime.Net35",
+        "Project": "Net4x.WshRuntime.Net35\\Net4x.WshRuntime.Net35.csproj",
+        "PackageReferences": null
+      },
+      {
+        "Name": "Net4x.WshRuntime.Net40",
+        "Project": "Net4x.WshRuntimeNet40\\Net4x.WshRuntime.Net40.csproj",
+        "PackageReferences": null
+      },
+      {
+        "Name": "Net4x.WshRuntime.NetCoreApp",
+        "Project": "Net4x.WshRuntime.NetCoreApp\\Net4x.WshRuntime.NetCoreApp.csproj",
         "PackageReferences": null
       }
     ]
@@ -25093,6 +25158,11 @@
         "Name": "JavascriptLibrary\\JavascriptLibrary.csproj",
         "Project": "Net4x.$(MSBuildProjectName)",
         "PackageReferences": null
+      },
+      {
+        "Name": "JavascriptLibrary\\JavascriptLibrary.csproj",
+        "Project": "Net4x.JavascriptLibrary",
+        "PackageReferences": null
       }
     ]
   },
@@ -25247,6 +25317,11 @@
       {
         "Name": "WebLibrary\\Starb.WebLibrary.csproj",
         "Project": "$(MSBuildProjectName)",
+        "PackageReferences": null
+      },
+      {
+        "Name": "WebLibrary\\Starb.WebLibrary.csproj",
+        "Project": "Starb.WebLibrary",
         "PackageReferences": null
       }
     ]
@@ -27722,6 +27797,11 @@
         "Name": "SolutionsLibrary",
         "Project": "SolutionsLibrary\\SolutionsLibrary.csproj",
         "PackageReferences": null
+      },
+      {
+        "Name": "SolutionsLibrary\\Solutions.Library.csproj",
+        "Project": "Net4x.Solutions.Library",
+        "PackageReferences": null
       }
     ]
   },
@@ -28571,6 +28651,1681 @@
       {
         "Name": "itext-hyph-xml",
         "Project": "itext-hyph-xml.csproj",
+        "PackageReferences": null
+      }
+    ]
+  },
+  {
+    "Solution": {
+      "Path": "D:\\CommonLibrary\\bc-csharp\\BouncyCastle.sln",
+      "Version": "BouncyCastleVersion"
+    },
+    "NuGetPackages": [
+      {
+        "Name": "Net4x.BouncyCastle.Cryptography",
+        "Project": "crypto\\src\\BouncyCastle.Crypto.csproj",
+        "PackageReferences": null
+      },
+      {
+        "Name": "BouncyCastle.Cryptography",
+        "Project": "crypto\\src\\BouncyCastle.Crypto.csproj",
+        "PackageReferences": null
+      }
+    ]
+  },
+  {
+    "Solution": {
+      "Path": "D:\\CommonLibrary\\DnsServer\\dnsServer.sln",
+      "Version": "dnsServerVersion"
+    },
+    "NuGetPackages": [
+      {
+        "Name": "Net4x.DnsServer.Library",
+        "Project": "DnsServer.Library\\DnsServer.Library.csproj",
+        "PackageReferences": null
+      }
+    ]
+  },
+  {
+    "Solution": {
+      "Path": "D:\\CommonLibrary\\WiaScannerLibrary\\WiaScanner\\WiaScannerLibrary.sln",
+      "Version": "WiaScannerLibraryVersion"
+    },
+    "NuGetPackages": [
+      {
+        "Name": "Net4x.WiaScanner.Library",
+        "Project": "WiaScanner.Library.csproj",
+        "PackageReferences": null
+      },
+      {
+        "Name": "Net4x.WiaScanner.Interfaces",
+        "Project": "..\\WiaScanner.Interfaces\\WiaScanner.Interfaces.csproj",
+        "PackageReferences": null
+      }
+    ]
+  },
+  {
+    "Solution": {
+      "Path": "D:\\Cartabianca\\ImmatricolazioniWS\\ImmatricolazioniWS_Libraries.sln",
+      "Version": "ImmatricolazioniWS_LibrariesVersion"
+    },
+    "NuGetPackages": [
+      {
+        "Name": "ImmatricolazioniLibrary.Services.AcquisizioneCOC",
+        "Project": "ImmatricolazioniLibrary.Services.AcquisizioneCOC\\ImmatricolazioniLibrary.Services.AcquisizioneCOC.csproj",
+        "PackageReferences": null
+      },
+      {
+        "Name": "ImmatricolazioniLibrary.Services.AcquisizioneCOCCompletato",
+        "Project": "ImmatricolazioniLibrary.Services.AcquisizioneCOCCompletato\\ImmatricolazioniLibrary.Services.AcquisizioneCOCCompletato.csproj",
+        "PackageReferences": null
+      },
+      {
+        "Name": "ImmatricolazioniLibrary.Services.AcquisizioneCOCIncompleto",
+        "Project": "ImmatricolazioniLibrary.Services.AcquisizioneCOCIncompleto\\ImmatricolazioniLibrary.Services.AcquisizioneCOCIncompleto.csproj",
+        "PackageReferences": null
+      },
+      {
+        "Name": "ImmatricolazioniLibrary.Services.AcquisizioneInterpolazione",
+        "Project": "ImmatricolazioniLibrary.Services.AcquisizioneInterpolazione\\ImmatricolazioniLibrary.Services.AcquisizioneInterpolazione.csproj",
+        "PackageReferences": null
+      },
+      {
+        "Name": "ImmatricolazioniLibrary.Services.AcquisizioneSchedaControlloFamiglia",
+        "Project": "ImmatricolazioniLibrary.Services.AcquisizioneSchedaControlloFamiglia\\ImmatricolazioniLibrary.Services.AcquisizioneSchedaControlloFamiglia.csproj",
+        "PackageReferences": null
+      },
+      {
+        "Name": "ImmatricolazioniLibrary.Services.AcquisizioneSchedaControlloVariante",
+        "Project": "ImmatricolazioniLibrary.Services.AcquisizioneSchedaControlloVariante\\ImmatricolazioniLibrary.Services.AcquisizioneSchedaControlloVariante.csproj",
+        "PackageReferences": null
+      },
+      {
+        "Name": "ImmatricolazioniLibrary.Services.AnnullamentoRegistroInvioVeicoli",
+        "Project": "ImmatricolazioniLibrary.Services.AnnullamentoRegistroInvioVeicoli\\ImmatricolazioniLibrary.Services.AnnullamentoRegistroInvioVeicoli.csproj",
+        "PackageReferences": null
+      },
+      {
+        "Name": "ImmatricolazioniLibrary.Services.CancellazioneCOC",
+        "Project": "ImmatricolazioniLibrary.Services.CancellazioneCOC\\ImmatricolazioniLibrary.Services.CancellazioneCOC.csproj",
+        "PackageReferences": null
+      },
+      {
+        "Name": "ImmatricolazioniLibrary.Services.CancellazioneCOCCompletato",
+        "Project": "ImmatricolazioniLibrary.Services.CancellazioneCOCCompletato\\ImmatricolazioniLibrary.Services.CancellazioneCOCCompletato.csproj",
+        "PackageReferences": null
+      },
+      {
+        "Name": "ImmatricolazioniLibrary.Services.CancellazioneSchedaControlloFamiglia",
+        "Project": "ImmatricolazioniLibrary.Services.CancellazioneSchedaControlloFamiglia\\ImmatricolazioniLibrary.Services.CancellazioneSchedaControlloFamiglia.csproj",
+        "PackageReferences": null
+      },
+      {
+        "Name": "ImmatricolazioniLibrary.Services.CancellazioneSchedaControlloVariante",
+        "Project": "ImmatricolazioniLibrary.Services.CancellazioneSchedaControlloVariante\\ImmatricolazioniLibrary.Services.CancellazioneSchedaControlloVariante.csproj",
+        "PackageReferences": null
+      },
+      {
+        "Name": "ImmatricolazioniLibrary.Services.EsistenzaOmologazione",
+        "Project": "ImmatricolazioniLibrary.Services.EsistenzaOmologazione\\ImmatricolazioniLibrary.Services.EsistenzaOmologazione.csproj",
+        "PackageReferences": null
+      },
+      {
+        "Name": "ImmatricolazioniLibrary.Services.FlussoRegistroInvioVeicoli",
+        "Project": "ImmatricolazioniLibrary.Services.FlussoRegistroInvioVeicoli\\ImmatricolazioniLibrary.Services.FlussoRegistroInvioVeicoli.csproj",
+        "PackageReferences": null
+      },
+      {
+        "Name": "ImmatricolazioniLibrary.Services.InserimentoRegistroInvioVeicoli",
+        "Project": "ImmatricolazioniLibrary.Services.InserimentoRegistroInvioVeicoli\\ImmatricolazioniLibrary.Services.InserimentoRegistroInvioVeicoli.csproj",
+        "PackageReferences": null
+      },
+      {
+        "Name": "ImmatricolazioniLibrary.Services.RettificaAcquisizioneCOC",
+        "Project": "ImmatricolazioniLibrary.Services.RettificaAcquisizioneCOC\\ImmatricolazioniLibrary.Services.RettificaAcquisizioneCOC.csproj",
+        "PackageReferences": null
+      },
+      {
+        "Name": "ImmatricolazioniLibrary.Services.RettificaAcquisizioneCOCCompletato",
+        "Project": "ImmatricolazioniLibrary.Services.RettificaAcquisizioneCOCCompletato\\ImmatricolazioniLibrary.Services.RettificaAcquisizioneCOCCompletato.csproj",
+        "PackageReferences": null
+      },
+      {
+        "Name": "ImmatricolazioniLibrary.Services.VerificaEsistenzaCOC",
+        "Project": "ImmatricolazioniLibrary.Services.VerificaEsistenzaCOC\\ImmatricolazioniLibrary.Services.VerificaEsistenzaCOC.csproj",
+        "PackageReferences": null
+      },
+      {
+        "Name": "ImmatricolazioniLibrary.Services.VisualizzaOmologazione",
+        "Project": "ImmatricolazioniLibrary.Services.VisualizzaOmologazione\\ImmatricolazioniLibrary.Services.VisualizzaOmologazione.csproj",
+        "PackageReferences": null
+      },
+      {
+        "Name": "ImmatricolazioniLibrary.Services.VisualizzazioneCOC",
+        "Project": "ImmatricolazioniLibrary.Services.VisualizzazioneCOC\\ImmatricolazioniLibrary.Services.VisualizzazioneCOC.csproj",
+        "PackageReferences": null
+      },
+      {
+        "Name": "ImmatricolazioniLibrary.Services.VisualizzazioneCOCCompletato",
+        "Project": "ImmatricolazioniLibrary.Services.VisualizzazioneCOCCompletato\\ImmatricolazioniLibrary.Services.VisualizzazioneCOCCompletato.csproj",
+        "PackageReferences": null
+      },
+      {
+        "Name": "ImmatricolazioniLibrary.Services.VisualizzazioneCOCIncompleto",
+        "Project": "ImmatricolazioniLibrary.Services.VisualizzazioneCOCIncompleto\\ImmatricolazioniLibrary.Services.VisualizzazioneCOCIncompleto.csproj",
+        "PackageReferences": null
+      },
+      {
+        "Name": "ImmatricolazioniLibrary.Services.VisualizzazioneCUC",
+        "Project": "ImmatricolazioniLibrary.Services.VisualizzazioneCUC\\ImmatricolazioniLibrary.Services.VisualizzazioneCUC.csproj",
+        "PackageReferences": null
+      },
+      {
+        "Name": "ImmatricolazioniLibrary.Services.VisualizzazioneRegistroInvioVeicoli",
+        "Project": "ImmatricolazioniLibrary.Services.VisualizzazioneRegistroInvioVeicoli\\ImmatricolazioniLibrary.Services.VisualizzazioneRegistroInvioVeicoli.csproj",
+        "PackageReferences": null
+      },
+      {
+        "Name": "ImmatricolazioniLibrary.Services.VisualizzazioneSchedaControlloFamiglia",
+        "Project": "ImmatricolazioniLibrary.Services.VisualizzazioneSchedaControlloFamiglia\\ImmatricolazioniLibrary.Services.VisualizzazioneSchedaControlloFamiglia.csproj",
+        "PackageReferences": null
+      },
+      {
+        "Name": "ImmatricolazioniLibrary.Services.VisualizzazioneSchedaControlloVariante",
+        "Project": "ImmatricolazioniLibrary.Services.VisualizzazioneSchedaControlloVariante\\ImmatricolazioniLibrary.Services.VisualizzazioneSchedaControlloVariante.csproj",
+        "PackageReferences": null
+      },
+      {
+        "Name": "ImmatricolazioniLibrary",
+        "Project": "ImmatricolazioniLibrary\\ImmatricolazioniLibrary.csproj",
+        "PackageReferences": null
+      },
+      {
+        "Name": "Net4x.PdfRepresentation",
+        "Project": "PdfRepresentation\\PdfRepresentation.csproj",
+        "PackageReferences": null
+      }
+    ]
+  },
+  {
+    "Solution": {
+      "Path": "C:\\Users\\Piero\\AppData\\Local\\Temp\\Sensors.sln",
+      "Version": "SensorsVersion"
+    },
+    "NuGetPackages": [
+      {
+        "Name": "Net4x.Microsoft-WindowsAPICodePack-Sensors",
+        "Project": "D:\\CommonLibrary\\Windows-API-Code-Pack-1.1\\source\\WindowsAPICodePack\\Sensors\\Sensors.csproj",
+        "PackageReferences": null
+      }
+    ]
+  },
+  {
+    "Solution": {
+      "Path": "C:\\Users\\Piero\\AppData\\Local\\Temp\\WindowsAPICodePack.sln",
+      "Version": "WindowsAPICodePackVersion"
+    },
+    "NuGetPackages": [
+      {
+        "Name": "Net4x.Microsoft-WindowsAPICodePack-Shell",
+        "Project": "D:\\CommonLibrary\\Windows-API-Code-Pack-1.1\\source\\WindowsAPICodePack\\Shell\\Shell.csproj",
+        "PackageReferences": null
+      },
+      {
+        "Name": "Net4x.Microsoft-WindowsAPICodePack-Core",
+        "Project": "D:\\CommonLibrary\\Windows-API-Code-Pack-1.1\\source\\WindowsAPICodePack\\Core\\Core.csproj",
+        "PackageReferences": null
+      },
+      {
+        "Name": "Net4x.Microsoft-WindowsAPICodePack-Sensors",
+        "Project": "D:\\CommonLibrary\\Windows-API-Code-Pack-1.1\\source\\WindowsAPICodePack\\Sensors\\Sensors.csproj",
+        "PackageReferences": null
+      },
+      {
+        "Name": "Net4x.Microsoft-WindowsAPICodePack-ExtendedLinguisticServices",
+        "Project": "D:\\CommonLibrary\\Windows-API-Code-Pack-1.1\\source\\WindowsAPICodePack\\ExtendedLinguisticServices\\ExtendedLinguisticServices.csproj",
+        "PackageReferences": null
+      },
+      {
+        "Name": "Net4x.Microsoft-WindowsAPICodePack-ShellExtensions",
+        "Project": "D:\\CommonLibrary\\Windows-API-Code-Pack-1.1\\source\\WindowsAPICodePack\\ShellExtensions\\ShellExtensions.csproj",
+        "PackageReferences": null
+      }
+    ]
+  },
+  {
+    "Solution": {
+      "Path": "C:\\Users\\Piero\\AppData\\Local\\Temp\\MSBuild.Community.Tasks.sln",
+      "Version": "MSBuildCommunityTasksVersion"
+    },
+    "NuGetPackages": [
+      {
+        "Name": "Net4x.MSBuild.Community.Tasks",
+        "Project": "D:\\CommonLibrary\\MSBuild.Community.Tasks\\Source\\MSBuild.Community.Tasks\\MSBuild.Community.Tasks.csproj",
+        "PackageReferences": null
+      }
+    ]
+  },
+  {
+    "Solution": {
+      "Path": "C:\\Users\\Piero\\AppData\\Local\\Temp\\serilog-sinks-console.sln",
+      "Version": "serilogsinksconsoleVersion"
+    },
+    "NuGetPackages": [
+      {
+        "Name": "Net4x.Serilog.Sinks.Console",
+        "Project": "D:\\CommonLibrary\\serilog-sinks-console\\src\\Serilog.Sinks.Console\\Serilog.Sinks.Console.csproj",
+        "PackageReferences": null
+      }
+    ]
+  },
+  {
+    "Solution": {
+      "Path": "C:\\Users\\Piero\\AppData\\Local\\Temp\\serilog-sinks-console-all.sln",
+      "Version": "serilogsinksconsoleallVersion"
+    },
+    "NuGetPackages": [
+      {
+        "Name": "Net4x.Serilog.Sinks.Console",
+        "Project": "D:\\CommonLibrary\\serilog-sinks-console\\src\\Serilog.Sinks.Console\\Serilog.Sinks.Console.csproj",
+        "PackageReferences": null
+      }
+    ]
+  },
+  {
+    "Solution": {
+      "Path": "C:\\Users\\Piero\\AppData\\Local\\Temp\\Net4x.SqlServer.Types.sln",
+      "Version": "Net4xSqlServerTypesVersion"
+    },
+    "NuGetPackages": [
+      {
+        "Name": "Net4x.SqlServer.Types",
+        "Project": "D:\\CommonLibrary\\Microsoft.SqlServer.Types\\src\\Microsoft.SqlServer.Types\\Net4x.SqlServer.Types.csproj",
+        "PackageReferences": null
+      }
+    ]
+  },
+  {
+    "Solution": {
+      "Path": "C:\\Users\\Piero\\AppData\\Local\\Temp\\Net4X.Runtime.Caching.sln",
+      "Version": "Net4XRuntimeCachingVersion"
+    },
+    "NuGetPackages": [
+      {
+        "Name": "Net4x.Runtime.Caching",
+        "Project": "D:\\CommonLibrary\\Net4X.System.Runtime.Caching\\Net4X.System.Runtime.Caching\\Net4x.Runtime.Caching.csproj",
+        "PackageReferences": null
+      }
+    ]
+  },
+  {
+    "Solution": {
+      "Path": "C:\\Users\\Piero\\AppData\\Local\\Temp\\CommandBindingLibrary.sln",
+      "Version": "CommandBindingLibraryVersion"
+    },
+    "NuGetPackages": [
+      {
+        "Name": "Net4x.CommandBindingLibrary",
+        "Project": "D:\\CommonLibrary\\CommandsBindingLibrary\\CommandBindingLibrary\\CommandBindingLibrary.csproj",
+        "PackageReferences": null
+      }
+    ]
+  },
+  {
+    "Solution": {
+      "Path": "C:\\Users\\Piero\\AppData\\Local\\Temp\\serilog-extensions-logging.sln",
+      "Version": "serilogextensionsloggingVersion"
+    },
+    "NuGetPackages": [
+      {
+        "Name": "Net4x.Serilog.Extensions.Logging",
+        "Project": "D:\\CommonLibrary\\serilog-extensions-logging\\src\\Serilog.Extensions.Logging\\Serilog.Extensions.Logging.csproj",
+        "PackageReferences": null
+      }
+    ]
+  },
+  {
+    "Solution": {
+      "Path": "C:\\Users\\Piero\\AppData\\Local\\Temp\\ViewCodeDom.sln",
+      "Version": "ViewCodeDomVersion"
+    },
+    "NuGetPackages": [
+      {
+        "Name": "Net4x.ViewCodeDom",
+        "Project": "D:\\CommonLibrary\\ViewCodeDom\\ViewCodeDom\\ViewCodeDom.csproj",
+        "PackageReferences": null
+      }
+    ]
+  },
+  {
+    "Solution": {
+      "Path": "C:\\Users\\Piero\\AppData\\Local\\Temp\\CodeDomExt.sln",
+      "Version": "CodeDomExtVersion"
+    },
+    "NuGetPackages": [
+      {
+        "Name": "Net4x.CodeDomExt",
+        "Project": "D:\\CommonLibrary\\CodeDomExt\\CodeDomExt\\CodeDomExt.csproj",
+        "PackageReferences": null
+      },
+      {
+        "Name": "Net4x.CodeDomExt.Helpers",
+        "Project": "D:\\CommonLibrary\\CodeDomExt\\CodeDomExt.Helpers\\CodeDomExt.Helpers.csproj",
+        "PackageReferences": null
+      }
+    ]
+  },
+  {
+    "Solution": {
+      "Path": "C:\\Users\\Piero\\AppData\\Local\\Temp\\CertificateLibrary.sln",
+      "Version": "CertificateLibraryVersion"
+    },
+    "NuGetPackages": [
+      {
+        "Name": "Net4x.CertificateLibrary",
+        "Project": "D:\\CommonLibrary\\CertificateLibrary\\CertificateLibrary\\CertificateLibrary.csproj",
+        "PackageReferences": null
+      }
+    ]
+  },
+  {
+    "Solution": {
+      "Path": "C:\\Users\\Piero\\AppData\\Local\\Temp\\Net4x.Runtime.CompilerServices.Unsafe.sln",
+      "Version": "Net4xRuntimeCompilerServicesUnsafeVersion"
+    },
+    "NuGetPackages": [
+      {
+        "Name": "Net4x.Runtime.CompilerServices.Unsafe",
+        "Project": "D:\\CommonLibrary\\PinnedLibrary\\Net4x.Runtime.CompilerServices.Unsafe\\Net4x.Runtime.CompilerServices.Unsafe.csproj",
+        "PackageReferences": null
+      }
+    ]
+  },
+  {
+    "Solution": {
+      "Path": "C:\\Users\\Piero\\AppData\\Local\\Temp\\AppDomainAlternative.sln",
+      "Version": "AppDomainAlternativeVersion"
+    },
+    "NuGetPackages": [
+      {
+        "Name": "Net4x.AppDomainAlternative",
+        "Project": "D:\\CommonLibrary\\AppDomainAlternative\\src\\AppDomainAlternative\\AppDomainAlternative.csproj",
+        "PackageReferences": null
+      },
+      {
+        "Name": "Net4x.HostApp",
+        "Project": "D:\\CommonLibrary\\AppDomainAlternative\\src\\HostApp\\HostApp.csproj",
+        "PackageReferences": null
+      },
+      {
+        "Name": "Net4x.ClientApp",
+        "Project": "D:\\CommonLibrary\\AppDomainAlternative\\src\\ClientApp\\ClientApp.csproj",
+        "PackageReferences": null
+      },
+      {
+        "Name": "Net4x.Common",
+        "Project": "D:\\CommonLibrary\\AppDomainAlternative\\src\\Common\\Common.csproj",
+        "PackageReferences": null
+      }
+    ]
+  },
+  {
+    "Solution": {
+      "Path": "C:\\Users\\Piero\\AppData\\Local\\Temp\\Serilog.sln",
+      "Version": "SerilogVersion"
+    },
+    "NuGetPackages": [
+      {
+        "Name": "Net4x.Serilog.Library",
+        "Project": "D:\\CommonLibrary\\serilog\\src\\Serilog\\Serilog.csproj",
+        "PackageReferences": null
+      }
+    ]
+  },
+  {
+    "Solution": {
+      "Path": "C:\\Users\\Piero\\AppData\\Local\\Temp\\PinnedLibrary.sln",
+      "Version": "PinnedLibraryVersion"
+    },
+    "NuGetPackages": [
+      {
+        "Name": "Net4x.PinnedLibrary",
+        "Project": "D:\\CommonLibrary\\PinnedLibrary\\PinnedLibrary\\PinnedLibrary.csproj",
+        "PackageReferences": null
+      },
+      {
+        "Name": "Net4x.Runtime.CompilerServices.Unsafe",
+        "Project": "D:\\CommonLibrary\\PinnedLibrary\\Net4x.Runtime.CompilerServices.Unsafe\\Net4x.Runtime.CompilerServices.Unsafe.csproj",
+        "PackageReferences": null
+      },
+      {
+        "Name": "Net4x.Numerics.Vectors",
+        "Project": "D:\\CommonLibrary\\PinnedLibrary\\Net4x.Numerics.Vectors\\Net4x.Numerics.Vectors.csproj",
+        "PackageReferences": null
+      },
+      {
+        "Name": "Net35.Numerics",
+        "Project": "D:\\CommonLibrary\\PinnedLibrary\\Net35.Numerics\\Net35.Numerics.csproj",
+        "PackageReferences": null
+      }
+    ]
+  },
+  {
+    "Solution": {
+      "Path": "C:\\Users\\Piero\\AppData\\Local\\Temp\\BuildAllPackages.sln",
+      "Version": "BuildAllPackagesVersion"
+    },
+    "NuGetPackages": [
+      {
+        "Name": "Net4x.$(MSBuildProjectName)",
+        "Project": "D:\\CommonLibrary\\NuGetUtility\\SolutionsLibrary\\Solutions.Library.csproj",
+        "PackageReferences": null
+      }
+    ]
+  },
+  {
+    "Solution": {
+      "Path": "C:\\Users\\Piero\\AppData\\Local\\Temp\\NugetOptimizer.sln",
+      "Version": "NugetOptimizerVersion"
+    },
+    "NuGetPackages": [
+      {
+        "Name": "Net4x.NugetOptimizer.Library",
+        "Project": "D:\\CommonLibrary\\NugetOptimizer\\NugetOptimizer.Library\\NugetOptimizer.Library.csproj",
+        "PackageReferences": null
+      }
+    ]
+  },
+  {
+    "Solution": {
+      "Path": "C:\\Users\\Piero\\AppData\\Local\\Temp\\Net4x.MsTests.sln",
+      "Version": "Net4xMsTestsVersion"
+    },
+    "NuGetPackages": [
+      {
+        "Name": "Net4x.MsTests",
+        "Project": "D:\\CommonLibrary\\Net4x.MsTests\\src\\MsTests\\MsTests.csproj",
+        "PackageReferences": null
+      },
+      {
+        "Name": "Net4x.XunitTests",
+        "Project": "D:\\CommonLibrary\\Net4x.MsTests\\src\\XunitTests\\XunitTests.csproj",
+        "PackageReferences": null
+      },
+      {
+        "Name": "Net4x.NunitTests",
+        "Project": "D:\\CommonLibrary\\Net4x.MsTests\\src\\NunitTests\\NunitTests.csproj",
+        "PackageReferences": null
+      },
+      {
+        "Name": "Net4x.Tests.Base",
+        "Project": "D:\\CommonLibrary\\Net4x.MsTests\\tests\\Tests.Base\\Tests.Base.csproj",
+        "PackageReferences": null
+      }
+    ]
+  },
+  {
+    "Solution": {
+      "Path": "C:\\Users\\Piero\\AppData\\Local\\Temp\\Net4x.IO.Compression.sln",
+      "Version": "Net4xIOCompressionVersion"
+    },
+    "NuGetPackages": [
+      {
+        "Name": "Net4x.IO.Compression.Library",
+        "Project": "D:\\CommonLibrary\\Net4x.IO.Compression\\Net4x.IO.Compression\\Net4x.IO.Compression.Library.csproj",
+        "PackageReferences": null
+      },
+      {
+        "Name": "Net4x.IO.Compression.ZipFile",
+        "Project": "D:\\CommonLibrary\\Net4x.IO.Compression\\Net4x.IO.Compression.ZipFile\\Net4x.IO.Compression.ZipFile.csproj",
+        "PackageReferences": null
+      }
+    ]
+  },
+  {
+    "Solution": {
+      "Path": "C:\\Users\\Piero\\AppData\\Local\\Temp\\Net4x.Data.DataSetExtensions.sln",
+      "Version": "Net4xDataDataSetExtensionsVersion"
+    },
+    "NuGetPackages": [
+      {
+        "Name": "Net4x.Data.DataSetExtensions",
+        "Project": "D:\\CommonLibrary\\Net4x.Data.DataSetExtensions\\System.Data.DataSetExtensions\\Net4x.Data.DataSetExtensions.csproj",
+        "PackageReferences": null
+      }
+    ]
+  },
+  {
+    "Solution": {
+      "Path": "C:\\Users\\Piero\\AppData\\Local\\Temp\\Net4x.Buffers.sln",
+      "Version": "Net4xBuffersVersion"
+    },
+    "NuGetPackages": [
+      {
+        "Name": "Net4x.SystemBuffers",
+        "Project": "D:\\CommonLibrary\\Net4x.Buffers\\Net4x.Buffers\\Net4x.SystemBuffers.csproj",
+        "PackageReferences": null
+      }
+    ]
+  },
+  {
+    "Solution": {
+      "Path": "C:\\Users\\Piero\\AppData\\Local\\Temp\\MockAdoNet.sln",
+      "Version": "MockAdoNetVersion"
+    },
+    "NuGetPackages": [
+      {
+        "Name": "Net4x.AdoNet.Mock",
+        "Project": "D:\\CommonLibrary\\MockAdoNet\\MockAdoNet\\MockAdoNet.csproj",
+        "PackageReferences": null
+      }
+    ]
+  },
+  {
+    "Solution": {
+      "Path": "C:\\Users\\Piero\\AppData\\Local\\Temp\\iTextCore.sln",
+      "Version": "iTextCoreVersion"
+    },
+    "NuGetPackages": [
+      {
+        "Name": "Net4x.iText.IO",
+        "Project": "D:\\CommonLibrary\\itext7-dotnet\\itext\\itext.io\\Net4x.iText.IO.csproj",
+        "PackageReferences": null
+      },
+      {
+        "Name": "Net4x.iText.PdfTest",
+        "Project": "D:\\CommonLibrary\\itext7-dotnet\\itext\\itext.pdftest\\Net4x.iText.PdfTest.csproj",
+        "PackageReferences": null
+      },
+      {
+        "Name": "Net4x.iText.Kernel",
+        "Project": "D:\\CommonLibrary\\itext7-dotnet\\itext\\itext.kernel\\Net4x.iText.Kernel.csproj",
+        "PackageReferences": null
+      },
+      {
+        "Name": "Net4x.iText.Layout",
+        "Project": "D:\\CommonLibrary\\itext7-dotnet\\itext\\itext.layout\\Net4x.iText.Layout.csproj",
+        "PackageReferences": null
+      },
+      {
+        "Name": "Net4x.iText.Pdfa",
+        "Project": "D:\\CommonLibrary\\itext7-dotnet\\itext\\itext.pdfa\\Net4x.iText.Pdfa.csproj",
+        "PackageReferences": null
+      },
+      {
+        "Name": "Net4x.iText.Forms",
+        "Project": "D:\\CommonLibrary\\itext7-dotnet\\itext\\itext.forms\\Net4x.iText.Forms.csproj",
+        "PackageReferences": null
+      },
+      {
+        "Name": "Net4x.iText.BarCodes",
+        "Project": "D:\\CommonLibrary\\itext7-dotnet\\itext\\itext.barcodes\\Net4x.iText.BarCodes.csproj",
+        "PackageReferences": null
+      },
+      {
+        "Name": "Net4x.iText.Font-Asian",
+        "Project": "D:\\CommonLibrary\\itext7-dotnet\\itext\\itext.font-asian\\Net4x.iText.Font-Asian.csproj",
+        "PackageReferences": null
+      },
+      {
+        "Name": "Net4x.iText.Hyph",
+        "Project": "D:\\CommonLibrary\\itext7-dotnet\\itext\\itext.hyph\\Net4x.iText.Hyph.csproj",
+        "PackageReferences": null
+      },
+      {
+        "Name": "Net4x.iText.Sign",
+        "Project": "D:\\CommonLibrary\\itext7-dotnet\\itext\\itext.sign\\Net4x.iText.Sign.csproj",
+        "PackageReferences": null
+      },
+      {
+        "Name": "Net4x.iText.StyledXmlParser",
+        "Project": "D:\\CommonLibrary\\itext7-dotnet\\itext\\itext.styledxmlparser\\Net4x.iText.StyledXmlParser.csproj",
+        "PackageReferences": null
+      },
+      {
+        "Name": "Net4x.iText.Svg",
+        "Project": "D:\\CommonLibrary\\itext7-dotnet\\itext\\itext.svg\\Net4x.iText.Svg.csproj",
+        "PackageReferences": null
+      },
+      {
+        "Name": "Net4x.iText.Commons",
+        "Project": "D:\\CommonLibrary\\itext7-dotnet\\itext\\itext.commons\\Net4x.iText.Commons.csproj",
+        "PackageReferences": null
+      },
+      {
+        "Name": "Net4x.iText.All",
+        "Project": "D:\\CommonLibrary\\itext7-dotnet\\itext\\Net4x.iText\\Net4x.iText.All.csproj",
+        "PackageReferences": null
+      }
+    ]
+  },
+  {
+    "Solution": {
+      "Path": "C:\\Users\\Piero\\AppData\\Local\\Temp\\Html2Xhtml.sln",
+      "Version": "Html2XhtmlVersion"
+    },
+    "NuGetPackages": [
+      {
+        "Name": "Net4x.Html2Xhtml",
+        "Project": "D:\\CommonLibrary\\Html2Xhtml\\Html2Xhtml\\Html2Xhtml.csproj",
+        "PackageReferences": null
+      }
+    ]
+  },
+  {
+    "Solution": {
+      "Path": "C:\\Users\\Piero\\AppData\\Local\\Temp\\HostProcessLibrary.sln",
+      "Version": "HostProcessLibraryVersion"
+    },
+    "NuGetPackages": [
+      {
+        "Name": "Net4x.HostProcessLibrary",
+        "Project": "D:\\CommonLibrary\\HostProcessLibrary\\HostProcessLibrary\\HostProcessLibrary.csproj",
+        "PackageReferences": null
+      }
+    ]
+  },
+  {
+    "Solution": {
+      "Path": "C:\\Users\\Piero\\AppData\\Local\\Temp\\HostAppInPanel.sln",
+      "Version": "HostAppInPanelVersion"
+    },
+    "NuGetPackages": [
+      {
+        "Name": "HostAppInPanelLib.PieroViano",
+        "Project": "D:\\CommonLibrary\\HostAppInPanel\\HostAppInPanelLib\\HostAppInPanelLib.csproj",
+        "PackageReferences": null
+      }
+    ]
+  },
+  {
+    "Solution": {
+      "Path": "C:\\Users\\Piero\\AppData\\Local\\Temp\\EasyTabs.sln",
+      "Version": "EasyTabsVersion"
+    },
+    "NuGetPackages": [
+      {
+        "Name": "Net4x.Net4x.$(MSBuildProjectName)",
+        "Project": "D:\\CommonLibrary\\EasyTabs\\EasyTabs\\EasyTabs.csproj",
+        "PackageReferences": null
+      }
+    ]
+  },
+  {
+    "Solution": {
+      "Path": "C:\\Users\\Piero\\AppData\\Local\\Temp\\dnsServer.sln",
+      "Version": "dnsServerVersion"
+    },
+    "NuGetPackages": [
+      {
+        "Name": "Net4x.DnsServer.Library",
+        "Project": "D:\\CommonLibrary\\DnsServer\\DnsServer.Library\\DnsServer.Library.csproj",
+        "PackageReferences": null
+      }
+    ]
+  },
+  {
+    "Solution": {
+      "Path": "C:\\Users\\Piero\\AppData\\Local\\Temp\\DataGridLib.sln",
+      "Version": "DataGridLibVersion"
+    },
+    "NuGetPackages": [
+      {
+        "Name": "Net4x.DataGridLib",
+        "Project": "D:\\CommonLibrary\\DataGridLib\\DataGridLib\\DataGridLib.csproj",
+        "PackageReferences": null
+      }
+    ]
+  },
+  {
+    "Solution": {
+      "Path": "C:\\Users\\Piero\\AppData\\Local\\Temp\\CompileLibrary.sln",
+      "Version": "CompileLibraryVersion"
+    },
+    "NuGetPackages": [
+      {
+        "Name": "Net4x.CompileLibrary",
+        "Project": "D:\\CommonLibrary\\CompileLibrary\\CompileLibrary\\CompileLibrary.csproj",
+        "PackageReferences": null
+      }
+    ]
+  },
+  {
+    "Solution": {
+      "Path": "C:\\Users\\Piero\\AppData\\Local\\Temp\\BouncyCastle.sln",
+      "Version": "BouncyCastleVersion"
+    },
+    "NuGetPackages": [
+      {
+        "Name": "Net4x.BouncyCastle.Cryptography",
+        "Project": "D:\\CommonLibrary\\bc-csharp\\crypto\\src\\BouncyCastle.Crypto.csproj",
+        "PackageReferences": null
+      }
+    ]
+  },
+  {
+    "Solution": {
+      "Path": "d:\\CommonLibrary\\CompileLibrary\\CompileLibrary.sln",
+      "Version": "CompileLibraryVersion"
+    },
+    "NuGetPackages": [
+      {
+        "Name": "Net4x.CompileLibrary",
+        "Project": "CompileLibrary\\CompileLibrary.csproj",
+        "PackageReferences": null
+      },
+      {
+        "Name": "CompileLibrary.Tests",
+        "Project": "Tests\\CompileLibrary.Tests\\CompileLibrary.Tests.csproj",
+        "PackageReferences": null
+      }
+    ]
+  },
+  {
+    "Solution": {
+      "Path": "C:\\Users\\Piero\\AppData\\Local\\Temp\\serilog-sinks-file.sln",
+      "Version": "serilogsinksfileVersion"
+    },
+    "NuGetPackages": [
+      {
+        "Name": "Net4x.Serilog.Sinks.File",
+        "Project": "D:\\CommonLibrary\\serilog-sinks-file\\src\\Serilog.Sinks.File\\Serilog.Sinks.File.csproj",
+        "PackageReferences": null
+      }
+    ]
+  },
+  {
+    "Solution": {
+      "Path": "C:\\Users\\Piero\\AppData\\Local\\Temp\\WrapperGenerator.sln",
+      "Version": "WrapperGeneratorVersion"
+    },
+    "NuGetPackages": [
+      {
+        "Name": "Net4x.WrapperGeneratorLibrary",
+        "Project": "D:\\CommonLibrary\\Net4x.WrapperGenerator\\Source\\WrapperGeneratorLibrary\\WrapperGeneratorLibrary.csproj",
+        "PackageReferences": null
+      },
+      {
+        "Name": "Net4x.StandardTypesWrappers",
+        "Project": "D:\\CommonLibrary\\Net4x.WrapperGenerator\\Source\\StandardTypesWrappers\\StandardTypesWrappers.csproj",
+        "PackageReferences": null
+      },
+      {
+        "Name": "Net4x.IonicWrapper",
+        "Project": "D:\\CommonLibrary\\Net4x.WrapperGenerator\\Source\\IonicWrapper\\IonicWrapper.csproj",
+        "PackageReferences": null
+      },
+      {
+        "Name": "Net4x.SystemWebWrapper",
+        "Project": "D:\\CommonLibrary\\Net4x.WrapperGenerator\\Source\\SystemWebWrapper\\SystemWebWrapper.csproj",
+        "PackageReferences": null
+      },
+      {
+        "Name": "Net4x.AppDomainWrapper",
+        "Project": "D:\\CommonLibrary\\Net4x.WrapperGenerator\\Source\\AppDomainWrapper\\AppDomainWrapper.csproj",
+        "PackageReferences": null
+      },
+      {
+        "Name": "Net4x.SystemConfigurationWrappers",
+        "Project": "D:\\CommonLibrary\\Net4x.WrapperGenerator\\Source\\SystemConfigurationWrappers\\SystemConfigurationWrappers.csproj",
+        "PackageReferences": null
+      }
+    ]
+  },
+  {
+    "Solution": {
+      "Path": "C:\\Users\\Piero\\AppData\\Local\\Temp\\Net4x.AsyncBridge.sln",
+      "Version": "Net4xAsyncBridgeVersion"
+    },
+    "NuGetPackages": [
+      {
+        "Name": "Net4x.AsyncBridge",
+        "Project": "D:\\CommonLibrary\\Net4x.AsyncBridge\\src\\AsyncBridge\\Net4x.AsyncBridge.csproj",
+        "PackageReferences": null
+      },
+      {
+        "Name": "Net4x.SmartThreadPool",
+        "Project": "D:\\CommonLibrary\\Net4x.AsyncBridge\\src\\SmartThreadPool\\Net4x.SmartThreadPool.csproj",
+        "PackageReferences": null
+      },
+      {
+        "Name": "Net4x.Dispatcher",
+        "Project": "D:\\CommonLibrary\\Net4x.AsyncBridge\\Net4x.Windows.Threads\\Net4x.Dispatcher.csproj",
+        "PackageReferences": null
+      }
+    ]
+  },
+  {
+    "Solution": {
+      "Path": "D:\\CommonLibrary\\CefSharp.Library\\CefSharp.Library.nuget.sln",
+      "Version": "CefSharpLibrarynugetVersion"
+    },
+    "NuGetPackages": [
+      {
+        "Name": "Net4x.CefSharp.Library",
+        "Project": "CefSharp.Library\\CefSharp.Library.csproj",
+        "PackageReferences": null
+      },
+      {
+        "Name": "Net4x.$(MSBuildProjectName)",
+        "Project": "JavascriptLibrary\\JavascriptLibrary.csproj",
+        "PackageReferences": null
+      }
+    ]
+  },
+  {
+    "Solution": {
+      "Path": "D:\\CommonLibrary\\NuGetUtility\\wrappergenerator\\WrapperGenerator.nuget.sln",
+      "Version": "WrapperGeneratornugetVersion"
+    },
+    "NuGetPackages": [
+      {
+        "Name": "Net4x.WrapperGeneratorLibrary",
+        "Project": "Source\\WrapperGeneratorLibrary\\WrapperGeneratorLibrary.csproj",
+        "PackageReferences": null
+      },
+      {
+        "Name": "Net4x.StandardTypesWrappers",
+        "Project": "Source\\StandardTypesWrappers\\StandardTypesWrappers.csproj",
+        "PackageReferences": null
+      },
+      {
+        "Name": "Net4x.IonicWrapper",
+        "Project": "Source\\IonicWrapper\\IonicWrapper.csproj",
+        "PackageReferences": null
+      },
+      {
+        "Name": "Net4x.SystemWebWrapper",
+        "Project": "Source\\SystemWebWrapper\\SystemWebWrapper.csproj",
+        "PackageReferences": null
+      },
+      {
+        "Name": "Net4x.AppDomainWrapper",
+        "Project": "Source\\AppDomainWrapper\\AppDomainWrapper.csproj",
+        "PackageReferences": null
+      },
+      {
+        "Name": "Net4x.SystemConfigurationWrappers",
+        "Project": "Source\\SystemConfigurationWrappers\\SystemConfigurationWrappers.csproj",
+        "PackageReferences": null
+      }
+    ]
+  },
+  {
+    "Solution": {
+      "Path": "C:\\Users\\Piero\\AppData\\Local\\Temp\\AsyncEnumerable.sln",
+      "Version": "AsyncEnumerableVersion"
+    },
+    "NuGetPackages": [
+      {
+        "Name": "Net4x.AsyncEnumerable",
+        "Project": "D:\\CommonLibrary\\AsyncEnumerable\\src\\AsyncEnumerable.csproj",
+        "PackageReferences": null
+      }
+    ]
+  },
+  {
+    "Solution": {
+      "Path": "C:\\Users\\Piero\\AppData\\Local\\Temp\\AppDomainTaskLibrary.sln",
+      "Version": "AppDomainTaskLibraryVersion"
+    },
+    "NuGetPackages": [
+      {
+        "Name": "Net4x.AppDomainTaskLibrary",
+        "Project": "D:\\CommonLibrary\\AppDomainTaskLibrary\\AppDomainTaskLibrary\\AppDomainTaskLibrary.csproj",
+        "PackageReferences": null
+      }
+    ]
+  },
+  {
+    "Solution": {
+      "Path": "D:\\CommonLibrary\\NuGetUtility\\NuGetUtility.sln",
+      "Version": "NuGetUtilityVersion"
+    },
+    "NuGetPackages": [
+      {
+        "Name": "Net4x.NuGetUtility",
+        "Project": "Source\\NuGetUtility\\NuGetUtility.csproj",
+        "PackageReferences": null
+      }
+    ]
+  },
+  {
+    "Solution": {
+      "Path": "C:\\Users\\Piero\\AppData\\Local\\Temp\\Authenticator.YubiKey.sln",
+      "Version": "AuthenticatorYubiKeyVersion"
+    },
+    "NuGetPackages": [
+      {
+        "Name": "Net4x.Authenticator.YubiKey",
+        "Project": "D:\\CommonLibrary\\Authenticator.YubiKey\\Authenticator.YubiKey\\Authenticator.YubiKey.csproj",
+        "PackageReferences": null
+      }
+    ]
+  },
+  {
+    "Solution": {
+      "Path": "C:\\Users\\Piero\\AppData\\Local\\Temp\\BackgroundWorkerLibrary.sln",
+      "Version": "BackgroundWorkerLibraryVersion"
+    },
+    "NuGetPackages": [
+      {
+        "Name": "Net4x.BackgroundWorkerLibrary",
+        "Project": "D:\\CommonLibrary\\BackgroundWorkerLibrary\\BackgroundWorkerLibrary\\BackgroundWorkerLibrary.csproj",
+        "PackageReferences": null
+      }
+    ]
+  },
+  {
+    "Solution": {
+      "Path": "C:\\Users\\Piero\\AppData\\Local\\Temp\\Barcode.sln",
+      "Version": "BarcodeVersion"
+    },
+    "NuGetPackages": [
+      {
+        "Name": "Net4x.Barcode",
+        "Project": "D:\\CommonLibrary\\Barcodes\\Barcode\\Barcode.csproj",
+        "PackageReferences": null
+      }
+    ]
+  },
+  {
+    "Solution": {
+      "Path": "C:\\Users\\Piero\\AppData\\Local\\Temp\\EFProviderWrappers.sln",
+      "Version": "EFProviderWrappersVersion"
+    },
+    "NuGetPackages": [
+      {
+        "Name": "Net4x.EFProviderWrapperToolkit",
+        "Project": "D:\\CommonLibrary\\CommunityEFCachingProvider\\Code\\EFProviderWrapperToolkit\\EFProviderWrapperToolkit.csproj",
+        "PackageReferences": null
+      },
+      {
+        "Name": "Net4x.EFTracingProvider",
+        "Project": "D:\\CommonLibrary\\CommunityEFCachingProvider\\Code\\EFTracingProvider\\EFTracingProvider.csproj",
+        "PackageReferences": null
+      },
+      {
+        "Name": "Net4x.EFCachingProvider",
+        "Project": "D:\\CommonLibrary\\CommunityEFCachingProvider\\Code\\EFCachingProvider\\EFCachingProvider.csproj",
+        "PackageReferences": null
+      },
+      {
+        "Name": "Net4x.ConfigOnlyInjection",
+        "Project": "D:\\CommonLibrary\\CommunityEFCachingProvider\\Code\\ConfigOnlyInjection\\ConfigOnlyInjection.csproj",
+        "PackageReferences": null
+      },
+      {
+        "Name": "Net4x.EFCachingProvider.Web",
+        "Project": "D:\\CommonLibrary\\CommunityEFCachingProvider\\Code\\EFCachingProvider.Web\\EFCachingProvider.Web.csproj",
+        "PackageReferences": null
+      }
+    ]
+  },
+  {
+    "Solution": {
+      "Path": "C:\\Users\\Piero\\AppData\\Local\\Temp\\CreateHiddenProcess.sln",
+      "Version": "CreateHiddenProcessVersion"
+    },
+    "NuGetPackages": [
+      {
+        "Name": "CreateHiddenProcessLib",
+        "Project": "D:\\CommonLibrary\\CreateHiddenProcess\\CreateHiddenProcessLib\\CreateHiddenProcessLib.csproj",
+        "PackageReferences": null
+      }
+    ]
+  },
+  {
+    "Solution": {
+      "Path": "C:\\Users\\Piero\\AppData\\Local\\Temp\\DocxToHTML.sln",
+      "Version": "DocxToHTMLVersion"
+    },
+    "NuGetPackages": [
+      {
+        "Name": "Net4x.DocxToHTML.Converter",
+        "Project": "D:\\CommonLibrary\\Docx-Html-Docx\\DocxToHTML.Converter\\DocxToHTML.Converter.csproj",
+        "PackageReferences": null
+      },
+      {
+        "Name": "Net4x.HTMLtoDOCX.Converter",
+        "Project": "D:\\CommonLibrary\\Docx-Html-Docx\\HTMLtoDOCX.Converter\\HTMLtoDOCX.Converter.csproj",
+        "PackageReferences": null
+      }
+    ]
+  },
+  {
+    "Solution": {
+      "Path": "C:\\Users\\Piero\\AppData\\Local\\Temp\\DotNetZip.sln",
+      "Version": "DotNetZipVersion"
+    },
+    "NuGetPackages": [
+      {
+        "Name": "Net4x.DotNetZip",
+        "Project": "D:\\CommonLibrary\\DotNetZip\\src\\Zip\\DotNetZip.csproj",
+        "PackageReferences": null
+      }
+    ]
+  },
+  {
+    "Solution": {
+      "Path": "C:\\Users\\Piero\\AppData\\Local\\Temp\\FreeImageDotnetCore.sln",
+      "Version": "FreeImageDotnetCoreVersion"
+    },
+    "NuGetPackages": [
+      {
+        "Name": "Net4x.FreeImage",
+        "Project": "D:\\CommonLibrary\\FreeImage-dotnet-core\\src\\FreeImage-dotnet-core\\FreeImage.csproj",
+        "PackageReferences": null
+      }
+    ]
+  },
+  {
+    "Solution": {
+      "Path": "C:\\Users\\Piero\\AppData\\Local\\Temp\\IdentityApplication.sln",
+      "Version": "IdentityApplicationVersion"
+    },
+    "NuGetPackages": [
+      {
+        "Name": "Net4x.IdentityData",
+        "Project": "D:\\CommonLibrary\\IdentityApplication\\IdentityData\\IdentityData.csproj",
+        "PackageReferences": null
+      }
+    ]
+  },
+  {
+    "Solution": {
+      "Path": "C:\\Users\\Piero\\AppData\\Local\\Temp\\IdentityServer4.AccessTokenValidation.sln",
+      "Version": "IdentityServer4AccessTokenValidationVersion"
+    },
+    "NuGetPackages": [
+      {
+        "Name": "Net6.IdentityServer4.AccessTokenValidation",
+        "Project": "D:\\CommonLibrary\\IdentityServer4.AccessTokenValidation\\src\\IdentityServer4.AccessTokenValidation.csproj",
+        "PackageReferences": null
+      }
+    ]
+  },
+  {
+    "Solution": {
+      "Path": "C:\\Users\\Piero\\AppData\\Local\\Temp\\IdentityServer4.sln",
+      "Version": "IdentityServer4Version"
+    },
+    "NuGetPackages": [
+      {
+        "Name": "Net8.IdentityServer4.Storage",
+        "Project": "D:\\CommonLibrary\\IdentityServer4\\src\\Storage\\src\\IdentityServer4.Storage.csproj",
+        "PackageReferences": null
+      },
+      {
+        "Name": "Net8.IdentityServer4.Base",
+        "Project": "D:\\CommonLibrary\\IdentityServer4\\src\\IdentityServer4\\src\\IdentityServer4.Base.csproj",
+        "PackageReferences": null
+      },
+      {
+        "Name": "Net8.IdentityServer4.EntityFramework.Storage",
+        "Project": "D:\\CommonLibrary\\IdentityServer4\\src\\EntityFramework.Storage\\src\\IdentityServer4.EntityFramework.Storage.csproj",
+        "PackageReferences": null
+      },
+      {
+        "Name": "IdentityServer4.EntityFramework.UnitTests",
+        "Project": "D:\\CommonLibrary\\IdentityServer4\\src\\EntityFramework.Storage\\test\\UnitTests\\IdentityServer4.EntityFramework.UnitTests.csproj",
+        "PackageReferences": null
+      },
+      {
+        "Name": "Net8.IdentityServer4.EntityFramework.Base",
+        "Project": "D:\\CommonLibrary\\IdentityServer4\\src\\EntityFramework\\src\\IdentityServer4.EntityFramework.csproj",
+        "PackageReferences": null
+      }
+    ]
+  },
+  {
+    "Solution": {
+      "Path": "C:\\Users\\Piero\\AppData\\Local\\Temp\\InjectModuleInitializer.sln",
+      "Version": "InjectModuleInitializerVersion"
+    },
+    "NuGetPackages": [
+      {
+        "Name": "Net4x.InjectModuleInitializer",
+        "Project": "D:\\CommonLibrary\\InjectModuleInitializer\\InjectModuleInitializer\\InjectModuleInitializer.csproj",
+        "PackageReferences": null
+      }
+    ]
+  },
+  {
+    "Solution": {
+      "Path": "C:\\Users\\Piero\\AppData\\Local\\Temp\\InputSimulator.sln",
+      "Version": "InputSimulatorVersion"
+    },
+    "NuGetPackages": [
+      {
+        "Name": "Net4x.InputSimulator",
+        "Project": "D:\\CommonLibrary\\InputSimulator\\InputSimulator\\InputSimulator.csproj",
+        "PackageReferences": null
+      }
+    ]
+  },
+  {
+    "Solution": {
+      "Path": "C:\\Users\\Piero\\AppData\\Local\\Temp\\iTextSharpPdfa.sln",
+      "Version": "iTextSharpPdfaVersion"
+    },
+    "NuGetPackages": [
+      {
+        "Name": "Net4x.iTextSharp.Pdfa",
+        "Project": "D:\\CommonLibrary\\iTextSharpPdfa\\iTextSharpPdfa\\iTextSharp.Pdfa.csproj",
+        "PackageReferences": null
+      }
+    ]
+  },
+  {
+    "Solution": {
+      "Path": "C:\\Users\\Piero\\AppData\\Local\\Temp\\KillChromeDriver.sln",
+      "Version": "KillChromeDriverVersion"
+    },
+    "NuGetPackages": [
+      {
+        "Name": "Net4x.KillChromeDriver",
+        "Project": "D:\\CommonLibrary\\KillChromeDriver\\KillChromeDriver\\KillChromeDriver.vbproj",
+        "PackageReferences": null
+      }
+    ]
+  },
+  {
+    "Solution": {
+      "Path": "C:\\Users\\Piero\\AppData\\Local\\Temp\\MetroFramework.sln",
+      "Version": "MetroFrameworkVersion"
+    },
+    "NuGetPackages": [
+      {
+        "Name": "Net4x.MetroFramework",
+        "Project": "D:\\CommonLibrary\\MetroFramework\\MetroFramework\\MetroFramework.csproj",
+        "PackageReferences": null
+      },
+      {
+        "Name": "Net4x.MetroFramework.Design",
+        "Project": "D:\\CommonLibrary\\MetroFramework\\MetroFramework.Design\\MetroFramework.Design.csproj",
+        "PackageReferences": null
+      },
+      {
+        "Name": "Net4x.MetroFramework.Fonts",
+        "Project": "D:\\CommonLibrary\\MetroFramework\\MetroFramework.Fonts\\MetroFramework.Fonts.csproj",
+        "PackageReferences": null
+      }
+    ]
+  },
+  {
+    "Solution": {
+      "Path": "C:\\Users\\Piero\\AppData\\Local\\Temp\\Net35.Actions.sln",
+      "Version": "Net35ActionsVersion"
+    },
+    "NuGetPackages": [
+      {
+        "Name": "Net35.Actions",
+        "Project": "D:\\CommonLibrary\\Net35.Actions\\Net35.Actions\\Net35.Actions.csproj",
+        "PackageReferences": null
+      }
+    ]
+  },
+  {
+    "Solution": {
+      "Path": "C:\\Users\\Piero\\AppData\\Local\\Temp\\Net35.Buffers.sln",
+      "Version": "Net35BuffersVersion"
+    },
+    "NuGetPackages": [
+      {
+        "Name": "Net35.MsCorlib",
+        "Project": "D:\\CommonLibrary\\Net35.Buffers\\src\\mscorlib.NET35\\Net35.MsCorlib.csproj",
+        "PackageReferences": null
+      },
+      {
+        "Name": "Net35.System.Buffers",
+        "Project": "D:\\CommonLibrary\\Net35.Buffers\\src\\System.Buffers.NET35\\Net35.System.Buffers.csproj",
+        "PackageReferences": null
+      },
+      {
+        "Name": "Net35.System.Runtime.InteropServices.RuntimeInformation",
+        "Project": "D:\\CommonLibrary\\Net35.Buffers\\src\\System.Runtime.InteropServices.RuntimeInformation.NET35\\Net35.System.Runtime.InteropServices.RuntimeInformation.csproj",
+        "PackageReferences": null
+      }
+    ]
+  },
+  {
+    "Solution": {
+      "Path": "C:\\Users\\Piero\\AppData\\Local\\Temp\\Net4x.Configuration.sln",
+      "Version": "Net4xConfigurationVersion"
+    },
+    "NuGetPackages": [
+      {
+        "Name": "Net4x.Configuration",
+        "Project": "D:\\CommonLibrary\\Net4x.Configuration\\Net4x.Configuration\\Net4x.Configuration.csproj",
+        "PackageReferences": null
+      },
+      {
+        "Name": "Net4x.Data",
+        "Project": "D:\\CommonLibrary\\Net4x.Configuration\\Net4x.Data\\Net4x.Data.csproj",
+        "PackageReferences": null
+      },
+      {
+        "Name": "Net4x.SqlClient",
+        "Project": "D:\\CommonLibrary\\Net4x.Configuration\\Net4x.SqlClient\\Net4x.SqlClient.csproj",
+        "PackageReferences": null
+      },
+      {
+        "Name": "Net4x.WindowsForms",
+        "Project": "D:\\CommonLibrary\\Net4x.Configuration\\Net4x.WindowsForms\\Net4x.WindowsForms.csproj",
+        "PackageReferences": null
+      }
+    ]
+  },
+  {
+    "Solution": {
+      "Path": "C:\\Users\\Piero\\AppData\\Local\\Temp\\Net4x.Drawing.sln",
+      "Version": "Net4xDrawingVersion"
+    },
+    "NuGetPackages": [
+      {
+        "Name": "Net4x.Drawing",
+        "Project": "D:\\CommonLibrary\\Net4x.Drawing\\Net4x.Drawing\\Net4x.Drawing.csproj",
+        "PackageReferences": null
+      }
+    ]
+  },
+  {
+    "Solution": {
+      "Path": "C:\\Users\\Piero\\AppData\\Local\\Temp\\Net4x.InternetExplorer.sln",
+      "Version": "Net4xInternetExplorerVersion"
+    },
+    "NuGetPackages": [
+      {
+        "Name": "Net4x.InternetExplorer",
+        "Project": "D:\\CommonLibrary\\Net4x.InternetExplorer\\Net4x.InternetExplorer\\Net4x.InternetExplorer.csproj",
+        "PackageReferences": null
+      }
+    ]
+  },
+  {
+    "Solution": {
+      "Path": "C:\\Users\\Piero\\AppData\\Local\\Temp\\Net4x.iTextSharp.sln",
+      "Version": "Net4xiTextSharpVersion"
+    },
+    "NuGetPackages": [
+      {
+        "Name": "Net4x.iTextSharp.Common",
+        "Project": "D:\\CommonLibrary\\Net4x.iTextSharp\\Net4x.iTextSharp\\Net4x.iTextSharp.csproj",
+        "PackageReferences": null
+      },
+      {
+        "Name": "Net4x.iTextSharp.Pdfa",
+        "Project": "D:\\CommonLibrary\\Net4x.iTextSharp\\iTextSharp.Pdfa\\Net4x.iTextSharp.Pdfa.csproj",
+        "PackageReferences": null
+      }
+    ]
+  },
+  {
+    "Solution": {
+      "Path": "C:\\Users\\Piero\\AppData\\Local\\Temp\\Net4x.MSHTML.sln",
+      "Version": "Net4xMSHTMLVersion"
+    },
+    "NuGetPackages": [
+      {
+        "Name": "Net4x.Net35.MSHTML",
+        "Project": "D:\\CommonLibrary\\Net4x.MsHtml\\Net4x.MSHTML.net35\\Net4x.Net35.MSHTML.csproj",
+        "PackageReferences": null
+      },
+      {
+        "Name": "Net4x.Net40.MSHTML",
+        "Project": "D:\\CommonLibrary\\Net4x.MsHtml\\Net4x.MSHTML.net40\\Net4x.Net40.MSHTML.csproj",
+        "PackageReferences": null
+      },
+      {
+        "Name": "Net4x.Net45.MSHTML",
+        "Project": "D:\\CommonLibrary\\Net4x.MsHtml\\Net4x.MSHTML.net45\\Net4x.Net45.MSHTML.csproj",
+        "PackageReferences": null
+      },
+      {
+        "Name": "Net4x.Netcoreapp.MSHTML",
+        "Project": "D:\\CommonLibrary\\Net4x.MsHtml\\Net4x.MSHTML.netcoreapp\\Net4x.Netcoreapp.MSHTML.csproj",
+        "PackageReferences": null
+      }
+    ]
+  },
+  {
+    "Solution": {
+      "Path": "C:\\Users\\Piero\\AppData\\Local\\Temp\\PackAsLibrary.sln",
+      "Version": "PackAsLibraryVersion"
+    },
+    "NuGetPackages": [
+      {
+        "Name": "Net4x.PackAsLibrary",
+        "Project": "D:\\CommonLibrary\\PackAsLibrary\\PackAsLibrary\\PackAsLibrary.csproj",
+        "PackageReferences": null
+      }
+    ]
+  },
+  {
+    "Solution": {
+      "Path": "C:\\Users\\Piero\\AppData\\Local\\Temp\\PackAsTool.sln",
+      "Version": "PackAsToolVersion"
+    },
+    "NuGetPackages": [
+      {
+        "Name": "Net4x.PackAsTool",
+        "Project": "D:\\CommonLibrary\\PackAsTool\\PackAsTool\\PackAsTool.csproj",
+        "PackageReferences": null
+      }
+    ]
+  },
+  {
+    "Solution": {
+      "Path": "C:\\Users\\Piero\\AppData\\Local\\Temp\\PagedList.sln",
+      "Version": "PagedListVersion"
+    },
+    "NuGetPackages": [
+      {
+        "Name": "Net4x.PagedList",
+        "Project": "D:\\CommonLibrary\\PagedList\\src\\PagedList\\PagedList.csproj",
+        "PackageReferences": null
+      },
+      {
+        "Name": "Net4x.PagedList.Mvc",
+        "Project": "D:\\CommonLibrary\\PagedList\\src\\PagedList.Mvc\\PagedList.Mvc.csproj",
+        "PackageReferences": null
+      }
+    ]
+  },
+  {
+    "Solution": {
+      "Path": "C:\\Users\\Piero\\AppData\\Local\\Temp\\PdfLibNet.x64.NetCore.sln",
+      "Version": "PdfLibNetx64NetCoreVersion"
+    },
+    "NuGetPackages": [
+      {
+        "Name": "Net4x.PdfLibNetLibrary",
+        "Project": "D:\\CommonLibrary\\PdfViewerLibrary\\PdfLibNet\\PdfLibNetLibrary\\PdfLibNetLibrary.csproj",
+        "PackageReferences": null
+      }
+    ]
+  },
+  {
+    "Solution": {
+      "Path": "C:\\Users\\Piero\\AppData\\Local\\Temp\\PdfLibNet.x86.NetCore.sln",
+      "Version": "PdfLibNetx86NetCoreVersion"
+    },
+    "NuGetPackages": [
+      {
+        "Name": "Net4x.PdfLibNetLibrary",
+        "Project": "D:\\CommonLibrary\\PdfViewerLibrary\\PdfLibNet\\PdfLibNetLibrary\\PdfLibNetLibrary.csproj",
+        "PackageReferences": null
+      }
+    ]
+  },
+  {
+    "Solution": {
+      "Path": "C:\\Users\\Piero\\AppData\\Local\\Temp\\PdfLibNet.x86.sln",
+      "Version": "PdfLibNetx86Version"
+    },
+    "NuGetPackages": [
+      {
+        "Name": "Net4x.PdfLibNetLibrary",
+        "Project": "D:\\CommonLibrary\\PdfViewerLibrary\\PdfLibNet\\PdfLibNetLibrary\\PdfLibNetLibrary.csproj",
+        "PackageReferences": null
+      }
+    ]
+  },
+  {
+    "Solution": {
+      "Path": "C:\\Users\\Piero\\AppData\\Local\\Temp\\SqlParametersToVariableDefinitions.sln",
+      "Version": "SqlParametersToVariableDefinitionsVersion"
+    },
+    "NuGetPackages": [
+      {
+        "Name": "Net4x.SqlParametersToVariableDefinitions",
+        "Project": "D:\\CommonLibrary\\SqlParametersToVariableDefinitions\\SqlParametersToVariableDefinitions\\SqlParametersToVariableDefinitions.csproj",
+        "PackageReferences": null
+      }
+    ]
+  },
+  {
+    "Solution": {
+      "Path": "C:\\Users\\Piero\\AppData\\Local\\Temp\\Starb.Common.sln",
+      "Version": "StarbCommonVersion"
+    },
+    "NuGetPackages": [
+      {
+        "Name": "Starb.DataLibrary",
+        "Project": "D:\\CommonLibrary\\Starb.Common\\DataLibrary\\Starb.DataLibrary.csproj",
+        "PackageReferences": null
+      },
+      {
+        "Name": "$(MSBuildProjectName)",
+        "Project": "D:\\CommonLibrary\\Starb.Common\\WebLibrary\\Starb.WebLibrary.csproj",
+        "PackageReferences": null
+      },
+      {
+        "Name": "Starb.ExcelInterop",
+        "Project": "D:\\CommonLibrary\\Starb.Common\\ExcelInterop\\ExcelInterop.csproj",
+        "PackageReferences": null
+      },
+      {
+        "Name": "Starb.PaccoLibrary",
+        "Project": "D:\\CommonLibrary\\Starb.Common\\PaccoLibrary\\PaccoLibrary.vbproj",
+        "PackageReferences": null
+      },
+      {
+        "Name": "Starb.HtmlEditor",
+        "Project": "D:\\CommonLibrary\\Starb.Common\\Winthusiasm.HtmlEditor\\Winthusiasm.HtmlEditor.csproj",
+        "PackageReferences": null
+      },
+      {
+        "Name": "Starb.TerminalCursorLib",
+        "Project": "D:\\CommonLibrary\\Starb.Common\\TerminalCursorLib\\TerminalCursorLib.csproj",
+        "PackageReferences": null
+      }
+    ]
+  },
+  {
+    "Solution": {
+      "Path": "C:\\Users\\Piero\\AppData\\Local\\Temp\\Titanium.Web.Proxy.sln",
+      "Version": "TitaniumWebProxyVersion"
+    },
+    "NuGetPackages": [
+      {
+        "Name": "Net40.Titanium.Web.Proxy",
+        "Project": "D:\\CommonLibrary\\titanium-web-proxy.net40\\src\\Titanium.Web.Proxy\\Titanium.Web.Proxy.csproj",
+        "PackageReferences": null
+      },
+      {
+        "Name": "D:\\CommonLibrary\\titanium-web-proxy\\src\\Titanium.Web.Proxy\\Titanium.Web.Proxy.csproj",
+        "Project": "Net4x.Titanium.Web.Proxy",
+        "PackageReferences": null
+      }
+    ]
+  },
+  {
+    "Solution": {
+      "Path": "C:\\Users\\Piero\\AppData\\Local\\Temp\\TopMostLibrary.sln",
+      "Version": "TopMostLibraryVersion"
+    },
+    "NuGetPackages": [
+      {
+        "Name": "Net4x.TopMostLibrary",
+        "Project": "D:\\CommonLibrary\\TopMostLibrary\\TopMostLibrary\\TopMostLibrary.csproj",
+        "PackageReferences": null
+      }
+    ]
+  },
+  {
+    "Solution": {
+      "Path": "C:\\Users\\Piero\\AppData\\Local\\Temp\\TouchLibrary.sln",
+      "Version": "TouchLibraryVersion"
+    },
+    "NuGetPackages": [
+      {
+        "Name": "Net4x.TouchLibrary",
+        "Project": "D:\\CommonLibrary\\TouchLibrary\\TouchLibrary\\TouchLibrary.csproj",
+        "PackageReferences": null
+      }
+    ]
+  },
+  {
+    "Solution": {
+      "Path": "C:\\Users\\Piero\\AppData\\Local\\Temp\\WhenTheVersion.sln",
+      "Version": "WhenTheVersionVersion"
+    },
+    "NuGetPackages": [
+      {
+        "Name": "Net4x.WhenTheVersion",
+        "Project": "D:\\CommonLibrary\\WhenTheVersion\\WhenTheVersion\\WhenTheVersion.csproj",
+        "PackageReferences": null
+      }
+    ]
+  },
+  {
+    "Solution": {
+      "Path": "C:\\Users\\Piero\\AppData\\Local\\Temp\\Win32Interop.sln",
+      "Version": "Win32InteropVersion"
+    },
+    "NuGetPackages": [
+      {
+        "Name": "Net4x.Win32Interop.User32",
+        "Project": "D:\\CommonLibrary\\Win32Interop\\User32\\Win32Interop.User32.csproj",
+        "PackageReferences": null
+      },
+      {
+        "Name": "Net4x.Win32Interop.Kernel32",
+        "Project": "D:\\CommonLibrary\\Win32Interop\\Kernel32\\Win32Interop.Kernel32.csproj",
+        "PackageReferences": null
+      },
+      {
+        "Name": "Net4x.Win32Interop.Gdi32",
+        "Project": "D:\\CommonLibrary\\Win32Interop\\Gdi32\\Win32Interop.Gdi32.csproj",
+        "PackageReferences": null
+      },
+      {
+        "Name": "Net4x.Win32Interop.Uxtheme",
+        "Project": "D:\\CommonLibrary\\Win32Interop\\Uxtheme\\Win32Interop.Uxtheme.csproj",
+        "PackageReferences": null
+      },
+      {
+        "Name": "Net4x.Win32Interop.Dwmapi",
+        "Project": "D:\\CommonLibrary\\Win32Interop\\Dwmapi\\Win32Interop.Dwmapi.csproj",
+        "PackageReferences": null
+      }
+    ]
+  },
+  {
+    "Solution": {
+      "Path": "C:\\Users\\Piero\\AppData\\Local\\Temp\\TestApp.sln",
+      "Version": "TestAppVersion"
+    },
+    "NuGetPackages": [
+      {
+        "Name": "Net4x.Microsoft-WindowsAPICodePack-Core",
+        "Project": "D:\\CommonLibrary\\Windows-API-Code-Pack-1.1\\source\\WindowsAPICodePack\\Core\\Core.csproj",
+        "PackageReferences": null
+      }
+    ]
+  },
+  {
+    "Solution": {
+      "Path": "C:\\Users\\Piero\\AppData\\Local\\Temp\\NotifyIconWpf.sln",
+      "Version": "NotifyIconWpfVersion"
+    },
+    "NuGetPackages": [
+      {
+        "Name": "Net4x.Hardcodet.NotifyIcon.Wpf",
+        "Project": "D:\\CommonLibrary\\wpf-notifyicon\\src\\NotifyIconWpf\\NotifyIconWpf.csproj",
+        "PackageReferences": null
+      }
+    ]
+  },
+  {
+    "Solution": {
+      "Path": "C:\\Users\\Piero\\AppData\\Local\\Temp\\WpfAdornedControl.sln",
+      "Version": "WpfAdornedControlVersion"
+    },
+    "NuGetPackages": [
+      {
+        "Name": "Net4x.WpfAdornedControl",
+        "Project": "D:\\CommonLibrary\\WpfAdornedControl\\WpfAdornedControl\\WpfAdornedControl.csproj",
+        "PackageReferences": null
+      }
+    ]
+  },
+  {
+    "Solution": {
+      "Path": "C:\\Users\\Piero\\AppData\\Local\\Temp\\ZipCodeApi.sln",
+      "Version": "ZipCodeApiVersion"
+    },
+    "NuGetPackages": [
+      {
+        "Name": "Net4x.Addresses.Library",
+        "Project": "D:\\CommonLibrary\\ZipCodeApi\\Addresses.Library\\Addresses.Library.csproj",
+        "PackageReferences": null
+      }
+    ]
+  },
+  {
+    "Solution": {
+      "Path": "C:\\Users\\Piero\\AppData\\Local\\Temp\\Net30.LinqBridge.sln",
+      "Version": "Net30LinqBridgeVersion"
+    },
+    "NuGetPackages": [
+      {
+        "Name": "Net30.LinqBridge",
+        "Project": "D:\\CommonLibrary\\Net30.LinqBridge\\src\\LinqBridge.csproj",
+        "PackageReferences": null
+      }
+    ]
+  },
+  {
+    "Solution": {
+      "Path": "C:\\Users\\Piero\\AppData\\Local\\Temp\\Net4x.ValueTuple.sln",
+      "Version": "Net4xValueTupleVersion"
+    },
+    "NuGetPackages": [
+      {
+        "Name": "Net4x.ValueTuple",
+        "Project": "D:\\CommonLibrary\\Net4x.ValueTuple\\Net4x.ValueTuple\\Net4x.ValueTuple.csproj",
+        "PackageReferences": null
+      }
+    ]
+  },
+  {
+    "Solution": {
+      "Path": "C:\\Users\\Piero\\AppData\\Local\\Temp\\Net35.Threading.Tasks.sln",
+      "Version": "Net35ThreadingTasksVersion"
+    },
+    "NuGetPackages": [
+      {
+        "Name": "Net35.Threading.Tasks",
+        "Project": "D:\\CommonLibrary\\Net35.Threading.Tasks\\Net35.Threading.Tasks\\Net35.Threading.Tasks.csproj",
+        "PackageReferences": null
+      }
+    ]
+  },
+  {
+    "Solution": {
+      "Path": "C:\\Users\\Piero\\AppData\\Local\\Temp\\PdfCompressorLibrary.sln",
+      "Version": "PdfCompressorLibraryVersion"
+    },
+    "NuGetPackages": [
+      {
+        "Name": "Net4x.PdfCompressorLibrary",
+        "Project": "D:\\CommonLibrary\\PdfCompressionLibrary\\PdfCompressorLibrary\\PdfCompressorLibrary.csproj",
+        "PackageReferences": null
+      }
+    ]
+  },
+  {
+    "Solution": {
+      "Path": "C:\\Users\\Piero\\AppData\\Local\\Temp\\Net4x.BaseTypes.sln",
+      "Version": "Net4xBaseTypesVersion"
+    },
+    "NuGetPackages": [
+      {
+        "Name": "Net4x.BaseTypes",
+        "Project": "D:\\CommonLibrary\\Net4x.BaseTypes\\src\\Net4x.BaseTypes\\Net4x.BaseTypes.csproj",
         "PackageReferences": null
       }
     ]
